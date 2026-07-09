@@ -195,7 +195,7 @@ export default function Header() {
         }`}
       >
         <SiteContainer className="flex items-center justify-between gap-2 py-2.5 sm:py-4">
-          <LogoLink size="md" showText="desktop" />
+          <LogoLink size="md" />
 
           <nav className="hidden items-center gap-0.5 md:flex">
             <Link href="/" className={navClass(pathname === "/")}>

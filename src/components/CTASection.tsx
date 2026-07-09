@@ -10,7 +10,7 @@ export default function CTASection() {
         <Reveal>
           <div className="relative overflow-hidden rounded-lg border border-brand-border bg-brand-cream p-8 sm:p-10 dark:border-stone-700 dark:bg-stone-900">
             <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-gold/10 blur-3xl" />
-            <div className="relative flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left">
+            <div className="relative flex flex-col items-start justify-between gap-6 text-left lg:flex-row lg:items-center lg:gap-8">
               <div>
                 <h2 className="font-display text-2xl font-semibold text-brand-navy dark:text-stone-50 sm:text-3xl">
                   Let&apos;s build the right team for your site
@@ -20,7 +20,7 @@ export default function CTASection() {
                   facility support. We&apos;ll respond quickly with a plan tailored to your location.
                 </p>
               </div>
-              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+              <div className="flex w-full flex-col items-start gap-3 sm:w-auto sm:flex-row sm:items-center">
                 <Link href="/contact" className="btn-primary">
                   Get Your Free Quote
                 </Link>

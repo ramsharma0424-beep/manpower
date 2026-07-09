@@ -58,7 +58,7 @@ export default function BlogsPreview() {
           ))}
         </div>
 
-        <Reveal className="mt-10 text-center">
+        <Reveal className="mt-8 sm:mt-10">
           <Link href="/blogs" className="btn-primary">
             Read All Articles
           </Link>

@@ -72,7 +72,7 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
             ))}
           </div>
 
-          <div className="mt-8 text-center sm:mt-10">
+          <div className="mt-8 sm:mt-10">
             <Link href="/clients" className="btn-primary">
               View All Clients
             </Link>
@@ -174,7 +174,7 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                 {displayClients.map((client) => (
                   <ClientCard key={client.name} client={client} showMeta />
                 ))}
@@ -197,19 +197,19 @@ function ClientCard({
   showMeta?: boolean;
 }) {
   return (
-    <div className="card-elevated group flex flex-col items-center justify-center p-4 sm:p-6">
-      <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-sm border border-brand-border bg-brand-cream font-display text-base font-semibold tracking-wide text-brand-gold shadow-sm transition-all duration-500 group-hover:scale-105 group-hover:border-brand-gold/50 dark:border-stone-700 dark:bg-stone-800 sm:mb-4 sm:h-16 sm:w-16 sm:text-lg">
+    <div className="card-elevated group flex h-full flex-col items-center justify-center p-3 sm:p-6">
+      <div className="mb-2 flex h-11 w-11 items-center justify-center rounded-sm border border-brand-border bg-brand-cream font-display text-sm font-semibold tracking-wide text-brand-gold shadow-sm transition-all duration-500 group-hover:scale-105 group-hover:border-brand-gold/50 dark:border-stone-700 dark:bg-stone-800 sm:mb-4 sm:h-16 sm:w-16 sm:text-lg">
         {client.initials}
       </div>
-      <p className="text-center text-sm font-semibold text-brand-navy dark:text-stone-100">
+      <p className="line-clamp-2 text-center text-xs font-semibold leading-snug text-brand-navy sm:text-sm dark:text-stone-100">
         {client.name}
       </p>
       {showMeta && (
-        <div className="mt-2 flex flex-col items-center gap-1">
-          <span className="rounded-sm border border-brand-border bg-brand-cream px-2 py-0.5 text-xs font-medium text-brand-gold dark:border-stone-700 dark:bg-stone-800">
+        <div className="mt-1.5 flex flex-col items-center gap-1 sm:mt-2">
+          <span className="rounded-sm border border-brand-border bg-brand-cream px-1.5 py-0.5 text-[10px] font-medium text-brand-gold sm:px-2 sm:text-xs dark:border-stone-700 dark:bg-stone-800">
             {client.service}
           </span>
-          <span className="text-center text-xs text-stone-400 dark:text-stone-500">{client.state}</span>
+          <span className="line-clamp-2 text-center text-[10px] text-stone-400 sm:text-xs dark:text-stone-500">{client.state}</span>
         </div>
       )}
     </div>

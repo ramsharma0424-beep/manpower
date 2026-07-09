@@ -12,7 +12,7 @@ type CoverImageProps = {
 const aspectClasses = {
   video: "aspect-video",
   wide: "aspect-[16/10]",
-  hero: "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[3/2]",
+  hero: "aspect-[5/4] sm:aspect-[16/10] lg:aspect-[3/2]",
   blog: "aspect-[16/10] sm:aspect-video",
 };
 

@@ -65,20 +65,20 @@ export default function Services({ showAll = false }: ServicesProps) {
           />
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:grid-cols-3">
           {items.map((service, i) => (
             <Reveal key={service.id} delay={i * 80}>
-              <article className="card-elevated group p-7">
-              <div className="mb-5 inline-flex rounded-sm bg-brand-cream p-3 text-brand-gold dark:bg-stone-800">
+              <article className="card-elevated group h-full p-4 sm:p-7">
+              <div className="mb-3 inline-flex rounded-sm bg-brand-cream p-2 text-brand-gold sm:mb-5 sm:p-3 dark:bg-stone-800 [&_svg]:h-5 [&_svg]:w-5 sm:[&_svg]:h-7 sm:[&_svg]:w-7">
                 {icons[service.icon]}
               </div>
-              <h3 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
+              <h3 className="font-display text-sm font-semibold leading-snug text-brand-navy sm:text-xl dark:text-stone-100">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+              <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
                 {service.description}
               </p>
-              <ul className="mt-5 space-y-2">
+              <ul className="mt-3 hidden space-y-2 sm:mt-5 sm:block">
                 {service.highlights.slice(0, 3).map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-stone-500 dark:text-stone-400">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" />
@@ -92,7 +92,7 @@ export default function Services({ showAll = false }: ServicesProps) {
         </div>
 
         {!showAll && (
-          <Reveal className="mt-10 text-center">
+          <Reveal className="mt-8 sm:mt-10">
             <Link href="/services" className="btn-primary">
               View All Services
             </Link>

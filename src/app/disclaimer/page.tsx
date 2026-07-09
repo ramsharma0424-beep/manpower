@@ -1,7 +1,7 @@
 import { PolicyLayout, policyMetadata } from "@/components/PolicyLayout";
 import { company } from "@/lib/data";
 
-export const metadata = policyMetadata("Disclaimer");
+export const metadata = policyMetadata("Disclaimer", "/disclaimer");
 
 export default function DisclaimerPage() {
   return (

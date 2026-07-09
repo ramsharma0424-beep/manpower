@@ -1,44 +1,67 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
+import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { company } from "@/lib/data";
-import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl, createPageMetadata, locationsLine, phoneE164 } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Contact Us — Get a Free Manpower Quote",
-  description: `Ready to hire security, housekeeping, or labour in ${company.region}? Contact ${company.shortName} at ${company.phone} or request a free quote online. We respond quickly.`,
+  description: `Ready to hire security, housekeeping, or labour in ${company.region}? Contact ${company.shortName} at ${company.phone} or request a free quote online. Serving ${locationsLine}.`,
   path: "/contact",
   keywords: [
     "contact Rudra Manpower",
     "manpower quote Delhi NCR",
     "hire security guards Gurugram",
     "housekeeping staff Noida",
+    "manpower supplier Sonipat",
+    "security agency Manesar",
+    "labour supplier Faridabad",
   ],
 });
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLdScript
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: `Contact ${company.shortName}`,
+          description: `Get a free manpower quote from ${company.shortName} for security, housekeeping, and labour across ${company.region}.`,
+          url: absoluteUrl("/contact"),
+          mainEntity: {
+            "@type": "LocalBusiness",
+            name: company.name,
+            telephone: phoneE164,
+            email: company.email,
+            areaServed: company.locations,
+            url: absoluteUrl("/"),
+          },
+        }}
+      />
       <PageHero
         eyebrow="Get in Touch"
         title="Contact Information"
         description={`Reach out for security, housekeeping, technical, or labour workforce requirements across ${company.region}.`}
       />
+      <Breadcrumbs items={[{ name: "Contact", path: "/contact" }]} />
 
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <SiteContainer>
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h2 className="font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="order-2 lg:order-1">
+              <h2 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100 sm:text-2xl">
                 Let&apos;s Talk
               </h2>
-              <p className="mt-4 text-stone-600 dark:text-stone-300">
+              <p className="mt-3 text-sm text-stone-600 dark:text-stone-300 sm:mt-4 sm:text-base">
                 Fill out the form and our team will respond promptly. For immediate assistance, call
                 us directly.
               </p>
 
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-5">
                 <ContactInfoCard
                   label="Email"
                   value={company.email}
@@ -51,16 +74,12 @@ export default function ContactPage() {
                   href={`tel:${company.phone}`}
                   icon="phone"
                 />
-                <ContactInfoCard
-                  label="Location"
-                  value={`${company.region} · ${company.address}`}
-                  icon="location"
-                />
+                <LocationsCard />
               </div>
             </div>
 
-            <div className="card-elevated p-8">
-              <h2 className="mb-6 font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
+            <div className="card-elevated order-1 p-5 sm:p-8 lg:order-2">
+              <h2 className="mb-5 font-display text-lg font-semibold text-brand-navy dark:text-stone-100 sm:mb-6 sm:text-xl">
                 Send us a message
               </h2>
               <ContactForm />
@@ -69,6 +88,40 @@ export default function ContactPage() {
         </SiteContainer>
       </section>
     </>
+  );
+}
+
+function LocationsCard() {
+  return (
+    <div className="card-elevated flex gap-3 p-4 sm:gap-4 sm:p-6">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-brand-cream text-brand-gold dark:bg-stone-800 sm:h-12 sm:w-12">
+        <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+          />
+        </svg>
+      </div>
+      <div className="min-w-0">
+        <p className="text-sm font-semibold text-stone-500 dark:text-stone-400">Locations</p>
+        <p className="mt-1 text-sm font-medium text-brand-gold sm:text-base">
+          {company.region} · {company.address}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {company.locations.map((city) => (
+            <span
+              key={city}
+              className="rounded-sm border border-brand-border bg-brand-cream px-2.5 py-1 text-xs font-medium text-brand-navy dark:border-stone-700 dark:bg-stone-800 dark:text-stone-200"
+            >
+              {city}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -114,23 +167,23 @@ function ContactInfoCard({
   };
 
   return (
-    <div className="card-elevated flex gap-4 p-6">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-brand-cream text-brand-gold dark:bg-stone-800">
-        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div className="card-elevated flex gap-3 p-4 sm:gap-4 sm:p-6">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-brand-cream text-brand-gold dark:bg-stone-800 sm:h-12 sm:w-12">
+        <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           {icons[icon]}
         </svg>
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="text-sm font-semibold text-stone-500 dark:text-stone-400">{label}</p>
         {href ? (
           <a
             href={href}
-            className="mt-1 block font-medium text-brand-gold transition hover:text-brand-gold-dark"
+            className="mt-1 block break-all text-sm font-medium text-brand-gold transition hover:text-brand-gold-dark sm:text-base"
           >
             {value}
           </a>
         ) : (
-          <p className="mt-1 font-medium text-brand-gold">{value}</p>
+          <p className="mt-1 text-sm font-medium text-brand-gold sm:text-base">{value}</p>
         )}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { PolicyLayout, policyMetadata } from "@/components/PolicyLayout";
 import { company } from "@/lib/data";
 
-export const metadata = policyMetadata("Privacy Policy");
+export const metadata = policyMetadata("Privacy Policy", "/privacy-policy");
 
 export default function PrivacyPolicyPage() {
   return (

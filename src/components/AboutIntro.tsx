@@ -12,7 +12,7 @@ type AboutIntroProps = {
 
 export default function AboutIntro({ compact = false }: AboutIntroProps) {
   return (
-    <section className="section-muted py-16 sm:py-20">
+    <section className="section-muted py-12 sm:py-16 lg:py-20">
       <SiteContainer>
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <div className="order-2 lg:order-1">
@@ -39,7 +39,7 @@ export default function AboutIntro({ compact = false }: AboutIntroProps) {
             {compact && (
               <Reveal delay={200}>
                 <Link href="/about" className="btn-primary mt-6">
-                  Learn Our Story
+                  About Rudra Manpower
                 </Link>
               </Reveal>
             )}

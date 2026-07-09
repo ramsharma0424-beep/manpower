@@ -20,6 +20,13 @@ const filterBtn = (active: boolean) =>
       : "border-transparent text-stone-500 hover:text-brand-gold dark:text-stone-400"
   }`;
 
+const chipBtn = (active: boolean) =>
+  `shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium transition ${
+    active
+      ? "border-brand-gold bg-brand-gold text-stone-950"
+      : "border-brand-border bg-white text-stone-600 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-300"
+  }`;
+
 export default function ClientsShowcase({ preview = false }: ClientsShowcaseProps) {
   const [serviceFilter, setServiceFilter] = useState<string>("Show All");
   const [industryFilter, setIndustryFilter] = useState<string>("Show All");
@@ -43,29 +50,29 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
 
   if (preview) {
     return (
-      <section className="section-muted py-20">
+      <section className="section-muted py-12 sm:py-20">
         <SiteContainer>
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center sm:mb-12">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold">
               Trusted By
             </p>
-            <h2 className="font-display text-3xl font-semibold text-brand-navy dark:text-stone-100 sm:text-4xl">
+            <h2 className="font-display text-2xl font-semibold text-brand-navy dark:text-stone-100 sm:text-4xl">
               Our Esteemed Clients
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-stone-600 dark:text-stone-300">
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-stone-600 dark:text-stone-300 sm:text-base">
               Leading enterprises across Delhi NCR trust us for security, housekeeping, and manpower
               solutions — including Mothers Dairy and Hotel Lemon Tree in Gurugram.
             </p>
             <div className="gold-line mx-auto mt-6" />
           </div>
 
-          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
+          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
             {displayClients.map((client) => (
               <ClientCard key={client.name} client={client} showMeta />
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center sm:mt-10">
             <Link href="/clients" className="btn-primary">
               View All Clients
             </Link>
@@ -76,10 +83,48 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
   }
 
   return (
-    <section className="section-muted py-16">
+    <section className="section-muted py-10 sm:py-16">
       <SiteContainer>
-        <div className="flex flex-col gap-10 lg:flex-row">
-          <aside className="lg:w-56 lg:shrink-0">
+        <div className="space-y-6 lg:hidden">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
+              By Service
+            </p>
+            <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {clientServiceFilters.map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setServiceFilter(filter)}
+                  className={chipBtn(serviceFilter === filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
+              By Industry
+            </p>
+            <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {clientIndustryFilters.map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setIndustryFilter(filter)}
+                  className={chipBtn(industryFilter === filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">
+          <aside className="hidden lg:block lg:w-56 lg:shrink-0">
             <div className="sticky top-24 space-y-8">
               <div>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
@@ -123,13 +168,13 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
 
           <div className="flex-1">
             {displayClients.length === 0 ? (
-              <div className="card-elevated flex h-48 items-center justify-center border-dashed">
-                <p className="text-stone-500 dark:text-stone-400">
+              <div className="card-elevated flex h-40 items-center justify-center border-dashed sm:h-48">
+                <p className="text-sm text-stone-500 dark:text-stone-400">
                   No clients match the selected filters.
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 xl:grid-cols-4">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                 {displayClients.map((client) => (
                   <ClientCard key={client.name} client={client} showMeta />
                 ))}
@@ -152,8 +197,8 @@ function ClientCard({
   showMeta?: boolean;
 }) {
   return (
-    <div className="card-elevated group flex flex-col items-center justify-center p-6">
-      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-sm border border-brand-border bg-brand-cream font-display text-lg font-semibold tracking-wide text-brand-gold shadow-sm transition-all duration-500 group-hover:scale-105 group-hover:border-brand-gold/50 dark:border-stone-700 dark:bg-stone-800">
+    <div className="card-elevated group flex flex-col items-center justify-center p-4 sm:p-6">
+      <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-sm border border-brand-border bg-brand-cream font-display text-base font-semibold tracking-wide text-brand-gold shadow-sm transition-all duration-500 group-hover:scale-105 group-hover:border-brand-gold/50 dark:border-stone-700 dark:bg-stone-800 sm:mb-4 sm:h-16 sm:w-16 sm:text-lg">
         {client.initials}
       </div>
       <p className="text-center text-sm font-semibold text-brand-navy dark:text-stone-100">
@@ -161,10 +206,10 @@ function ClientCard({
       </p>
       {showMeta && (
         <div className="mt-2 flex flex-col items-center gap-1">
-          <span className="rounded-sm border border-brand-border bg-brand-cream px-2.5 py-0.5 text-xs font-medium text-brand-gold dark:border-stone-700 dark:bg-stone-800">
+          <span className="rounded-sm border border-brand-border bg-brand-cream px-2 py-0.5 text-xs font-medium text-brand-gold dark:border-stone-700 dark:bg-stone-800">
             {client.service}
           </span>
-          <span className="text-xs text-stone-400 dark:text-stone-500">{client.state}</span>
+          <span className="text-center text-xs text-stone-400 dark:text-stone-500">{client.state}</span>
         </div>
       )}
     </div>

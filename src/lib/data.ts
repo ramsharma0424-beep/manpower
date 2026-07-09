@@ -8,9 +8,10 @@ export const company = {
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
   phone: "7005851441",
+  website: "https://manpowerservices.com",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
-  locations: ["Delhi NCR", "Gurugram", "Noida", "Rohtak"],
+  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad"],
   address: "Gurugram, Haryana, India",
 };
 
@@ -20,7 +21,7 @@ export const aboutContent = {
     "If you've ever dealt with absent staff, unclear billing, or security you can't trust — you're not alone. Rudra Manpower was built to fix that. Led by a retired Indian Army Captain, we give you teams that show up on time, follow SOPs, and treat your site like their own.",
   paragraphs: [
     "We started in 2023 because too many businesses in Delhi NCR were stuck with the same problems: delayed wages to workers, no transparency on who's deployed, constant re-hiring, and security staff without proper verification. You deserve better than that.",
-    "Today, we deploy PASARA-licensed security guards, trained housekeeping teams, and skilled labour across Gurugram, Noida, and Rohtak — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you manage one facility or ten, we scale with you.",
+    "Today, we deploy PASARA-licensed security guards, trained housekeeping teams, and skilled labour across Gurugram, Noida, Rohtak, Sonipat, Manesar, and Faridabad — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you manage one facility or ten, we scale with you.",
     "Our promise is simple: you focus on running your business. We'll handle the people, the discipline, and the accountability on the ground.",
   ],
 };
@@ -282,6 +283,37 @@ export const services = [
       "EPFO, ESIC & statutory compliance",
       "Scalable teams across multiple sites",
     ],
+  },
+];
+
+export const faqs = [
+  {
+    question: "Which areas does Rudra Manpower serve?",
+    answer: `We deploy security, housekeeping, and labour teams across Delhi NCR, including ${company.locations.join(", ")}. Contact us to confirm availability for your site.`,
+  },
+  {
+    question: "Are your security guards PASARA licensed and police verified?",
+    answer:
+      "Yes. Rudra Manpower is PASARA licensed, and every security deployment goes through police verification and document checks before staff are placed on your premises.",
+  },
+  {
+    question: "What manpower services do you provide?",
+    answer:
+      "We provide security services, housekeeping, technical and facility management, horticulture, general labour, construction site labour, professional supervisory staff, and contract manpower deployment.",
+  },
+  {
+    question: "How quickly can you deploy staff?",
+    answer:
+      "Deployment timelines depend on role, headcount, and location. For standard security and housekeeping requirements in Gurugram, Noida, and nearby areas, we can often mobilise teams within a few days after site assessment.",
+  },
+  {
+    question: "Do you handle EPFO, ESIC, and statutory compliance?",
+    answer:
+      "Yes. Our contract manpower deployment includes support for EPFO, ESIC, and applicable statutory compliance so your workforce operations stay organised and accountable.",
+  },
+  {
+    question: "How do I get a quote for manpower services?",
+    answer: `Share your site location, service type, and headcount through our contact form or call us at ${company.phone}. We will respond with a tailored manpower plan and quote.`,
   },
 ];
 

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BlogContent from "@/components/BlogContent";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CoverImage from "@/components/CoverImage";
+import JsonLdScript from "@/components/JsonLdScript";
 import SiteContainer from "@/components/SiteContainer";
 import { blogs } from "@/lib/blogs";
 import { company } from "@/lib/data";
-import { createPageMetadata, siteUrl } from "@/lib/seo";
+import { absoluteImageUrl, absoluteUrl, createPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -41,23 +43,24 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
-    image: post.image,
-    datePublished: post.date,
-    author: { "@type": "Organization", name: company.name },
+    image: [absoluteImageUrl(post.image)],
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    author: { "@type": "Organization", name: company.name, url: absoluteUrl("/") },
     publisher: {
       "@type": "Organization",
       name: company.name,
-      logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` },
+      logo: { "@type": "ImageObject", url: absoluteUrl("/logo.png") },
     },
-    mainEntityOfPage: `${siteUrl}/blogs/${post.slug}`,
+    mainEntityOfPage: absoluteUrl(`/blogs/${post.slug}`),
+    articleSection: post.category,
+    keywords: post.keywords.join(", "),
+    inLanguage: "en-IN",
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      <JsonLdScript data={articleJsonLd} />
 
       <section className="premium-hero py-16 text-white sm:py-20 lg:py-24">
         <SiteContainer narrow>
@@ -80,6 +83,13 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="gold-line mt-6" />
         </SiteContainer>
       </section>
+
+      <Breadcrumbs
+        items={[
+          { name: "Blogs", path: "/blogs" },
+          { name: post.title, path: `/blogs/${post.slug}` },
+        ]}
+      />
 
       <SiteContainer narrow className="py-12 sm:py-16">
         <CoverImage

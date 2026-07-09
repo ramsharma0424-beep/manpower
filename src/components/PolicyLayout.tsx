@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteContainer from "@/components/SiteContainer";
 import { company } from "@/lib/data";
+import { createPageMetadata } from "@/lib/seo";
 
 type PolicyPageProps = {
   title: string;
@@ -8,7 +9,11 @@ type PolicyPageProps = {
   children: React.ReactNode;
 };
 
-export function PolicyLayout({ title, lastUpdated = "July 2026", children }: PolicyPageProps) {
+export function PolicyLayout({
+  title,
+  lastUpdated = "July 2026",
+  children,
+}: PolicyPageProps) {
   return (
     <>
       <section className="premium-hero py-16 text-white sm:py-20 lg:py-24">
@@ -26,9 +31,10 @@ export function PolicyLayout({ title, lastUpdated = "July 2026", children }: Pol
   );
 }
 
-export function policyMetadata(title: string): Metadata {
-  return {
+export function policyMetadata(title: string, path: string): Metadata {
+  return createPageMetadata({
     title,
-    description: `${title} for ${company.name}`,
-  };
+    description: `${title} for ${company.name}. Learn how we handle privacy, legal terms, cookies, and website usage.`,
+    path,
+  });
 }

@@ -58,8 +58,8 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center dark:border-green-800 dark:bg-green-950/40">
-        <p className="text-lg font-semibold text-green-800 dark:text-green-300">
+      <div className="rounded-2xl border border-green-200 bg-green-50 p-5 text-center sm:p-8 dark:border-green-800 dark:bg-green-950/40">
+        <p className="text-base font-semibold text-green-800 sm:text-lg dark:text-green-300">
           Thank you for reaching out!
         </p>
         <p className="mt-2 text-sm text-green-700 dark:text-green-400">

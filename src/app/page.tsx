@@ -8,6 +8,7 @@ import ClientsShowcase from "@/components/ClientsShowcase";
 import Leadership from "@/components/Leadership";
 import BlogsPreview from "@/components/BlogsPreview";
 import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Leadership compact />
       <ClientsShowcase preview />
       <BlogsPreview />
+      <FAQSection />
       <CTASection />
     </>
   );

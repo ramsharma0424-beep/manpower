@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CoverImage from "@/components/CoverImage";
+import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { blogs } from "@/lib/blogs";
 import { company } from "@/lib/data";
-import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Blogs & Workforce Insights",
@@ -23,11 +25,28 @@ export const metadata: Metadata = createPageMetadata({
 export default function BlogsPage() {
   return (
     <>
+      <JsonLdScript
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: `${company.shortName} Blog`,
+          description: "Workforce insights, security staffing tips, and manpower guides for Delhi NCR businesses.",
+          url: absoluteUrl("/blogs"),
+          publisher: { "@type": "Organization", name: company.name },
+          blogPost: blogs.map((post) => ({
+            "@type": "BlogPosting",
+            headline: post.title,
+            url: absoluteUrl(`/blogs/${post.slug}`),
+            datePublished: new Date(post.date).toISOString(),
+          })),
+        }}
+      />
       <PageHero
         eyebrow="Insights"
         title="Blogs & Articles"
         description={`Straight talk on manpower, security, and facility management — so you can make confident hiring decisions for your business in ${company.region}.`}
       />
+      <Breadcrumbs items={[{ name: "Blogs", path: "/blogs" }]} />
 
       <section className="py-14 sm:py-16">
         <SiteContainer>

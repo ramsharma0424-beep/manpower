@@ -1,7 +1,7 @@
 import { PolicyLayout, policyMetadata } from "@/components/PolicyLayout";
 import { company } from "@/lib/data";
 
-export const metadata = policyMetadata("Terms of Use");
+export const metadata = policyMetadata("Terms of Use", "/terms-of-use");
 
 export default function TermsOfUsePage() {
   return (

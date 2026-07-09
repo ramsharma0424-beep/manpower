@@ -1,10 +1,6 @@
-import { organizationJsonLd } from "@/lib/seo";
+import { globalJsonLdGraph } from "@/lib/seo";
+import JsonLdScript from "./JsonLdScript";
 
 export default function JsonLd() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-    />
-  );
+  return <JsonLdScript data={globalJsonLdGraph} />;
 }

@@ -1,7 +1,7 @@
 import { PolicyLayout, policyMetadata } from "@/components/PolicyLayout";
 import { company } from "@/lib/data";
 
-export const metadata = policyMetadata("Cookie Policy");
+export const metadata = policyMetadata("Cookie Policy", "/cookie-policy");
 
 export default function CookiePolicyPage() {
   return (

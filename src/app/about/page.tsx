@@ -1,34 +1,50 @@
 import type { Metadata } from "next";
 import AboutIntro from "@/components/AboutIntro";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ComplianceBadges from "@/components/ComplianceBadges";
 import CoreValues from "@/components/CoreValues";
+import FAQSection from "@/components/FAQSection";
+import JsonLdScript from "@/components/JsonLdScript";
 import Leadership from "@/components/Leadership";
 import PageHero from "@/components/PageHero";
 import Solutions from "@/components/Solutions";
 import SiteContainer from "@/components/SiteContainer";
 import { aboutContent, company, mission, qualityAssurance, sectors, vision } from "@/lib/data";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, absoluteUrl, locationsLine } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "About Us — Who We Are, Mission & Leadership",
-  description: `Meet ${company.shortName}: army veteran-led manpower services in ${company.region}. PASARA licensed security, verified staff, and disciplined teams across Gurugram, Noida & Rohtak.`,
+  description: `Meet ${company.shortName}: army veteran-led manpower services in ${company.region}. PASARA licensed security and verified staff across ${locationsLine}.`,
   path: "/about",
   keywords: [
     "about Rudra Manpower",
     "manpower company Delhi NCR",
     "PASARA security agency Gurugram",
     "army veteran manpower services",
+    "manpower agency Sonipat",
+    "security company Manesar",
   ],
 });
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLdScript
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: `About ${company.shortName}`,
+          description: aboutContent.summary,
+          url: absoluteUrl("/about"),
+          mainEntity: { "@id": `${absoluteUrl("/")}#organization` },
+        }}
+      />
       <PageHero
         eyebrow="About Us"
         title={company.name}
         description={aboutContent.summary}
       />
+      <Breadcrumbs items={[{ name: "About Us", path: "/about" }]} />
 
       <div id="who-we-are" className="scroll-mt-24">
         <AboutIntro />
@@ -89,8 +105,8 @@ export default function AboutPage() {
                 Where We Operate
               </h2>
               <p className="mt-4 text-stone-600 dark:text-stone-300">
-                Deploying verified workforce across {company.region} with active operations in
-                Gurugram, Noida, and Rohtak.
+                Deploying verified workforce across {company.region} — including{" "}
+                {company.locations.join(", ")}.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {company.locations.map((city) => (

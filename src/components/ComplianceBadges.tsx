@@ -6,7 +6,7 @@ import SiteContainer from "./SiteContainer";
 
 export default function ComplianceBadges() {
   return (
-    <section className="section-muted py-16">
+    <section className="section-muted py-12 sm:py-16">
       <SiteContainer>
         <Reveal>
           <SectionHeading
@@ -16,14 +16,14 @@ export default function ComplianceBadges() {
           />
         </Reveal>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-3 gap-3 sm:gap-5">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
           {certifications.map((cert, i) => (
             <Reveal
               key={cert.id}
               delay={i * 60}
-              className={i === certifications.length - 1 ? "col-start-2" : undefined}
+              className={i === certifications.length - 1 ? "lg:col-start-2" : undefined}
             >
-              <div className="card-elevated group flex h-full flex-col items-center p-3 text-center sm:p-4">
+              <div className="card-elevated group flex h-full flex-col items-center p-4 text-center sm:p-5">
                 <div className="mb-3 flex h-24 w-full items-center justify-center overflow-hidden rounded-sm border border-brand-border bg-white px-1 py-1 transition-transform duration-500 group-hover:scale-[1.02] dark:border-stone-700 dark:bg-stone-950 sm:h-28 sm:px-1.5">
                   <Image
                     src={cert.logo}

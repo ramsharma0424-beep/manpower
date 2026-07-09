@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-stone-800 bg-stone-950 text-stone-300">
       <SiteContainer className="py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           <div className="sm:col-span-2">
             <div className="mb-4">
               <Logo size="lg" variant="light" />
@@ -54,6 +54,24 @@ export default function Footer() {
                   >
                     {item.label}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-gold">
+              Service Areas
+            </h3>
+            <p className="mb-3 text-sm text-stone-400">
+              Manpower deployment across {company.region}:
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {company.locations.map((city) => (
+                <li key={city}>
+                  <span className="rounded-sm border border-stone-800 px-2.5 py-1 text-xs text-stone-400">
+                    {city}
+                  </span>
                 </li>
               ))}
             </ul>

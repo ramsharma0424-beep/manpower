@@ -194,8 +194,8 @@ export default function Header() {
           scrolled ? "shadow-md shadow-stone-900/5" : ""
         }`}
       >
-        <SiteContainer className="flex items-center justify-between gap-2 py-3 sm:gap-3 sm:py-4">
-          <LogoLink size="md" />
+        <SiteContainer className="flex items-center justify-between gap-2 py-2.5 sm:py-4">
+          <LogoLink size="md" showText="desktop" />
 
           <nav className="hidden items-center gap-0.5 md:flex">
             <Link href="/" className={navClass(pathname === "/")}>

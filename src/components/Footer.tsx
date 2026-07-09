@@ -1,0 +1,109 @@
+import Link from "next/link";
+import Logo from "@/components/Logo";
+import SiteContainer from "@/components/SiteContainer";
+import { aboutDropdown, company, footerPolicies, navLinks } from "@/lib/data";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-stone-800 bg-stone-950 text-stone-300">
+      <SiteContainer className="py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="sm:col-span-2">
+            <div className="mb-4">
+              <Logo size="lg" variant="light" />
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-stone-400">
+              {company.tagline}. Deploying trained security, housekeeping, and labour workforce
+              since {company.founded}.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-gold">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="text-sm text-stone-400 transition hover:text-brand-gold">
+                  About Us
+                </Link>
+              </li>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-stone-400 transition hover:text-brand-gold"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-gold">
+              About Us
+            </h3>
+            <ul className="space-y-2">
+              {aboutDropdown.slice(0, 5).map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-stone-400 transition hover:text-brand-gold"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-gold">
+              Contact
+            </h3>
+            <ul className="space-y-3 text-sm text-stone-400">
+              <li>
+                <a href={`mailto:${company.email}`} className="transition hover:text-brand-gold">
+                  {company.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${company.phone}`} className="transition hover:text-brand-gold">
+                  {company.phone}
+                </a>
+              </li>
+              <li>{company.address}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-stone-800 pt-8">
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-gold">
+            Policies
+          </h3>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {footerPolicies.map((policy) => (
+              <li key={policy.href}>
+                <Link
+                  href={policy.href}
+                  className="text-sm text-stone-400 transition hover:text-brand-gold"
+                >
+                  {policy.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-stone-800 pt-8 text-sm text-stone-500 sm:flex-row">
+          <p>
+            © {new Date().getFullYear()} {company.name} All rights reserved.
+          </p>
+          <p>PASARA Licensed · Startup India · GeM Registered</p>
+        </div>
+      </SiteContainer>
+    </footer>
+  );
+}

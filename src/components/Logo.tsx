@@ -9,9 +9,9 @@ type LogoProps = {
 };
 
 const sizes = {
-  sm: { img: 40, text: "text-base sm:text-lg" },
-  md: { img: 48, text: "text-lg sm:text-xl" },
-  lg: { img: 56, text: "text-xl sm:text-2xl" },
+  sm: { img: 36, text: "text-base sm:text-lg" },
+  md: { img: 40, text: "text-lg sm:text-xl" },
+  lg: { img: 48, text: "text-xl sm:text-2xl" },
 };
 
 export default function Logo({ size = "md", showText = true, variant = "dark" }: LogoProps) {
@@ -19,17 +19,17 @@ export default function Logo({ size = "md", showText = true, variant = "dark" }:
   const textColor = variant === "light" ? "text-white" : "text-brand-navy dark:text-white";
 
   return (
-    <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+    <div className="flex min-w-0 items-center gap-2 sm:gap-3">
       <Image
         src="/logo.png"
         alt={`${company.shortName} logo`}
         width={s.img}
         height={s.img}
-        className="shrink-0 rounded-full object-cover"
+        className="size-9 shrink-0 rounded-full object-cover sm:size-12"
         priority
       />
       {showText && (
-        <p className={`truncate font-bold uppercase tracking-wide ${textColor} ${s.text}`}>
+        <p className={`whitespace-nowrap font-bold uppercase tracking-wide ${textColor} ${s.text}`}>
           {company.shortName}
         </p>
       )}
@@ -43,7 +43,7 @@ export function LogoLink({
   variant = "dark",
 }: LogoProps) {
   return (
-    <Link href="/" className="group flex min-w-0 shrink items-center">
+    <Link href="/" className="group flex min-w-0 items-center">
       <Logo size={size} showText={showText} variant={variant} />
     </Link>
   );

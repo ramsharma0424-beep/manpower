@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CoverImage from "@/components/CoverImage";
 
 type ContentImageProps = {
   src: string;
@@ -14,16 +14,13 @@ export default function ContentImage({
   className = "",
 }: ContentImageProps) {
   return (
-    <div className={`relative overflow-hidden rounded-2xl ${className}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={1200}
-        height={700}
-        priority={priority}
-        className="h-full w-full object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
-      />
-    </div>
+    <CoverImage
+      src={src}
+      alt={alt}
+      priority={priority}
+      aspect="wide"
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className={`rounded-lg ${className}`}
+    />
   );
 }

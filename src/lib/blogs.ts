@@ -352,7 +352,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "p",
-        text: `Rudra Manpower is PASARA licensed, GeM registered, and led by a retired Army Captain. We serve clients including Mothers Dairy, Tata Steel, and Gamut Buildcon. Call us at 70058514441 or email rudramanpowerservices@gmail.com — let's discuss what your site actually needs.`,
+        text: `Rudra Manpower is PASARA licensed, GeM registered, and led by a retired Army Captain. We serve clients including Mothers Dairy, Tata Steel, and Gamut Buildcon. Call us at 7005851441 or email rudramanpowerservices@gmail.com — let's discuss what your site actually needs.`,
       },
     ],
   },

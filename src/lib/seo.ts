@@ -82,11 +82,6 @@ export const rootMetadata: Metadata = {
     default: `${company.shortName} | Security, Housekeeping & Manpower in Delhi NCR`,
     template: `%s | ${company.shortName}`,
   },
-  icons: {
-    icon: [{ url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" }],
-    shortcut: [{ url: "/favicon.png?v=3", type: "image/png" }],
-    apple: [{ url: "/favicon.png?v=3", type: "image/png" }],
-  },
 };
 
 export const organizationJsonLd = {

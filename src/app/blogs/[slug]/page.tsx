@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import BlogContent from "@/components/BlogContent";
+import CoverImage from "@/components/CoverImage";
 import SiteContainer from "@/components/SiteContainer";
 import { blogs } from "@/lib/blogs";
 import { company } from "@/lib/data";
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      <section className="premium-hero py-14 text-white sm:py-16">
+      <section className="premium-hero py-16 text-white sm:py-20 lg:py-24">
         <SiteContainer narrow>
           <Link
             href="/blogs"
@@ -82,16 +82,14 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       <SiteContainer narrow className="py-12 sm:py-16">
-        <div className="relative mb-10 h-56 overflow-hidden rounded-lg sm:h-80">
-          <Image
-            src={post.image}
-            alt={post.imageAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-            priority
-          />
-        </div>
+        <CoverImage
+          src={post.image}
+          alt={post.imageAlt}
+          aspect="blog"
+          priority
+          sizes="(max-width: 768px) 100vw, 768px"
+          className="mb-10 rounded-lg"
+        />
 
         <BlogContent blocks={post.blocks} />
 

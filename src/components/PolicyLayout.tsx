@@ -11,7 +11,7 @@ type PolicyPageProps = {
 export function PolicyLayout({ title, lastUpdated = "July 2026", children }: PolicyPageProps) {
   return (
     <>
-      <section className="premium-hero py-14 text-white sm:py-16">
+      <section className="premium-hero py-16 text-white sm:py-20 lg:py-24">
         <SiteContainer narrow>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold">Legal</p>
           <h1 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">{title}</h1>

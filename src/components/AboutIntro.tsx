@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/CoverImage";
 import Reveal from "@/components/Reveal";
 import { aboutContent, company } from "@/lib/data";
 import { images } from "@/lib/images";
@@ -48,13 +48,12 @@ export default function AboutIntro({ compact = false }: AboutIntroProps) {
           <div className="order-1 lg:order-2">
             <Reveal delay={120}>
               <div className="group overflow-hidden rounded-lg shadow-xl shadow-stone-900/10">
-                <Image
+                <CoverImage
                   src={images.about}
                   alt="Rudra Manpower team collaborating on workforce solutions"
-                  width={900}
-                  height={700}
-                  className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-72 lg:h-auto"
+                  aspect="hero"
                   sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
             </Reveal>
@@ -67,7 +66,7 @@ export default function AboutIntro({ compact = false }: AboutIntroProps) {
                   {[
                     "You'll get army veteran-led, disciplined teams",
                     "Every security guard is police-verified before day one",
-                    "We serve brands like Mothers Dairy, Tata Steel & Lemon Tree",
+                    "We serve brands like Mothers Dairy & Lemon Tree in Gurugram, plus Tata Steel",
                     `We're active across ${company.region} — ready when you need us`,
                   ].map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-stone-700 dark:text-stone-300">

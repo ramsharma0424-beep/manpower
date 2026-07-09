@@ -7,7 +7,7 @@ export const company = {
     "We know how frustrating it is when guards don't show up, staff turnover disrupts your operations, or you're unsure who's on your premises. That's exactly why we built Rudra — to give you disciplined, verified teams led by a retired Indian Army Captain.",
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
-  phone: "70058514441",
+  phone: "7005851441",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
   locations: ["Delhi NCR", "Gurugram", "Noida", "Rohtak"],
@@ -112,52 +112,45 @@ export const stats = [
 export const certifications = [
   {
     id: "pasara",
-    name: "PASARA",
     title: "PASARA Licensed",
     description: "Licensed under the Private Security Agencies Regulation Act",
-    colors: "from-blue-700 to-blue-900",
+    logo: "/certificates/psara.png",
   },
   {
     id: "startup-india",
-    name: "Startup India",
     title: "Startup India Recognized",
     description: "Recognized by Department for Promotion of Industry and Internal Trade",
-    colors: "from-orange-500 to-orange-600",
+    logo: "/certificates/startup-india.png",
   },
   {
     id: "gem",
-    name: "GeM",
     title: "GeM Registered",
     description: "Registered on Government e-Marketplace for public procurement",
-    colors: "from-green-600 to-green-700",
+    logo: "/certificates/gem.png",
   },
   {
     id: "gst",
-    name: "GST",
     title: "GST Registered",
     description: "Goods and Services Tax compliant operations",
-    colors: "from-blue-600 to-indigo-700",
+    logo: "/certificates/gst.png",
   },
   {
     id: "epfo",
-    name: "EPFO",
     title: "EPFO Registered",
     description: "Employees Provident Fund Organisation registered employer",
-    colors: "from-red-600 to-red-700",
+    logo: "/certificates/epfo.png",
   },
   {
     id: "esic",
-    name: "ESIC",
     title: "ESIC Registered",
     description: "Employees State Insurance Corporation compliant",
-    colors: "from-sky-600 to-blue-700",
+    logo: "/certificates/esic.png",
   },
   {
     id: "mca",
-    name: "MCA",
     title: "MCA Incorporated",
     description: "Registered with Ministry of Corporate Affairs, Government of India",
-    colors: "from-slate-700 to-slate-900",
+    logo: "/certificates/mca.png",
   },
 ];
 
@@ -307,11 +300,11 @@ export const sectors = [
 export const clients = [
   {
     name: "Mothers Dairy",
-    state: "Uttar Pradesh",
+    state: "Gurugram (Haryana)",
     service: "Security",
     industry: "FMCG",
     initials: "MD",
-    color: "#1d4ed8",
+    featured: true,
   },
   {
     name: "Rices Mill",
@@ -319,15 +312,14 @@ export const clients = [
     service: "Labour",
     industry: "Manufacturing",
     initials: "RM",
-    color: "#2563eb",
   },
   {
     name: "Hotel Lemon Tree",
-    state: "Uttar Pradesh",
+    state: "Gurugram (Haryana)",
     service: "Housekeeping",
     industry: "Hospitality",
     initials: "LT",
-    color: "#3b82f6",
+    featured: true,
   },
   {
     name: "Paper Mill",
@@ -335,7 +327,6 @@ export const clients = [
     service: "Security",
     industry: "Manufacturing",
     initials: "PM",
-    color: "#1e40af",
   },
   {
     name: "Gamut Buildcon",
@@ -343,7 +334,6 @@ export const clients = [
     service: "Security",
     industry: "Construction",
     initials: "GB",
-    color: "#2563eb",
   },
   {
     name: "Tata Steel",
@@ -351,7 +341,6 @@ export const clients = [
     service: "Labour",
     industry: "Manufacturing",
     initials: "TS",
-    color: "#1d4ed8",
   },
   {
     name: "Sports Fit Gym",
@@ -359,7 +348,13 @@ export const clients = [
     service: "Helper",
     industry: "Fitness",
     initials: "SF",
-    color: "#3b82f6",
+  },
+  {
+    name: "Amul",
+    state: "Uttar Pradesh",
+    service: "Security",
+    industry: "FMCG",
+    initials: "AM",
   },
 ];
 
@@ -404,9 +399,9 @@ export const aboutDropdown = [
     description: "Our story, purpose, and operating regions",
   },
   {
-    href: "/about#mission",
-    label: "Mission",
-    description: "What drives every deployment we make",
+    href: "/about#certificates",
+    label: "Certificates",
+    description: "PASARA, GeM, Startup India & more",
   },
   {
     href: "/about#vision",
@@ -414,32 +409,29 @@ export const aboutDropdown = [
     description: "Where we are headed as a company",
   },
   {
-    href: "/about#leadership",
-    label: "Our Leadership",
-    description: "Army veteran-led management",
-  },
-  {
-    href: "/about#certificates",
-    label: "Certificates",
-    description: "PASARA, GeM, Startup India & more",
+    href: "/about#mission",
+    label: "Mission",
+    description: "What drives every deployment we make",
   },
   {
     href: "/about#core-values",
     label: "Core Values",
     description: "Discipline, integrity & transparency",
-    suggested: true,
   },
   {
     href: "/about#solutions",
     label: "Our Solutions",
     description: "How we solve industry challenges",
-    suggested: true,
+  },
+  {
+    href: "/about#leadership",
+    label: "Our Leadership",
+    description: "Army veteran-led management",
   },
   {
     href: "/about#quality-standards",
     label: "Quality Standards",
     description: "Training, briefings & site SOPs",
-    suggested: true,
   },
 ];
 

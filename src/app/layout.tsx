@@ -3,7 +3,9 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import ScrollToTop from "@/components/ScrollToTop";
 import ThemeScript from "@/components/ThemeScript";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -29,21 +31,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${cormorant.variable} h-full scroll-smooth`}
+      className={`${dmSans.variable} ${cormorant.variable} h-full scroll-smooth scroll-pt-20`}
       suppressHydrationWarning
     >
       <head>
         <ThemeScript />
-        <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/favicon.png?v=3" />
-        <link rel="shortcut icon" href="/favicon.png?v=3" />
         <JsonLd />
       </head>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
+        <ScrollToTop />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ export const images = {
   about:
     "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=700&fit=crop&q=80",
   security:
-    "https://images.unsplash.com/photo-1557597774-9d2736050989?w=1200&h=700&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&h=700&fit=crop&q=80",
   housekeeping:
     "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=700&fit=crop&q=80",
   construction:

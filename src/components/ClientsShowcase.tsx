@@ -34,7 +34,12 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
     });
   }, [serviceFilter, industryFilter]);
 
-  const displayClients = preview ? clients.slice(0, 6) : filtered;
+  const displayClients = preview
+    ? [
+        ...clients.filter((client) => client.featured),
+        ...clients.filter((client) => !client.featured),
+      ].slice(0, 6)
+    : filtered;
 
   if (preview) {
     return (
@@ -49,14 +54,14 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-stone-600 dark:text-stone-300">
               Leading enterprises across Delhi NCR trust us for security, housekeeping, and manpower
-              solutions.
+              solutions — including Mothers Dairy and Hotel Lemon Tree in Gurugram.
             </p>
             <div className="gold-line mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
             {displayClients.map((client) => (
-              <ClientCard key={client.name} client={client} />
+              <ClientCard key={client.name} client={client} showMeta />
             ))}
           </div>
 
@@ -71,7 +76,7 @@ export default function ClientsShowcase({ preview = false }: ClientsShowcaseProp
   }
 
   return (
-    <section className="py-16">
+    <section className="section-muted py-16">
       <SiteContainer>
         <div className="flex flex-col gap-10 lg:flex-row">
           <aside className="lg:w-56 lg:shrink-0">
@@ -148,10 +153,7 @@ function ClientCard({
 }) {
   return (
     <div className="card-elevated group flex flex-col items-center justify-center p-6">
-      <div
-        className="mb-4 flex h-16 w-16 items-center justify-center rounded-sm text-lg font-bold text-white shadow-sm transition-transform duration-500 group-hover:scale-105"
-        style={{ backgroundColor: client.color }}
-      >
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-sm border border-brand-border bg-brand-cream font-display text-lg font-semibold tracking-wide text-brand-gold shadow-sm transition-all duration-500 group-hover:scale-105 group-hover:border-brand-gold/50 dark:border-stone-700 dark:bg-stone-800">
         {client.initials}
       </div>
       <p className="text-center text-sm font-semibold text-brand-navy dark:text-stone-100">
@@ -159,10 +161,10 @@ function ClientCard({
       </p>
       {showMeta && (
         <div className="mt-2 flex flex-col items-center gap-1">
-          <span className="rounded-sm bg-brand-cream px-2.5 py-0.5 text-xs font-medium text-brand-gold dark:bg-stone-800">
+          <span className="rounded-sm border border-brand-border bg-brand-cream px-2.5 py-0.5 text-xs font-medium text-brand-gold dark:border-stone-700 dark:bg-stone-800">
             {client.service}
           </span>
-          <span className="text-xs text-stone-400">{client.state}</span>
+          <span className="text-xs text-stone-400 dark:text-stone-500">{client.state}</span>
         </div>
       )}
     </div>

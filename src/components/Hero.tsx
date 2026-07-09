@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/CoverImage";
 import Reveal from "@/components/Reveal";
 import { company, sectors } from "@/lib/data";
 import { images } from "@/lib/images";
@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(166,124,82,0.08),transparent_55%)]" />
-      <SiteContainer className="relative grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
+      <SiteContainer className="relative grid items-center gap-8 py-12 sm:gap-10 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:py-28">
         <div className="order-2 lg:order-1">
           <Reveal>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold">
@@ -38,19 +38,18 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={150} className="order-1 lg:order-2">
+        <div className="order-1 lg:order-2">
           <div className="group relative overflow-hidden rounded-lg shadow-2xl shadow-stone-900/10">
-            <Image
+            <CoverImage
               src={images.hero}
               alt="Professional workforce and corporate facility"
-              width={1200}
-              height={800}
               priority
-              className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-72 lg:h-full lg:min-h-[440px]"
+              aspect="hero"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              className="transition-transform duration-700 group-hover:scale-[1.02]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-stone-950/30 p-6 backdrop-blur-sm">
+            <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-stone-950/30 p-4 backdrop-blur-sm sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
                 Operational Areas
               </p>
@@ -73,7 +72,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </Reveal>
+        </div>
       </SiteContainer>
     </section>
   );

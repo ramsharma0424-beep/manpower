@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/CoverImage";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
-import SiteContainer from "@/components/SiteContainer";
+import SectionHeading from "./SectionHeading";
+import SiteContainer from "./SiteContainer";
 import { blogs } from "@/lib/blogs";
 
 export default function BlogsPreview() {
@@ -23,15 +23,13 @@ export default function BlogsPreview() {
           {latest.map((post, i) => (
             <Reveal key={post.slug} delay={i * 90}>
               <article className="card-elevated group flex flex-col overflow-hidden">
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.imageAlt}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
+                <CoverImage
+                  src={post.image}
+                  alt={post.imageAlt}
+                  aspect="blog"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="transition-transform duration-700 group-hover:scale-[1.02]"
+                />
                 <div className="flex flex-1 flex-col p-6">
                   <div className="mb-3 flex items-center gap-2 text-xs text-stone-500 dark:text-stone-400">
                     <span className="rounded-sm bg-brand-cream px-2.5 py-0.5 font-medium text-brand-gold dark:bg-stone-800">

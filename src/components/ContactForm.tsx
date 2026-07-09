@@ -12,10 +12,48 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [service, setService] = useState("");
   const [otherService, setOtherService] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      service: String(formData.get("service") ?? ""),
+      otherService: String(formData.get("otherService") ?? ""),
+      message: String(formData.get("message") ?? ""),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Failed to send message.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+      setService("");
+      setOtherService("");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -37,6 +75,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {error && (
+        <div className="rounded-sm border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/40 dark:text-red-300">
+          {error}
+        </div>
+      )}
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelClass}>
@@ -46,6 +90,7 @@ export default function ContactForm() {
             id="name"
             name="name"
             required
+            disabled={loading}
             className={fieldClass}
             placeholder="Your name"
           />
@@ -59,6 +104,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             required
+            disabled={loading}
             className={fieldClass}
             placeholder="Your phone"
           />
@@ -74,6 +120,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
+          disabled={loading}
           className={fieldClass}
           placeholder="you@company.com"
         />
@@ -87,6 +134,7 @@ export default function ContactForm() {
           id="service"
           name="service"
           required
+          disabled={loading}
           value={service}
           onChange={(e) => setService(e.target.value)}
           className={fieldClass}
@@ -111,6 +159,7 @@ export default function ContactForm() {
               id="otherService"
               name="otherService"
               required
+              disabled={loading}
               value={otherService}
               onChange={(e) => setOtherService(e.target.value)}
               className={fieldClass}
@@ -129,13 +178,18 @@ export default function ContactForm() {
           name="message"
           rows={4}
           required
+          disabled={loading}
           className={fieldClass}
           placeholder="Tell us about your manpower requirements..."
         />
       </div>
 
-      <button type="submit" className="btn-primary w-full sm:w-auto sm:px-10">
-        Send Message
+      <button
+        type="submit"
+        disabled={loading}
+        className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:px-10"
+      >
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

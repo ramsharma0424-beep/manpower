@@ -44,6 +44,10 @@ export default function AboutPage() {
         </SiteContainer>
       </section>
 
+      <div id="certificates" className="scroll-mt-24">
+        <ComplianceBadges />
+      </div>
+
       <section id="vision" className="scroll-mt-24 section-muted py-16">
         <SiteContainer>
           <div className="grid gap-8 md:grid-cols-2">
@@ -139,9 +143,6 @@ export default function AboutPage() {
         </SiteContainer>
       </section>
 
-      <div id="certificates" className="scroll-mt-24">
-        <ComplianceBadges />
-      </div>
     </>
   );
 }

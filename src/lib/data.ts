@@ -11,7 +11,7 @@ export const company = {
   website: "https://manpowerservices.com",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
-  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad", "Burari"],
+  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad", "Bhiwadi"],
   address: "Gurugram, Haryana, India",
 };
 

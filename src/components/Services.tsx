@@ -46,6 +46,16 @@ const icons: Record<string, React.ReactElement> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" />
     </svg>
   ),
+  bouncer: (
+    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0z" />
+    </svg>
+  ),
+  pso: (
+    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+    </svg>
+  ),
 };
 
 type ServicesProps = {
@@ -53,7 +63,7 @@ type ServicesProps = {
 };
 
 export default function Services({ showAll = false }: ServicesProps) {
-  const items = showAll ? services : services.slice(0, 6);
+  const items = showAll ? services : services.slice(0, 8);
 
   return (
     <section className="py-20">
@@ -88,10 +98,10 @@ export default function Services({ showAll = false }: ServicesProps) {
               <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
                 {service.description}
               </p>
-              <ul className="mt-3 hidden space-y-2 sm:mt-5 sm:block">
+              <ul className="mt-3 space-y-1.5 sm:mt-5 sm:space-y-2">
                 {service.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-stone-500 dark:text-stone-400">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" />
+                  <li key={item} className="flex items-start gap-2 text-[11px] text-stone-500 sm:text-sm dark:text-stone-400">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold sm:mt-1.5" />
                     {item}
                   </li>
                 ))}

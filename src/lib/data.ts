@@ -189,8 +189,8 @@ export const services = [
     highlights: [
       "Access control & visitor management",
       "Fire safety & emergency response",
-      "Bouncer services for hotels, events & venues",
-      "PSO (Personal Security Officer) deployment",
+      "Parking & perimeter security",
+      "PASARA-licensed operations",
     ],
   },
   {
@@ -204,6 +204,32 @@ export const services = [
       "Hospital & hotel hygiene standards",
       "Mall & retail facility upkeep",
       "Residential housekeeping support",
+    ],
+  },
+  {
+    id: "bouncer",
+    title: "Bouncer Services",
+    description:
+      "Professional bouncers for hotels, banquets, clubs, corporate events, and venues across Gurugram, Noida, and Delhi NCR.",
+    icon: "bouncer",
+    highlights: [
+      "Hotel, banquet & club venue security",
+      "Crowd screening & entry control",
+      "Event and nightlife assignments",
+      "Trained, uniformed personnel",
+    ],
+  },
+  {
+    id: "pso",
+    title: "PSO Services",
+    description:
+      "Personal Security Officers for executives, VIPs, and high-profile individuals — discreet, verified protection across Delhi NCR.",
+    icon: "pso",
+    highlights: [
+      "Executive & VIP escort protection",
+      "Police-verified PSO personnel",
+      "Threat awareness & communication protocols",
+      "Assignment-based deployment",
     ],
   },
   {

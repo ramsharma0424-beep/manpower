@@ -9,10 +9,20 @@ const fieldClass =
 
 const labelClass = "mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300";
 
+const ACCEPTED_RESUME_TYPES = ".pdf,.doc,.docx,application/pdf,application/msword";
+const MAX_RESUME_MB = 5;
+
 export default function CareerApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [resumeName, setResumeName] = useState("");
+
+  function handleResumeChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    setResumeName(file?.name ?? "");
+    setError("");
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -21,21 +31,24 @@ export default function CareerApplicationForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const resume = formData.get("resume");
 
-    const payload = {
-      formType: "career",
-      name: String(formData.get("name") ?? ""),
-      phone: String(formData.get("phone") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      role: String(formData.get("role") ?? ""),
-      message: String(formData.get("message") ?? ""),
-    };
+    if (!(resume instanceof File) || resume.size === 0) {
+      setError("Please upload your resume or CV (PDF, DOC, or DOCX).");
+      setLoading(false);
+      return;
+    }
+
+    if (resume.size > MAX_RESUME_MB * 1024 * 1024) {
+      setError(`Resume must be ${MAX_RESUME_MB} MB or smaller.`);
+      setLoading(false);
+      return;
+    }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/careers", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       const data = (await response.json()) as { error?: string };
@@ -46,6 +59,7 @@ export default function CareerApplicationForm() {
 
       setSubmitted(true);
       form.reset();
+      setResumeName("");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to submit application.");
     } finally {
@@ -61,7 +75,7 @@ export default function CareerApplicationForm() {
         </p>
         <p className="mt-2 text-sm text-green-700 dark:text-green-400">
           Thank you for your interest in joining {company.shortName}. Our HR team will review your
-          application and contact you shortly. For urgent queries, call{" "}
+          application and resume, and contact you shortly. For urgent queries, call{" "}
           <a href={`tel:${company.phone}`} className="font-semibold underline">
             {company.phone}
           </a>
@@ -72,7 +86,7 @@ export default function CareerApplicationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
       {error && (
         <div className="rounded-sm border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/40 dark:text-red-300">
           {error}
@@ -129,6 +143,32 @@ export default function CareerApplicationForm() {
             </option>
           ))}
         </select>
+      </div>
+
+      <div>
+        <label htmlFor="career-resume" className={labelClass}>
+          Resume / CV
+        </label>
+        <div className="rounded-sm border border-dashed border-brand-border bg-brand-cream/40 p-4 dark:border-stone-600 dark:bg-stone-900/40">
+          <input
+            id="career-resume"
+            name="resume"
+            type="file"
+            required
+            disabled={loading}
+            accept={ACCEPTED_RESUME_TYPES}
+            onChange={handleResumeChange}
+            className="block w-full cursor-pointer text-sm text-stone-600 file:mr-4 file:cursor-pointer file:rounded-sm file:border-0 file:bg-brand-gold file:px-4 file:py-2 file:text-sm file:font-semibold file:text-stone-950 hover:file:bg-brand-gold-dark dark:text-stone-300"
+          />
+          <p className="mt-2 text-xs text-stone-500 dark:text-stone-400">
+            PDF, DOC, or DOCX only. Maximum size {MAX_RESUME_MB} MB.
+          </p>
+          {resumeName && (
+            <p className="mt-2 text-xs font-medium text-brand-gold">
+              Selected: {resumeName}
+            </p>
+          )}
+        </div>
       </div>
 
       <div>

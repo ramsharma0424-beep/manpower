@@ -1,11 +1,18 @@
 import nodemailer from "nodemailer";
 
+export type EmailAttachment = {
+  filename: string;
+  content: Buffer;
+  contentType: string;
+};
+
 export type ContactFormPayload = {
   name: string;
   phone: string;
   email: string;
   service: string;
   message: string;
+  attachments?: EmailAttachment[];
 };
 
 function getSmtpConfig() {
@@ -33,26 +40,43 @@ export async function sendContactEmail(payload: ContactFormPayload) {
     auth: { user, pass },
   });
 
-  const subject = `New enquiry from ${payload.name} — ${payload.service}`;
+  const isCareer = payload.service.startsWith("Career Application:");
+  const heading = isCareer ? "New career application" : "New contact form submission";
+  const subject = isCareer
+    ? `${payload.service} — ${payload.name}`
+    : `New enquiry from ${payload.name} — ${payload.service}`;
+
+  const attachmentNote =
+    payload.attachments && payload.attachments.length > 0
+      ? "\nResume/CV: Attached to this email."
+      : "";
 
   const text = [
-    "New contact form submission",
+    heading,
     "",
     `Name: ${payload.name}`,
     `Phone: ${payload.phone}`,
     `Email: ${payload.email}`,
     `Service: ${payload.service}`,
+    attachmentNote,
     "",
     "Message:",
     payload.message,
-  ].join("\n");
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   const html = `
-    <h2>New contact form submission</h2>
+    <h2>${heading}</h2>
     <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
     <p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>
     <p><strong>Email:</strong> <a href="mailto:${escapeHtml(payload.email)}">${escapeHtml(payload.email)}</a></p>
     <p><strong>Service:</strong> ${escapeHtml(payload.service)}</p>
+    ${
+      payload.attachments?.length
+        ? `<p><strong>Resume/CV:</strong> Attached (${escapeHtml(payload.attachments[0].filename)})</p>`
+        : ""
+    }
     <p><strong>Message:</strong></p>
     <p style="white-space:pre-wrap">${escapeHtml(payload.message)}</p>
   `;
@@ -64,6 +88,11 @@ export async function sendContactEmail(payload: ContactFormPayload) {
     subject,
     text,
     html,
+    attachments: payload.attachments?.map((file) => ({
+      filename: file.filename,
+      content: file.content,
+      contentType: file.contentType,
+    })),
   });
 }
 

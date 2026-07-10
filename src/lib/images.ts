@@ -1,9 +1,7 @@
 /** Curated stock images (Unsplash) for workforce, security & facility themes */
 export const images = {
-  hero:
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop&q=80",
-  about:
-    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=700&fit=crop&q=80",
+  hero: "/hero-cyber-city.jpg",
+  about: "/about-india.jpg",
   security:
     "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&h=700&fit=crop&q=80",
   housekeeping:

@@ -46,15 +46,15 @@ export default function ServicesPage() {
             Tailored manpower for key sectors across Delhi NCR — with sector-specific training,
             supervisor reporting, and deployment in {locationsLine}.
           </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="card-grid mt-6 grid gap-4 sm:grid-cols-3">
             {industryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="card-elevated p-5 transition hover:border-brand-gold/40"
+                className="card-elevated flex h-full flex-col p-5 transition hover:border-brand-gold/40"
               >
                 <h3 className="font-semibold text-brand-navy dark:text-stone-100">{link.label}</h3>
-                <p className="mt-2 text-sm text-brand-gold">Explore industry solutions →</p>
+                <p className="mt-auto pt-2 text-sm text-brand-gold">Explore industry solutions →</p>
               </Link>
             ))}
           </div>

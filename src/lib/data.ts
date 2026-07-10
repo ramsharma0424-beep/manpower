@@ -4,24 +4,24 @@ export const company = {
   tagline: "Your trusted partner for security, housekeeping & manpower in Delhi NCR",
   heroHeadline: "Need a Workforce You Can Actually Rely On?",
   heroSubtext:
-    "We know how frustrating it is when guards don't show up, staff turnover disrupts your operations, or you're unsure who's on your premises. That's exactly why we built Rudra — to give you disciplined, verified teams led by a retired Indian Army Captain.",
+    "Led by a dedicated retired armed forces team, Rudra Manpower deploys disciplined, police-verified security, housekeeping, and labour across Delhi NCR — with supervisors accountable on every shift.",
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
   phone: "7005851441",
   website: "https://manpowerservices.com",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
-  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad"],
+  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad", "Burari"],
   address: "Gurugram, Haryana, India",
 };
 
 export const aboutContent = {
   title: "We're Here to Make Manpower Simple for You",
   summary:
-    "If you've ever dealt with absent staff, unclear billing, or security you can't trust — you're not alone. Rudra Manpower was built to fix that. Led by a retired Indian Army Captain, we give you teams that show up on time, follow SOPs, and treat your site like their own.",
+    "If you've ever dealt with absent staff, unclear billing, or security you can't trust — you're not alone. Rudra Manpower was built to fix that, with a retired armed forces team overseeing every deployment on the ground.",
   paragraphs: [
     "We started in 2023 because too many businesses in Delhi NCR were stuck with the same problems: delayed wages to workers, no transparency on who's deployed, constant re-hiring, and security staff without proper verification. You deserve better than that.",
-    "Today, we deploy PASARA-licensed security guards, trained housekeeping teams, and skilled labour across Gurugram, Noida, Rohtak, Sonipat, Manesar, and Faridabad — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you manage one facility or ten, we scale with you.",
+    `Today, we deploy PASARA-licensed security guards, trained housekeeping teams, and skilled labour across ${company.locations.join(", ")} — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you manage one facility or ten, we scale with you.`,
     "Our promise is simple: you focus on running your business. We'll handle the people, the discipline, and the accountability on the ground.",
   ],
 };
@@ -437,15 +437,15 @@ export const mission = {
 
 export const leadership = [
   {
-    name: "Capt. (Retd.) Raj Kumar",
+    name: "Capt Raj Kumar (Retd)",
     role: "Director",
     badge: "Indian Army Veteran",
-    bio: "A retired Captain from the Indian Army, Capt. (Retd.) Raj Kumar brings decades of command experience, strategic planning, and operational rigour to Rudra Manpower Services. Having led troops in high-pressure environments and managed complex security operations, he instils the same values of discipline, punctuality, and accountability across every deployment — from corporate security to industrial labour.",
+    bio: "After retiring as a Captain from the Indian Army, Raj Kumar founded Rudra Manpower in 2023 because the same problems kept showing up at client sites — guards not reporting on time, verification done only on paper, and facility managers left guessing who was actually on duty. He still runs operations hands-on, with retired armed forces supervisors handling site assessments, shift briefings, escalation calls, and quality checks across Delhi NCR.",
     highlights: [
       "Retired Captain, Indian Army",
-      "Expertise in security operations & team leadership",
-      "Champion of police verification & workforce integrity",
-      "Drives PASARA-compliant, mission-first service delivery",
+      "Hands-on site assessments before deployment",
+      "Police verification mandatory for security staff",
+      "PASARA-licensed operations across Delhi NCR",
     ],
   },
 ];

@@ -41,14 +41,14 @@ export default function TrainingPage() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="card-grid mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {trainingPrograms.map((program, i) => (
               <Reveal key={program.title} delay={i * 60}>
-                <article className="card-elevated h-full p-5 sm:p-6">
+                <article className="card-elevated flex h-full flex-col p-5 sm:p-6">
                   <h2 className="font-display text-lg font-semibold text-brand-navy dark:text-stone-100">
                     {program.title}
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
                     {program.description}
                   </p>
                   <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-brand-gold">

@@ -19,10 +19,10 @@ export default function BlogsPreview() {
           />
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="card-grid grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {latest.map((post, i) => (
             <Reveal key={post.slug} delay={i * 90}>
-              <article className="card-elevated group flex flex-col overflow-hidden">
+              <article className="card-elevated group flex h-full flex-col overflow-hidden">
                 <CoverImage
                   src={post.image}
                   alt={post.imageAlt}

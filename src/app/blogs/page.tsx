@@ -50,11 +50,11 @@ export default function BlogsPage() {
 
       <section className="py-14 sm:py-16">
         <SiteContainer>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="card-grid grid gap-8 md:grid-cols-2">
             {blogs.map((post) => (
               <article
                 key={post.slug}
-                className="card-elevated group flex flex-col overflow-hidden"
+                className="card-elevated group flex h-full flex-col overflow-hidden"
               >
                 <CoverImage
                   src={post.image}

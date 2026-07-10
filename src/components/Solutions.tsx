@@ -33,10 +33,10 @@ export default function Solutions() {
           />
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="card-grid grid auto-rows-fr gap-6 md:grid-cols-2">
           {solutions.map((item, i) => (
-            <Reveal key={item.title} delay={i * 80}>
-              <div className="card-elevated p-6">
+            <Reveal key={item.title} delay={i * 80} className="h-full">
+              <div className="card-elevated flex h-full min-h-full flex-col p-6">
                 <div className="mb-4 inline-flex rounded-sm bg-brand-cream p-3 text-brand-gold dark:bg-stone-800">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     {icons[item.icon]}
@@ -49,7 +49,7 @@ export default function Solutions() {
                   <span className="font-medium text-stone-700 dark:text-stone-300">Challenge: </span>
                   {item.problem}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
                   <span className="font-medium text-brand-gold">Our approach: </span>
                   {item.solution}
                 </p>

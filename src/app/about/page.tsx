@@ -66,8 +66,8 @@ export default function AboutPage() {
 
       <section id="vision" className="scroll-mt-24 section-muted py-16">
         <SiteContainer>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="card-elevated p-8">
+          <div className="card-grid grid gap-8 md:grid-cols-2">
+            <div className="card-elevated h-full p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">Vision</p>
               <h2 className="mt-2 font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
                 {vision.title}
@@ -76,7 +76,7 @@ export default function AboutPage() {
                 {vision.description}
               </p>
             </div>
-            <div id="mission" className="card-elevated scroll-mt-24 p-8">
+            <div id="mission" className="card-elevated h-full scroll-mt-24 p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">Mission</p>
               <h2 className="mt-2 font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
                 {mission.title}
@@ -146,9 +146,9 @@ export default function AboutPage() {
           <h2 className="mb-8 text-center font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
             Quality Assurance at Every Shift
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="card-grid grid gap-4 md:grid-cols-2">
             {qualityAssurance.map((item, i) => (
-              <div key={item} className="card-elevated flex gap-4 p-6">
+              <div key={item} className="card-elevated flex h-full items-start gap-4 p-6">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-brand-gold text-sm font-bold text-stone-950">
                   {i + 1}
                 </span>

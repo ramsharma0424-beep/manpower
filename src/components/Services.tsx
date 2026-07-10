@@ -75,10 +75,10 @@ export default function Services({ showAll = false }: ServicesProps) {
           />
         </Reveal>
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:grid-cols-3">
+        <div className="card-grid grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:grid-cols-3">
           {items.map((service, i) => (
             <Reveal key={service.id} delay={i * 80}>
-              <article className="card-elevated group h-full p-4 sm:p-7">
+              <article className="card-elevated group flex h-full flex-col p-4 sm:p-7">
               <div className="mb-3 inline-flex rounded-sm bg-brand-cream p-2 text-brand-gold sm:mb-5 sm:p-3 dark:bg-stone-800 [&_svg]:h-5 [&_svg]:w-5 sm:[&_svg]:h-7 sm:[&_svg]:w-7">
                 {icons[service.icon]}
               </div>

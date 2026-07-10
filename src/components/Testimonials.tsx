@@ -15,7 +15,7 @@ export default function Testimonials() {
           />
         </Reveal>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="card-grid grid gap-5 md:grid-cols-3">
           {testimonials.map((item, i) => (
             <Reveal key={item.name + item.role} delay={i * 80}>
               <blockquote className="card-elevated flex h-full flex-col p-5 sm:p-6">

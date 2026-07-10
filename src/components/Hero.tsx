@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="group relative overflow-hidden rounded-lg shadow-2xl shadow-stone-900/10">
             <CoverImage
               src={images.hero}
-              alt="Professional workforce and corporate facility"
+              alt="DLF Cyber City corporate towers in Gurugram"
               priority
               aspect="hero"
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -18,7 +18,7 @@ export default function Leadership({ compact = false }: LeadershipProps) {
           <SectionHeading
             eyebrow="Leadership"
             title="Led by Military Discipline & Integrity"
-            description="Our leadership brings the precision, accountability, and mission-first ethos of the Indian Army to every workforce deployment."
+            description="Capt Raj Kumar (Retd) and our retired armed forces supervisors bring on-ground discipline, clear reporting, and accountability to every deployment."
           />
         </Reveal>
 

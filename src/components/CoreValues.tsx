@@ -39,10 +39,10 @@ export default function CoreValues() {
           />
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="card-grid grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreValues.map((value, i) => (
-            <Reveal key={value.title} delay={i * 70}>
-              <div className="card-elevated p-6">
+            <Reveal key={value.title} delay={i * 70} className="h-full">
+              <div className="card-elevated flex h-full min-h-full flex-col p-6">
                 <div className="mb-4 inline-flex rounded-sm bg-brand-cream p-3 text-brand-gold dark:bg-stone-800">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     {icons[value.icon]}
@@ -51,7 +51,7 @@ export default function CoreValues() {
                 <h3 className="font-display text-lg font-semibold text-brand-navy dark:text-stone-100">
                   {value.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
                   {value.description}
                 </p>
               </div>

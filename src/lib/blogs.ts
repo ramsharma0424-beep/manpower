@@ -159,7 +159,7 @@ export const blogs: BlogPost[] = [
     blocks: [
       {
         type: "p",
-        text: "When Capt. (Retd.) Raj Kumar founded Rudra Manpower, he didn't bring a corporate playbook — he brought  years of commanding troops in high-pressure environments. And honestly? That's exactly what the manpower industry needed.",
+        text: "When Capt Raj Kumar (Retd) founded Rudra Manpower, he didn't bring a corporate playbook — he brought years of commanding troops in high-pressure environments. And honestly? That's exactly what the manpower industry needed.",
       },
       {
         type: "h2",

@@ -70,13 +70,13 @@ export default async function ServiceDetailPage({ params }: Props) {
           <h2 className="mt-10 font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
             What We Offer
           </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="card-grid mt-6 grid gap-4 sm:grid-cols-2">
             {service.offerings.map((offering) => (
-              <article key={offering.title} className="card-elevated p-5 sm:p-6">
+              <article key={offering.title} className="card-elevated flex h-full flex-col p-5 sm:p-6">
                 <h3 className="font-semibold text-brand-navy dark:text-stone-100">
                   {offering.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
                   {offering.description}
                 </p>
               </article>

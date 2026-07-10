@@ -26,6 +26,11 @@ export const whyChooseRudra = [
     title: "Deployed Across Delhi NCR",
     description: `Active operations in ${company.locations.join(", ")} with scalable teams for single-site and multi-location contracts.`,
   },
+  {
+    title: "Dedicated Retired Armed Forces Team",
+    description:
+      "Beyond one leader — Rudra is backed by a dedicated retired armed forces team that brings field discipline, operational planning, and mission-first accountability to every deployment.",
+  },
 ];
 
 export const testimonials = [
@@ -185,7 +190,7 @@ export const careerRoles = [
   {
     id: "security-guard",
     title: "Security Guard",
-    locations: "Gurugram, Noida, Manesar, Faridabad, Sonipat",
+    locations: "Gurugram, Noida, Manesar, Faridabad, Sonipat, Burari",
     type: "Full-time / Shift-based",
     description:
       "Join our PASARA-licensed security teams for corporate, industrial, hotel, and residential deployments across Delhi NCR. Police verification required.",
@@ -193,7 +198,7 @@ export const careerRoles = [
   {
     id: "housekeeping",
     title: "Housekeeping Staff",
-    locations: "Gurugram, Noida, Faridabad",
+    locations: "Gurugram, Noida, Faridabad, Burari",
     type: "Full-time / Shift-based",
     description:
       "Work with hotels, corporates, malls, and hospitals. Training provided on hygiene SOPs, equipment use, and guest-area standards.",
@@ -217,7 +222,7 @@ export const careerRoles = [
   {
     id: "labour-helper",
     title: "Labour & Site Helper",
-    locations: "Noida, Faridabad, Sonipat, Rohtak",
+    locations: "Noida, Faridabad, Sonipat, Rohtak, Burari",
     type: "Project & contract-based",
     description:
       "Construction sites, manufacturing units, and industrial facilities. Safety briefing provided before deployment.",
@@ -262,7 +267,7 @@ export const serviceDetails: ServiceDetail[] = [
     heroDescription:
       "Police-verified security guards for corporates, factories, warehouses, and residential premises across Delhi NCR.",
     intro:
-      "Your first line of defence should be licensed, verified, and disciplined. Rudra Manpower deploys PASARA-compliant security personnel with army veteran-led oversight — covering access control, fire safety, parking, and perimeter security across Gurugram, Noida, Manesar, Faridabad, Sonipat, and Rohtak.",
+      "Your first line of defence should be licensed, verified, and disciplined. Rudra Manpower deploys PASARA-compliant security personnel with army veteran-led oversight — covering access control, fire safety, parking, and perimeter security across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak, and Burari.",
     image: images.security,
     imageAlt: "Professional security guard at a corporate facility",
     offerings: [
@@ -699,7 +704,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         title: "Scalable Multi-Site Teams",
         description:
-          "One contract structure across Gurugram, Noida, Manesar, Faridabad, Sonipat, and Rohtak with centralised coordination.",
+          "One contract structure across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak, and Burari with centralised coordination.",
       },
     ],
     whyUs: [

@@ -16,7 +16,7 @@ export default function ComplianceBadges() {
           />
         </Reveal>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
+        <div className="card-grid mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
           {certifications.map((cert, i) => (
             <Reveal
               key={cert.id}
@@ -36,7 +36,7 @@ export default function ComplianceBadges() {
                 <h3 className="text-sm font-semibold text-brand-navy dark:text-stone-100">
                   {cert.title}
                 </h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-stone-500 dark:text-stone-400">
+                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-stone-500 dark:text-stone-400">
                   {cert.description}
                 </p>
               </div>

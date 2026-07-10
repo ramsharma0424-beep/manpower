@@ -50,7 +50,7 @@ export default function AboutIntro({ compact = false }: AboutIntroProps) {
               <div className="group overflow-hidden rounded-lg shadow-xl shadow-stone-900/10">
                 <CoverImage
                   src={images.about}
-                  alt="Rudra Manpower team collaborating on workforce solutions"
+                  alt="Indian professionals at work in a corporate setting"
                   aspect="hero"
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="transition-transform duration-700 group-hover:scale-[1.02]"

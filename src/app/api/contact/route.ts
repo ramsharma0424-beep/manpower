@@ -9,6 +9,8 @@ type ContactRequestBody = {
   service?: string;
   otherService?: string;
   message?: string;
+  formType?: "contact" | "career";
+  role?: string;
 };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,11 +33,10 @@ export async function POST(request: Request) {
     const name = body.name?.trim();
     const phone = body.phone?.trim();
     const email = body.email?.trim();
-    const service = body.service?.trim();
-    const otherService = body.otherService?.trim();
     const message = body.message?.trim();
+    const formType = body.formType ?? "contact";
 
-    if (!name || !phone || !email || !service || !message) {
+    if (!name || !phone || !email || !message) {
       return NextResponse.json({ error: "Please fill in all required fields." }, { status: 400 });
     }
 
@@ -47,18 +48,37 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please enter a valid phone number." }, { status: 400 });
     }
 
-    if (service === "other" && !otherService) {
-      return NextResponse.json(
-        { error: "Please specify the service you need." },
-        { status: 400 },
-      );
+    let serviceLabel: string;
+
+    if (formType === "career") {
+      const role = body.role?.trim();
+      if (!role) {
+        return NextResponse.json({ error: "Please select a role." }, { status: 400 });
+      }
+      serviceLabel = `Career Application: ${role}`;
+    } else {
+      const service = body.service?.trim();
+      const otherService = body.otherService?.trim();
+
+      if (!service) {
+        return NextResponse.json({ error: "Please fill in all required fields." }, { status: 400 });
+      }
+
+      if (service === "other" && !otherService) {
+        return NextResponse.json(
+          { error: "Please specify the service you need." },
+          { status: 400 },
+        );
+      }
+
+      serviceLabel = resolveServiceLabel(service, otherService);
     }
 
     await sendContactEmail({
       name,
       phone,
       email,
-      service: resolveServiceLabel(service, otherService),
+      service: serviceLabel,
       message,
     });
 

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogs } from "@/lib/blogs";
+import { industries, serviceDetails } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 
 const pageConfig: Array<{
@@ -10,8 +11,9 @@ const pageConfig: Array<{
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/services", changeFrequency: "weekly", priority: 0.9 },
   { path: "/contact", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/careers", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/training", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/clients", changeFrequency: "monthly", priority: 0.8 },
   { path: "/blogs", changeFrequency: "weekly", priority: 0.7 },
   { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms-of-use", changeFrequency: "yearly", priority: 0.3 },
@@ -26,6 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency,
       priority,
+    })),
+    ...serviceDetails.map((service) => ({
+      url: `${siteUrl}/services/${service.id}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })),
+    ...industries.map((industry) => ({
+      url: `${siteUrl}/industries/${industry.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
     ...blogs.map((post) => ({
       url: `${siteUrl}/blogs/${post.slug}`,

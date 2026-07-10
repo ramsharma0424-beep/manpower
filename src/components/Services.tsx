@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { getServiceDetail } from "@/lib/content";
 import { services } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import SiteContainer from "./SiteContainer";
@@ -73,19 +74,36 @@ export default function Services({ showAll = false }: ServicesProps) {
                 {icons[service.icon]}
               </div>
               <h3 className="font-display text-sm font-semibold leading-snug text-brand-navy sm:text-xl dark:text-stone-100">
-                {service.title}
+                {getServiceDetail(service.id) ? (
+                  <Link
+                    href={`/services/${service.id}`}
+                    className="transition hover:text-brand-gold"
+                  >
+                    {service.title}
+                  </Link>
+                ) : (
+                  service.title
+                )}
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
                 {service.description}
               </p>
               <ul className="mt-3 hidden space-y-2 sm:mt-5 sm:block">
-                {service.highlights.slice(0, 3).map((item) => (
+                {service.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-stone-500 dark:text-stone-400">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" />
                     {item}
                   </li>
                 ))}
               </ul>
+              {getServiceDetail(service.id) && (
+                <Link
+                  href={`/services/${service.id}`}
+                  className="mt-3 hidden text-sm font-semibold text-brand-gold transition hover:text-brand-gold-dark sm:inline-block"
+                >
+                  Know more →
+                </Link>
+              )}
             </article>
             </Reveal>
           ))}

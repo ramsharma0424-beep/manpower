@@ -107,7 +107,7 @@ export const stats = [
   { value: "2023", label: "Established" },
   { value: "7+", label: "Enterprise Clients" },
   { value: "Delhi NCR", label: "Primary Region" },
-  { value: "8", label: "Service Verticals" },
+  { value: "10", label: "Service Verticals" },
 ];
 
 export const certifications = [
@@ -189,8 +189,8 @@ export const services = [
     highlights: [
       "Access control & visitor management",
       "Fire safety & emergency response",
-      "Parking & perimeter security",
-      "PASARA-licensed operations",
+      "Bouncer services for hotels, events & venues",
+      "PSO (Personal Security Officer) deployment",
     ],
   },
   {
@@ -299,7 +299,7 @@ export const faqs = [
   {
     question: "What manpower services do you provide?",
     answer:
-      "We provide security services, housekeeping, technical and facility management, horticulture, general labour, construction site labour, professional supervisory staff, and contract manpower deployment.",
+      "We provide security services (including bouncers and PSO deployment), housekeeping, technical and facility management, horticulture, general labour, construction site labour, professional supervisory staff, and contract manpower deployment.",
   },
   {
     question: "How quickly can you deploy staff?",
@@ -470,7 +470,14 @@ export const aboutDropdown = [
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/clients", label: "Clients" },
+  { href: "/training", label: "Training" },
+  { href: "/careers", label: "Careers" },
   { href: "/blogs", label: "Blogs" },
   { href: "/contact", label: "Contact" },
+];
+
+export const industryLinks = [
+  { href: "/industries/hospitality", label: "Hospitality" },
+  { href: "/industries/manufacturing", label: "Manufacturing" },
+  { href: "/industries/construction", label: "Construction" },
 ];

@@ -16,4 +16,16 @@ export const images = {
     "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=700&fit=crop&q=80",
   services:
     "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=700&fit=crop&q=80",
+  bouncer:
+    "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200&h=700&fit=crop&q=80",
+  pso:
+    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=700&fit=crop&q=80",
+  technical:
+    "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=700&fit=crop&q=80",
+  horticulture:
+    "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=700&fit=crop&q=80",
+  labour:
+    "https://images.unsplash.com/photo-1581094794329-cd2a74a7f282?w=1200&h=700&fit=crop&q=80",
+  facility:
+    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=700&fit=crop&q=80",
 };

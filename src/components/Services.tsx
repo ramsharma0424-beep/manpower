@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { getServiceDetail } from "@/lib/content";
 import { services } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import SiteContainer from "./SiteContainer";
@@ -84,16 +83,12 @@ export default function Services({ showAll = false }: ServicesProps) {
                 {icons[service.icon]}
               </div>
               <h3 className="font-display text-sm font-semibold leading-snug text-brand-navy sm:text-xl dark:text-stone-100">
-                {getServiceDetail(service.id) ? (
-                  <Link
-                    href={`/services/${service.id}`}
-                    className="transition hover:text-brand-gold"
-                  >
-                    {service.title}
-                  </Link>
-                ) : (
-                  service.title
-                )}
+                <Link
+                  href={`/services/${service.id}`}
+                  className="transition hover:text-brand-gold"
+                >
+                  {service.title}
+                </Link>
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
                 {service.description}
@@ -106,14 +101,12 @@ export default function Services({ showAll = false }: ServicesProps) {
                   </li>
                 ))}
               </ul>
-              {getServiceDetail(service.id) && (
-                <Link
-                  href={`/services/${service.id}`}
-                  className="mt-3 hidden text-sm font-semibold text-brand-gold transition hover:text-brand-gold-dark sm:inline-block"
-                >
-                  Know more →
-                </Link>
-              )}
+              <Link
+                href={`/services/${service.id}`}
+                className="mt-3 inline-block text-xs font-semibold text-brand-gold transition hover:text-brand-gold-dark sm:text-sm"
+              >
+                Know more →
+              </Link>
             </article>
             </Reveal>
           ))}

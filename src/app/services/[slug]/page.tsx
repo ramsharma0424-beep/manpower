@@ -6,8 +6,8 @@ import CoverImage from "@/components/CoverImage";
 import CTASection from "@/components/CTASection";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
-import { getServiceDetail, serviceDetails } from "@/lib/content";
-import { company } from "@/lib/data";
+import { getServiceDetail } from "@/lib/content";
+import { company, services } from "@/lib/data";
 import { createPageMetadata } from "@/lib/seo";
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return serviceDetails.map((service) => ({ slug: service.id }));
+  return services.map((service) => ({ slug: service.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogs } from "@/lib/blogs";
-import { industries, serviceDetails } from "@/lib/content";
+import { industries } from "@/lib/content";
+import { services } from "@/lib/data";
 import { siteUrl } from "@/lib/seo";
 
 const pageConfig: Array<{
@@ -29,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency,
       priority,
     })),
-    ...serviceDetails.map((service) => ({
+    ...services.map((service) => ({
       url: `${siteUrl}/services/${service.id}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

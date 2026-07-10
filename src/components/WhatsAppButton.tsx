@@ -1,10 +1,8 @@
 import { company } from "@/lib/data";
 
-const whatsappMessage = encodeURIComponent(
-  "Hi Rudra Manpower, I'm interested in your security, housekeeping, or manpower services in Delhi NCR. Please share details and a quote.",
-);
+const whatsappMessage = encodeURIComponent("Hi, I am interested in ");
 
-const whatsappUrl = `https://wa.me/91${company.phone}?text=${whatsappMessage}`;
+const whatsappUrl = `https://wa.me/91${company.whatsappPhone}?text=${whatsappMessage}`;
 
 export default function WhatsAppButton() {
   return (

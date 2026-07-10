@@ -1,4 +1,5 @@
 import { images } from "./images";
+import { company } from "./data";
 import type { BlogPost } from "./blog-types";
 
 export const blogs: BlogPost[] = [
@@ -352,7 +353,7 @@ export const blogs: BlogPost[] = [
       },
       {
         type: "p",
-        text: `Rudra Manpower is PASARA licensed, GeM registered, and led by a retired Army Captain. We serve clients including Mothers Dairy, Tata Steel, and Gamut Buildcon. Call us at 7005851441 or email rudramanpowerservices@gmail.com — let's discuss what your site actually needs.`,
+        text: `Rudra Manpower is PASARA licensed, GeM registered, and led by a retired Army Captain. We serve clients including Mothers Dairy, Tata Steel, and Gamut Buildcon. Call us at ${company.phone} or email ${company.email} — let's discuss what your site actually needs.`,
       },
     ],
   },

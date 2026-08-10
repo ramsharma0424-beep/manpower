@@ -8,16 +8,18 @@ type PageHeroProps = {
 
 export default function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
-    <section className="premium-hero py-12 text-white sm:py-16 lg:py-24">
+    <section className="premium-hero py-12 sm:py-16 lg:py-20">
       <SiteContainer>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold">{eyebrow}</p>
-        <h1 className="mt-3 font-display text-3xl font-semibold leading-tight sm:mt-4 sm:text-4xl lg:text-5xl">
+        <p className="pl-4 text-xs font-bold uppercase tracking-[0.24em] text-brand-gold sm:pl-5">
+          {eyebrow}
+        </p>
+        <h1 className="mt-3 pl-4 font-display text-3xl font-extrabold uppercase leading-tight tracking-wide text-white sm:mt-4 sm:pl-5 sm:text-4xl lg:text-5xl">
           {title}
         </h1>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-stone-300 sm:mt-6 sm:text-base lg:text-lg">
+        <p className="mt-4 max-w-2xl pl-4 text-sm leading-relaxed text-stone-300 sm:mt-6 sm:pl-5 sm:text-base lg:text-lg">
           {description}
         </p>
-        <div className="gold-line mt-6 sm:mt-8" />
+        <div className="brand-line mt-6 sm:mt-8 sm:ml-5" />
       </SiteContainer>
     </section>
   );

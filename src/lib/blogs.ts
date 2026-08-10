@@ -20,6 +20,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Professional security guard at a corporate facility entrance",
     category: "Security",
     date: "June 15, 2026",
+    isoDate: "2026-06-15",
     readTime: "6 min read",
     blocks: [
       {
@@ -87,6 +88,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Business team discussing workforce planning in an office",
     category: "Industry Insights",
     date: "May 28, 2026",
+    isoDate: "2026-05-28",
     readTime: "7 min read",
     blocks: [
       {
@@ -156,6 +158,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Professional business leader in a corporate setting",
     category: "Leadership",
     date: "April 10, 2026",
+    isoDate: "2026-04-10",
     readTime: "6 min read",
     blocks: [
       {
@@ -214,6 +217,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Professional cleaning staff maintaining a modern office space",
     category: "Housekeeping",
     date: "March 22, 2026",
+    isoDate: "2026-03-22",
     readTime: "6 min read",
     blocks: [
       {
@@ -273,6 +277,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Construction workers at a building site with safety equipment",
     category: "Construction",
     date: "February 14, 2026",
+    isoDate: "2026-02-14",
     readTime: "5 min read",
     blocks: [
       {
@@ -323,6 +328,7 @@ export const blogs: BlogPost[] = [
     imageAlt: "Security professional monitoring a commercial building",
     category: "Security",
     date: "January 8, 2026",
+    isoDate: "2026-01-08",
     readTime: "6 min read",
     blocks: [
       {

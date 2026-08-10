@@ -9,9 +9,9 @@ type LogoProps = {
 };
 
 const sizes = {
-  sm: { img: 36, text: "text-xs sm:text-base" },
-  md: { img: 40, text: "text-[11px] leading-tight sm:text-base md:text-xl" },
-  lg: { img: 48, text: "text-sm sm:text-xl md:text-2xl" },
+  sm: { img: 36, text: "text-sm sm:text-base" },
+  md: { img: 44, text: "text-base sm:text-lg md:text-xl" },
+  lg: { img: 52, text: "text-lg sm:text-xl md:text-2xl" },
 };
 
 export default function Logo({
@@ -29,12 +29,12 @@ export default function Logo({
         alt={`${company.shortName} logo`}
         width={s.img}
         height={s.img}
-        className="size-8 shrink-0 rounded-full object-cover sm:size-10 md:size-12"
+        className="size-10 shrink-0 rounded-full object-cover sm:size-11 md:size-12 lg:size-[3.25rem]"
         priority
       />
       {showText && (
         <p
-          className={`truncate font-bold uppercase tracking-wide ${textColor} ${s.text}`}
+          className={`truncate font-display font-extrabold tracking-wide ${textColor} ${s.text}`}
         >
           {company.shortName}
         </p>

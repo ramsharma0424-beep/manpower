@@ -13,6 +13,7 @@ export type BlogPost = {
   imageAlt: string;
   category: string;
   date: string;
+  isoDate: string;
   readTime: string;
   blocks: BlogBlock[];
 };

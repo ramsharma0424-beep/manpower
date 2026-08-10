@@ -6,7 +6,7 @@ import SiteContainer from "./SiteContainer";
 
 export default function ComplianceBadges() {
   return (
-    <section className="section-muted py-12 sm:py-16">
+    <section className="bg-white py-12 sm:py-16">
       <SiteContainer>
         <Reveal>
           <SectionHeading
@@ -18,35 +18,25 @@ export default function ComplianceBadges() {
 
         <div className="card-grid mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
           {certifications.map((cert, i) => (
-            <Reveal
-              key={cert.id}
-              delay={i * 60}
-              className={i === certifications.length - 1 ? "lg:col-start-2" : undefined}
-            >
-              <div className="card-elevated group flex h-full flex-col items-center p-4 text-center sm:p-5">
-                <div className="mb-3 flex h-24 w-full items-center justify-center overflow-hidden rounded-sm border border-brand-border bg-white px-1 py-1 transition-transform duration-500 group-hover:scale-[1.02] dark:border-stone-700 dark:bg-stone-950 sm:h-28 sm:px-1.5">
+            <Reveal key={cert.id} delay={i * 60} className="h-full">
+              <div className="cert-card flex h-full flex-col">
+                <div className="cert-logo-box">
                   <Image
                     src={cert.logo}
                     alt={`${cert.title} logo`}
-                    width={280}
-                    height={112}
-                    className="max-h-full w-full object-contain object-center"
+                    width={200}
+                    height={80}
+                    className="max-h-16 w-full object-contain"
                   />
                 </div>
-                <h3 className="text-sm font-semibold text-brand-navy dark:text-stone-100">
-                  {cert.title}
-                </h3>
-                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-stone-500 dark:text-stone-400">
+                <h3 className="text-sm font-bold text-brand-navy">{cert.title}</h3>
+                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-stone-600">
                   {cert.description}
                 </p>
               </div>
             </Reveal>
           ))}
         </div>
-
-        <p className="mt-8 text-center text-sm text-stone-500 dark:text-stone-400">
-          Verified and compliant with all applicable labour, security, and corporate regulations.
-        </p>
       </SiteContainer>
     </section>
   );

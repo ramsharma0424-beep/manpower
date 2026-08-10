@@ -1,18 +1,11 @@
-import JsonLdScript from "@/components/JsonLdScript";
 import { faqs } from "@/lib/data";
-import { createFaqJsonLd } from "@/lib/seo";
 import SectionHeading from "./SectionHeading";
 import SiteContainer from "./SiteContainer";
 
-type FAQSectionProps = {
-  showSchema?: boolean;
-};
-
-export default function FAQSection({ showSchema = true }: FAQSectionProps) {
+export default function FAQSection() {
   return (
     <section className="py-12 sm:py-16">
       <SiteContainer narrow>
-        {showSchema && <JsonLdScript data={createFaqJsonLd()} />}
         <SectionHeading
           eyebrow="FAQ"
           title="Common Questions"

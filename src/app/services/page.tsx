@@ -8,20 +8,15 @@ import PageHero from "@/components/PageHero";
 import Services from "@/components/Services";
 import SiteContainer from "@/components/SiteContainer";
 import { company, industryLinks, sectors } from "@/lib/data";
+import { homeKeywordSummary } from "@/lib/content";
+import { servicesMainKeywords } from "@/lib/keywords";
 import { absoluteUrl, createPageMetadata, createServicesJsonLd, locationsLine } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Our Services — Security, Housekeeping & Labour",
-  description: `Need security guards, bouncers, PSOs, housekeeping staff, or construction labour in ${company.region}? Explore manpower services from ${company.shortName} across ${locationsLine} — PASARA licensed, police-verified teams.`,
+  description: `Need security guard services, bouncer services, PSO services, housekeeping services, or construction labour supply in ${company.region}? Explore integrated facility management and contract staffing from ${company.shortName} across ${locationsLine}.`,
   path: "/services",
-  keywords: [
-    "security services Gurugram",
-    "bouncer services Noida",
-    "PSO security Delhi NCR",
-    "housekeeping manpower Noida",
-    "construction labour Rohtak",
-    "facility management staff Delhi NCR",
-  ],
+  keywords: servicesMainKeywords(),
 });
 
 export default function ServicesPage() {
@@ -31,9 +26,17 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Solutions"
         title="Our Services"
-        description={`Comprehensive manpower and facility management solutions across ${sectors.join(", ")} in ${company.region}.`}
+        description={`Manpower services, security services, housekeeping services, facility management services, and labour supply across ${sectors.join(", ")} in ${company.region}.`}
       />
       <Breadcrumbs items={[{ name: "Services", path: "/services" }]} />
+
+      <section className="border-b border-brand-border bg-brand-cream/40 py-6 dark:bg-stone-900/40">
+        <SiteContainer>
+          <p className="max-w-4xl text-sm leading-relaxed text-stone-600 dark:text-stone-400">
+            {homeKeywordSummary}
+          </p>
+        </SiteContainer>
+      </section>
 
       <Services showAll />
 

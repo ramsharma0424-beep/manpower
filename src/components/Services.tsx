@@ -71,7 +71,7 @@ export default function Services({ showAll = false }: ServicesProps) {
           <SectionHeading
             eyebrow="What We Do"
             title="Whatever Your Site Needs, We've Got You Covered"
-            description="Tell us your challenge — we'll deploy the right team. Security, cleaning, technical staff, construction labour, or full contract manpower."
+            description="From security guard services and housekeeping services to general labour supply and contract staffing — tell us your challenge and we'll deploy the right workforce across Delhi NCR."
           />
         </Reveal>
 
@@ -79,35 +79,35 @@ export default function Services({ showAll = false }: ServicesProps) {
           {items.map((service, i) => (
             <Reveal key={service.id} delay={i * 80}>
               <article className="card-elevated group flex h-full flex-col p-4 sm:p-7">
-              <div className="mb-3 inline-flex rounded-sm bg-brand-cream p-2 text-brand-gold sm:mb-5 sm:p-3 dark:bg-stone-800 [&_svg]:h-5 [&_svg]:w-5 sm:[&_svg]:h-7 sm:[&_svg]:w-7">
-                {icons[service.icon]}
-              </div>
-              <h3 className="font-display text-sm font-semibold leading-snug text-brand-navy sm:text-xl dark:text-stone-100">
+                <div className="mb-3 inline-flex rounded-sm bg-brand-cream p-2 text-brand-gold sm:mb-5 sm:p-3 dark:bg-stone-800 [&_svg]:h-5 [&_svg]:w-5 sm:[&_svg]:h-7 sm:[&_svg]:w-7">
+                  {icons[service.icon]}
+                </div>
+                <h3 className="font-display text-sm font-extrabold uppercase leading-snug tracking-wide text-brand-navy sm:text-xl dark:text-stone-100">
+                  <Link
+                    href={`/services/${service.id}`}
+                    className="transition hover:text-brand-gold"
+                  >
+                    {service.title}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
+                  {service.description}
+                </p>
+                <ul className="mt-3 space-y-1.5 sm:mt-5 sm:space-y-2">
+                  {service.highlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-[11px] text-stone-500 sm:text-sm dark:text-stone-400">
+                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold sm:mt-1.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
                 <Link
                   href={`/services/${service.id}`}
-                  className="transition hover:text-brand-gold"
+                  className="mt-3 inline-block text-xs font-semibold text-brand-gold transition hover:text-brand-gold-dark sm:text-sm"
                 >
-                  {service.title}
+                  Know more →
                 </Link>
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:mt-3 sm:text-sm dark:text-stone-300">
-                {service.description}
-              </p>
-              <ul className="mt-3 space-y-1.5 sm:mt-5 sm:space-y-2">
-                {service.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-[11px] text-stone-500 sm:text-sm dark:text-stone-400">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold sm:mt-1.5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/services/${service.id}`}
-                className="mt-3 inline-block text-xs font-semibold text-brand-gold transition hover:text-brand-gold-dark sm:text-sm"
-              >
-                Know more →
-              </Link>
-            </article>
+              </article>
             </Reveal>
           ))}
         </div>

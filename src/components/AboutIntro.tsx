@@ -47,30 +47,34 @@ export default function AboutIntro({ compact = false }: AboutIntroProps) {
 
           <div className="order-1 lg:order-2">
             <Reveal delay={120}>
-              <div className="group overflow-hidden rounded-lg shadow-xl shadow-stone-900/10">
-                <CoverImage
-                  src={images.about}
-                  alt="Indian professionals at work in a corporate setting"
-                  aspect="hero"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="transition-transform duration-700 group-hover:scale-[1.02]"
-                />
+              <div className="hero-frame shadow-xl shadow-stone-900/10">
+                <div className="hero-frame-inner group">
+                  <CoverImage
+                    src={images.about}
+                    alt="Indian professionals at work in a corporate setting"
+                    aspect="hero"
+                    objectPosition="center 35%"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="hero-frame-accent" aria-hidden="true" />
               </div>
             </Reveal>
             <Reveal delay={200}>
-              <div className="card-elevated mt-4 p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-brand-gold">
+              <div className="card-elevated mt-4 border-l-4 border-l-brand-gold p-6">
+                <p className="text-sm font-bold uppercase tracking-wider text-brand-gold">
                   Why businesses choose us
                 </p>
                 <ul className="mt-4 space-y-3">
                   {[
-                    "You'll get army veteran-led, disciplined teams",
-                    "Every security guard is police-verified before day one",
-                    "We serve brands like Mothers Dairy & Lemon Tree in Gurugram, plus Tata Steel",
-                    `We're active across ${company.region} — ready when you need us`,
+                    "Army veteran-led security company with disciplined teams",
+                    "Police verified security guards on every PASARA licensed deployment",
+                    "Corporate manpower solutions for brands like Mothers Dairy & Lemon Tree",
+                    `Workforce solutions across ${company.region} — Gurugram, Noida, Bhiwadi & more`,
                   ].map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-stone-700 dark:text-stone-300">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm bg-brand-gold text-xs text-stone-950">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm bg-brand-gold text-xs text-white">
                         ✓
                       </span>
                       {item}

@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CoverImage from "@/components/CoverImage";
 import CTASection from "@/components/CTASection";
+import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { getServiceDetail } from "@/lib/content";
 import { company, services } from "@/lib/data";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, createServiceJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -40,6 +41,14 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <>
+      <JsonLdScript
+        data={createServiceJsonLd({
+          id: service.id,
+          title: service.title,
+          description: service.heroDescription,
+          areas: service.areas,
+        })}
+      />
       <PageHero
         eyebrow={service.eyebrow}
         title={service.title}
@@ -65,6 +74,9 @@ export default async function ServiceDetailPage({ params }: Props) {
 
           <p className="max-w-3xl text-sm leading-relaxed text-stone-600 sm:text-base dark:text-stone-300">
             {service.intro}
+          </p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-stone-500 sm:text-base dark:text-stone-400">
+            {service.keywordParagraph}
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">

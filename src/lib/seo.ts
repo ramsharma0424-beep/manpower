@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { company, faqs, services } from "./data";
+import { seoKeywords } from "./keywords";
+import { company, faqs, leadership, services } from "./data";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || company.website;
@@ -12,21 +13,17 @@ export const defaultKeywords = [
   "manpower services Delhi NCR",
   "security guard services Gurugram",
   "housekeeping services Noida",
-  "construction labour Rohtak",
-  "manpower agency Sonipat",
-  "security guards Manesar",
-  "housekeeping staff Faridabad",
   "PASARA licensed security agency",
-  "facility management manpower",
   "Rudra Manpower Services",
-  "workforce solutions Haryana",
   "contract staffing Delhi NCR",
-  "verified security personnel",
   "police verified security guards",
-  "manpower supplier Gurugram",
+  "facility management manpower",
+  "Bhiwadi manpower agency",
+  ...seoKeywords.slice(0, 20),
 ];
 
-export const defaultDescription = `Looking for reliable security, housekeeping, or labour staff in Delhi NCR? Rudra Manpower deploys police-verified, army-led teams across ${locationsLine}. PASARA licensed. Get a free quote today.`;
+export const defaultDescription =
+  "PASARA-licensed manpower agency in Delhi NCR. Police-verified security, housekeeping & labour across Gurugram, Noida, Faridabad & more. Free quote.";
 
 type PageMetaOptions = {
   title: string;
@@ -187,7 +184,12 @@ export const organizationJsonLd = {
   name: company.name,
   alternateName: company.shortName,
   url: siteUrl,
-  logo: absoluteUrl("/logo.png"),
+  logo: {
+    "@type": "ImageObject",
+    url: absoluteUrl("/logo.png"),
+    width: 200,
+    height: 60,
+  },
   description: defaultDescription,
   email: company.email,
   telephone: phoneE164,
@@ -195,19 +197,32 @@ export const organizationJsonLd = {
     "@type": "PostalAddress",
     addressLocality: "Gurugram",
     addressRegion: "Haryana",
+    postalCode: "122001",
     addressCountry: "IN",
   },
-  areaServed: company.locations,
+  areaServed: company.locations.map((city) => ({
+    "@type": "City",
+    name: city,
+    containedInPlace: { "@type": "AdministrativeArea", name: "Delhi NCR" },
+  })),
   foundingDate: "2023-04-10",
-  sameAs: [],
+  // sameAs: ["https://www.google.com/maps?cid=YOUR_GBP_CID", ...] — add once profiles are live
 };
 
 export const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  // EmploymentAgency is the correct Schema.org subtype for manpower/staffing agencies
+  "@type": ["EmploymentAgency", "LocalBusiness"],
   "@id": `${siteUrl}/#localbusiness`,
   name: company.name,
-  image: absoluteUrl("/logo.png"),
+  image: [
+    {
+      "@type": "ImageObject",
+      url: absoluteUrl("/logo.png"),
+      width: 200,
+      height: 60,
+    },
+  ],
   url: siteUrl,
   telephone: phoneE164,
   email: company.email,
@@ -215,7 +230,7 @@ export const localBusinessJsonLd = {
   description: defaultDescription,
   address: {
     "@type": "PostalAddress",
-    streetAddress: company.address,
+    // streetAddress omitted intentionally — SAB with no public walk-in address
     addressLocality: "Gurugram",
     addressRegion: "Haryana",
     postalCode: "122001",
@@ -223,8 +238,9 @@ export const localBusinessJsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 28.4595,
-    longitude: 77.0266,
+    // Gurugram city-centre coordinates — update to exact office pin once confirmed
+    latitude: 28.45952,
+    longitude: 77.02660,
   },
   areaServed: company.locations.map((city) => ({
     "@type": "City",
@@ -234,12 +250,22 @@ export const localBusinessJsonLd = {
       name: company.region,
     },
   })),
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  // Populate once GBP reviews are live — prevents schema errors from zero-count
+  // aggregateRating: {
+  //   "@type": "AggregateRating",
+  //   ratingValue: "4.8",
+  //   reviewCount: "12",
+  //   bestRating: "5",
+  //   worstRating: "1",
+  // },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Manpower & Facility Services",
@@ -269,3 +295,51 @@ export const globalJsonLdGraph = {
   "@context": "https://schema.org",
   "@graph": [organizationJsonLd, localBusinessJsonLd, websiteJsonLd],
 };
+
+type ServiceLike = {
+  id: string;
+  title: string;
+  description: string;
+  areas?: string[];
+};
+
+export function createServiceJsonLd(service: ServiceLike) {
+  const areas = service.areas ?? company.locations;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/services/${service.id}#service`,
+    name: service.title,
+    description: service.description,
+    url: absoluteUrl(`/services/${service.id}`),
+    provider: {
+      "@id": `${siteUrl}/#organization`,
+    },
+    areaServed: areas.map((city) => ({
+      "@type": "City",
+      name: city,
+      containedInPlace: { "@type": "AdministrativeArea", name: company.region },
+    })),
+    serviceType: service.title,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: absoluteUrl("/contact"),
+      servicePhone: phoneE164,
+    },
+  };
+}
+
+export const personJsonLd = leadership.map((person) => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: person.name,
+  jobTitle: person.role,
+  description: person.bio,
+  worksFor: { "@id": `${siteUrl}/#organization` },
+  knowsAbout: [
+    "Security Services",
+    "Facility Management",
+    "Manpower Agency",
+    "Army Veteran Operations",
+  ],
+}));

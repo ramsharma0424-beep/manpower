@@ -1,15 +1,15 @@
 export const company = {
   name: "Rudra Manpower Services Pvt. Ltd.",
   shortName: "Rudra Manpower",
-  tagline: "Your trusted partner for security, housekeeping & manpower in Delhi NCR",
+  tagline: "Your trusted manpower agency for security, housekeeping & workforce solutions in Delhi NCR",
   heroHeadline: "Need a Workforce You Can Actually Rely On?",
   heroSubtext:
-    "Led by a dedicated retired armed forces team, Rudra Manpower deploys disciplined, police-verified security, housekeeping, and labour across Delhi NCR — with supervisors accountable on every shift.",
+    "As a verified manpower agency and reliable staffing company, Rudra Manpower deploys police-verified security guard services, housekeeping services, and labour supply across Delhi NCR — with army veteran-led supervision on every shift.",
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
   phone: "8278065927",
   whatsappPhone: "7005851441",
-  website: "https://manpowerservices.com",
+  website: "https://www.rudramanpowerservice.com",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
   locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad", "Bhiwadi"],
@@ -19,11 +19,11 @@ export const company = {
 export const aboutContent = {
   title: "We're Here to Make Manpower Simple for You",
   summary:
-    "If you've ever dealt with absent staff, unclear billing, or security you can't trust — you're not alone. Rudra Manpower was built to fix that, with a retired armed forces team overseeing every deployment on the ground.",
+    "If you've ever dealt with absent staff, unclear billing, or security you can't trust — you're not alone. Rudra Manpower is a PASARA licensed security agency and verified manpower agency built to deliver corporate manpower solutions with a retired armed forces team on every deployment.",
   paragraphs: [
-    "We started in 2023 because too many businesses in Delhi NCR were stuck with the same problems: delayed wages to workers, no transparency on who's deployed, constant re-hiring, and security staff without proper verification. You deserve better than that.",
-    `Today, we deploy PASARA-licensed security guards, trained housekeeping teams, and skilled labour across ${company.locations.join(", ")} — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you manage one facility or ten, we scale with you.`,
-    "Our promise is simple: you focus on running your business. We'll handle the people, the discipline, and the accountability on the ground.",
+    "We started in 2023 because too many businesses in Delhi NCR were stuck with the same problems: delayed wages to workers, no transparency on who's deployed, constant re-hiring, and security staff without proper verification. As a trusted security partner and staffing agency, we set out to fix that.",
+    `Today, we deploy PASARA-licensed security guards, trained housekeeping teams, facility management services, and skilled labour across ${company.locations.join(", ")} — for corporates, hospitals, hotels, malls, factories, and construction sites. Whether you need contract staffing for one site or workforce solutions across ten, we scale with you.`,
+    "Our promise is simple: you focus on running your business. We'll handle manpower outsourcing, on-ground discipline, and accountability — from security guard services to integrated facility management.",
   ],
 };
 
@@ -31,7 +31,7 @@ export const coreValues = [
   {
     title: "Discipline & Integrity",
     description:
-      "Every deployment follows clear SOPs, dress codes, and conduct standards — shaped by army-led leadership and on-site accountability.",
+      "Every deployment follows clear SOPs, dress codes, and conduct standards — shaped by our army veteran-led security company culture and on-site accountability.",
     icon: "shield",
   },
   {
@@ -55,7 +55,7 @@ export const coreValues = [
   {
     title: "Safety & Verification",
     description:
-      "You need to know who's on your site — and that they're vetted. We run police verification and document checks on every security deployment before day one.",
+      "You need to know who's on your site — and that they're vetted. We run police verification and document checks on every security personnel supply deployment before day one.",
     icon: "check",
   },
   {
@@ -185,130 +185,130 @@ export const services = [
     id: "security",
     title: "Security Services",
     description:
-      "Trained security personnel for safety, access control, fire safety, and parking management across corporate and industrial sites.",
+      "PASARA licensed security guard services with police verified security guards for access control, fire safety, perimeter security, parking security, and night watch across corporate, factory, and warehouse sites.",
     icon: "shield",
     highlights: [
-      "Access control & visitor management",
-      "Fire safety & emergency response",
-      "Parking & perimeter security",
-      "PASARA-licensed operations",
+      "Corporate security guards & industrial security services",
+      "Access control services & visitor management",
+      "Fire safety and emergency response",
+      "Parking security, perimeter security & night watch",
     ],
   },
   {
     id: "housekeeping",
     title: "Housekeeping Services",
     description:
-      "Professional cleaning and hygiene maintenance for corporate offices, malls, hospitals, hotels, and residential premises.",
+      "Professional housekeeping services and commercial cleaning for corporate offices, hotel housekeeping, hospital housekeeping, mall and retail cleaning, and residential premises.",
     icon: "sparkles",
     highlights: [
-      "Corporate & commercial cleaning",
-      "Hospital & hotel hygiene standards",
-      "Mall & retail facility upkeep",
-      "Residential housekeeping support",
+      "Office cleaning & corporate housekeeping",
+      "Hotel and hospital housekeeping services",
+      "Mall and retail facility hygiene",
+      "Deep cleaning & sanitation staff supply",
     ],
   },
   {
     id: "bouncer",
     title: "Bouncer Services",
     description:
-      "Professional bouncers for hotels, banquets, clubs, corporate events, and venues across Gurugram, Noida, and Delhi NCR.",
+      "Trained bouncer services for event security, crowd management, hotel and banquet security, wedding security, and corporate event security across Gurugram, Noida, and Delhi NCR.",
     icon: "bouncer",
     highlights: [
-      "Hotel, banquet & club venue security",
-      "Crowd screening & entry control",
-      "Event and nightlife assignments",
-      "Trained, uniformed personnel",
+      "Event security & venue security staff",
+      "Hotel, banquet & nightclub security",
+      "Entry screening and VIP crowd control",
+      "Wedding and corporate event security",
     ],
   },
   {
     id: "pso",
     title: "PSO Services",
     description:
-      "Personal Security Officers for executives, VIPs, and high-profile individuals — discreet, verified protection across Delhi NCR.",
+      "Personal Security Officers for executive protection, VIP security, bodyguard services, and discreet personal security across Delhi NCR.",
     icon: "pso",
     highlights: [
-      "Executive & VIP escort protection",
-      "Police-verified PSO personnel",
-      "Threat awareness & communication protocols",
-      "Assignment-based deployment",
+      "Personal security officer & close protection",
+      "Executive protection & VIP security services",
+      "Celebrity security & dignitary protection",
+      "Executive escort security assignments",
     ],
   },
   {
     id: "technical",
     title: "Technical & Facility Management",
     description:
-      "Skilled technical workforce including facility managers, supervisors, electricians, plumbers, AC operators, and DG operators.",
+      "Integrated facility management with technical manpower supply — electricians, plumbers, AC operators, DG operators, HVAC, and MEP manpower services for corporates and industrial sites.",
     icon: "wrench",
     highlights: [
-      "Facility managers & supervisors",
-      "Electricians, plumbers & carpenters",
-      "AC & DG operators",
-      "Multi-technician support",
+      "Facility management services & maintenance staff",
+      "Electrician, plumber & multi-technician support",
+      "AC operator and DG operator services",
+      "Building maintenance & skilled technical workforce",
     ],
   },
   {
     id: "horticulture",
     title: "Horticulture Services",
     description:
-      "Landscaping, garden maintenance, and indoor plant care to keep your premises green and well-maintained.",
+      "Horticulture services including landscaping, garden maintenance, lawn care, indoor plant care, and corporate landscaping across Delhi NCR.",
     icon: "leaf",
     highlights: [
-      "Landscaping & garden design",
-      "Regular maintenance schedules",
-      "Indoor plant care",
-      "Seasonal upkeep programs",
+      "Landscaping & garden maintenance services",
+      "Lawn care & grounds maintenance",
+      "Indoor plant care for corporates",
+      "Seasonal landscaping & green space management",
     ],
   },
   {
     id: "labour",
     title: "General Labour & Helpers",
     description:
-      "Reliable labour and helper staff for manufacturing, mills, gyms, and industrial operations across North India.",
+      "General labour supply and helper staffing for manufacturing, warehouse labour staffing, loading and unloading, and shift-based labour deployment across North India.",
     icon: "users",
     highlights: [
-      "Manufacturing & mill operations",
-      "Loading & material handling",
-      "Site helper deployment",
-      "Flexible shift arrangements",
+      "Industrial labour & factory helper supply",
+      "Warehouse labour staffing & material handling",
+      "Manufacturing labour supply & mill labour",
+      "Production line helpers on flexible shifts",
     ],
   },
   {
     id: "construction-labour",
     title: "Construction Site Labour",
     description:
-      "Skilled and semi-skilled labour for construction sites including masons, helpers, bar benders, and general site workers for residential, commercial, and infrastructure projects.",
+      "Construction labour supply with mason and helper supply, bar bender labour, skilled construction workers, and safety-briefed site workforce for residential and commercial projects.",
     icon: "construction",
     highlights: [
-      "Masons, helpers & bar benders",
-      "Residential & commercial projects",
-      "Daily wage & contract deployment",
-      "Safety-briefed site workforce",
+      "Construction manpower services & site labour agency",
+      "Masons, helpers & bar bender labour",
+      "Daily wage labour supply & contract deployment",
+      "Safety-briefed construction workforce",
     ],
   },
   {
     id: "professional",
     title: "Professional & Supervisory Staff",
     description:
-      "Experienced site supervisors, facility coordinators, and operations leads who manage on-ground teams and ensure service quality across client locations.",
+      "Supervisory staff services with site supervisor supply, facility coordinators, operations lead staffing, and manpower supervision for multi-site contracts.",
     icon: "briefcase",
     highlights: [
-      "Site supervisors & team leads",
-      "Facility coordinators",
-      "Shift management & reporting",
-      "Client liaison & escalation handling",
+      "Site supervisor supply & team lead staffing",
+      "Facility coordinator services",
+      "Shift management & quality audit staff",
+      "Client liaison & on-site supervisor agency",
     ],
   },
   {
     id: "contract-staffing",
     title: "Contract Manpower Deployment",
     description:
-      "Flexible contract-based staffing for short-term projects, seasonal demand, and long-term engagements — with end-to-end recruitment, deployment, and compliance support.",
+      "Contract staffing services and end-to-end manpower outsourcing with EPFO ESIC compliant staffing, project-based staffing, and scalable workforce solutions across Delhi NCR.",
     icon: "clipboard",
     highlights: [
-      "Project-based & long-term contracts",
-      "Rapid workforce mobilisation",
-      "EPFO, ESIC & statutory compliance",
-      "Scalable teams across multiple sites",
+      "Contract manpower supply & flexible staffing",
+      "Project-based & seasonal staffing services",
+      "Temporary workforce deployment at scale",
+      "Multi-site staffing contracts with compliance",
     ],
   },
 ];
@@ -316,17 +316,17 @@ export const services = [
 export const faqs = [
   {
     question: "Which areas does Rudra Manpower serve?",
-    answer: `We deploy security, housekeeping, and labour teams across Delhi NCR, including ${company.locations.join(", ")}. Contact us to confirm availability for your site.`,
+    answer: `We deploy security guard services, housekeeping services, facility management services, and labour supply teams across Delhi NCR, including ${company.locations.join(", ")}. Contact us to confirm availability for your site.`,
   },
   {
     question: "Are your security guards PASARA licensed and police verified?",
     answer:
-      "Yes. Rudra Manpower is PASARA licensed, and every security deployment goes through police verification and document checks before staff are placed on your premises.",
+      "Yes. Rudra Manpower is a PASARA licensed security agency, and every security guard services deployment uses police verified security guards with document checks before staff are placed on your premises.",
   },
   {
     question: "What manpower services do you provide?",
     answer:
-      "We provide security services (including bouncers and PSO deployment), housekeeping, technical and facility management, horticulture, general labour, construction site labour, professional supervisory staff, and contract manpower deployment.",
+      "We provide security services (corporate security guards, bouncers, and PSO services), housekeeping services, technical and facility management services, horticulture services, general labour supply, construction labour supply, supervisory staff services, and contract staffing services with workforce deployment across Delhi NCR.",
   },
   {
     question: "How quickly can you deploy staff?",
@@ -336,11 +336,11 @@ export const faqs = [
   {
     question: "Do you handle EPFO, ESIC, and statutory compliance?",
     answer:
-      "Yes. Our contract manpower deployment includes support for EPFO, ESIC, and applicable statutory compliance so your workforce operations stay organised and accountable.",
+      "Yes. Our contract manpower deployment includes EPFO ESIC compliant staffing and statutory compliance support so your workforce operations stay organised and accountable.",
   },
   {
     question: "How do I get a quote for manpower services?",
-    answer: `Share your site location, service type, and headcount through our contact form or call us at ${company.phone}. We will respond with a tailored manpower plan and quote.`,
+    answer: `Share your site location, service type, and headcount through our contact form or call us at ${company.phone}. We will respond with a tailored manpower services plan and quote for security, housekeeping, or labour supply.`,
   },
 ];
 
@@ -427,13 +427,13 @@ export const qualityAssurance = [
 export const vision = {
   title: "Our Vision",
   description:
-    "To become Delhi NCR's most trusted manpower partner — known for disciplined teams, transparent operations, and workforce solutions that set the standard for security, facility management, and industrial staffing.",
+    "To become Delhi NCR's most trusted manpower services partner — known for disciplined teams, transparent operations, and workforce solutions that set the standard for security guard services, facility management services, and industrial staffing.",
 };
 
 export const mission = {
   title: "Our Mission",
   description:
-    "To solve the manpower industry's core challenges — delayed payments, weak verification, high attrition, and poor accountability — by deploying trained, police-verified professionals under military-inspired leadership and fair, transparent employment practices.",
+    "To solve the manpower industry's core challenges — delayed payments, weak verification, high attrition, and poor accountability — by deploying trained, police-verified professionals under military-inspired leadership, EPFO ESIC compliant staffing, and fair, transparent employment practices.",
 };
 
 export const leadership = [
@@ -507,4 +507,105 @@ export const industryLinks = [
   { href: "/industries/hospitality", label: "Hospitality" },
   { href: "/industries/manufacturing", label: "Manufacturing" },
   { href: "/industries/construction", label: "Construction" },
+];
+
+export type LocationData = {
+  slug: string;
+  city: string;
+  state: string;
+  region: string;
+  postalCode: string;
+  /** Key client types or industries that dominate this city */
+  dominantSectors: string[];
+  /** 2-3 sentence unique description of why this city matters for Rudra */
+  summary: string;
+  /** City-specific deployment detail sentence */
+  deploymentNote: string;
+};
+
+export const locationPages: LocationData[] = [
+  {
+    slug: "gurugram",
+    city: "Gurugram",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "122001",
+    dominantSectors: ["Corporate Offices", "BPOs", "Malls & Retail", "Hospitals"],
+    summary:
+      "Gurugram is Rudra Manpower's primary base of operations and home to our registered office. We deploy PASARA-licensed security guards, trained housekeeping staff, and facility management teams across Cyber City, Udyog Vihar, Sohna Road, Golf Course Road, and the Manesar industrial belt.",
+    deploymentNote:
+      "Same-day site assessments available for Gurugram clients — contact us at 8278065927 to confirm your location.",
+  },
+  {
+    slug: "noida",
+    city: "Noida",
+    state: "Uttar Pradesh",
+    region: "Delhi NCR",
+    postalCode: "201301",
+    dominantSectors: ["IT Parks", "Corporate Offices", "Manufacturing", "Hospitals"],
+    summary:
+      "Noida and Greater Noida host a concentration of IT parks, manufacturing units, and large residential complexes that need reliable, police-verified security and housekeeping teams. Rudra Manpower provides multi-shift security guard deployment, corporate housekeeping, and contract labour for clients across Sectors 62, 63, and 135.",
+    deploymentNote:
+      "We cover Noida, Greater Noida, and the Expressway industrial corridor — call 8278065927 to get a quote for your site.",
+  },
+  {
+    slug: "rohtak",
+    city: "Rohtak",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "124001",
+    dominantSectors: ["Manufacturing", "Industrial Sites", "Construction"],
+    summary:
+      "Rohtak is a growing industrial hub in Haryana with rising demand for verified security guards, construction labour, and facility staff. Rudra Manpower deploys EPFO-compliant teams for factories, warehouses, and construction sites across Rohtak and the surrounding industrial areas.",
+    deploymentNote:
+      "Serving Rohtak with police-verified security and construction labour — reach us at 8278065927 to discuss your manpower requirement.",
+  },
+  {
+    slug: "sonipat",
+    city: "Sonipat",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "131001",
+    dominantSectors: ["Manufacturing", "Industrial Sites", "Warehousing"],
+    summary:
+      "Sonipat's industrial corridors — including the KMP Expressway belt — attract large manufacturing and logistics operations that need dependable security and general labour. Rudra Manpower provides police-verified security guards and shift-based general labour for Sonipat's factories and warehouses.",
+    deploymentNote:
+      "Contact us at 8278065927 for security guard and labour deployment across Sonipat's industrial zones.",
+  },
+  {
+    slug: "manesar",
+    city: "Manesar",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "122051",
+    dominantSectors: ["Automotive", "Manufacturing", "Industrial Sites"],
+    summary:
+      "Manesar is home to automotive OEMs, Tier-1 suppliers, and industrial parks that require round-the-clock perimeter security, access control, and technical facility staff. Rudra Manpower has active deployments at Manesar's IMT industrial area with experienced guards trained for factory and shift-work environments.",
+    deploymentNote:
+      "Active in IMT Manesar — call 8278065927 for PASARA-licensed security and technical workforce.",
+  },
+  {
+    slug: "faridabad",
+    city: "Faridabad",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "121001",
+    dominantSectors: ["Manufacturing", "Industrial Sites", "Residential"],
+    summary:
+      "Faridabad's mix of heavy industry, residential societies, and commercial spaces creates diverse manpower requirements. Rudra Manpower serves manufacturing plants, residential complexes, and retail outlets across Faridabad with security guards, housekeeping staff, and facility management teams.",
+    deploymentNote:
+      "Serving clients across Faridabad's industrial and residential zones — reach out at 8278065927 for a free quote.",
+  },
+  {
+    slug: "bhiwadi",
+    city: "Bhiwadi",
+    state: "Rajasthan",
+    region: "Delhi NCR",
+    postalCode: "301019",
+    dominantSectors: ["Manufacturing", "Industrial Sites", "Warehousing"],
+    summary:
+      "Bhiwadi's RIICO industrial area is one of the fastest-growing manufacturing belts in the Delhi NCR region. Rudra Manpower deploys PASARA-licensed security guards, construction labour, and facility management staff for factories, logistics parks, and warehouses across Bhiwadi and Neemrana.",
+    deploymentNote:
+      "Covering Bhiwadi RIICO and Neemrana industrial zones — call 8278065927 to confirm deployment availability.",
+  },
 ];

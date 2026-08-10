@@ -12,7 +12,7 @@ export default function Leadership({ compact = false }: LeadershipProps) {
   const director = leadership[0];
 
   return (
-    <section className={compact ? "py-16" : "section-muted py-20"}>
+    <section className={compact ? "section-muted py-16" : "bg-white py-20"}>
       <SiteContainer narrow>
         <Reveal>
           <SectionHeading
@@ -23,10 +23,10 @@ export default function Leadership({ compact = false }: LeadershipProps) {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="card-elevated overflow-hidden">
+          <div className="card-elevated overflow-hidden border-2 border-brand-gold">
             <div className="grid md:grid-cols-5">
-              <div className="flex flex-col items-center justify-center border-b border-brand-border bg-brand-cream p-8 dark:border-stone-700 dark:bg-stone-900 md:col-span-2 md:border-b-0 md:border-r">
-                <div className="relative mb-6 flex h-32 w-32 items-center justify-center rounded-full border-4 border-brand-gold/30 bg-background">
+              <div className="flex flex-col items-center justify-center border-b border-brand-border bg-brand-surface p-8 md:col-span-2 md:border-b-0 md:border-r">
+                <div className="relative mb-6 flex h-32 w-32 items-center justify-center rounded-full border-4 border-brand-gold bg-white">
                   <svg
                     className="h-16 w-16 text-stone-400"
                     fill="none"
@@ -40,11 +40,11 @@ export default function Leadership({ compact = false }: LeadershipProps) {
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
-                  <div className="absolute -bottom-2 rounded-sm bg-brand-gold px-3 py-1 text-xs font-bold text-stone-950">
+                  <div className="absolute -bottom-2 rounded-sm bg-brand-gold px-3 py-1 text-xs font-bold uppercase text-white">
                     {director.badge}
                   </div>
                 </div>
-                <h3 className="text-center font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
+                <h3 className="text-center font-display text-xl font-extrabold uppercase tracking-wide text-brand-navy">
                   {director.name}
                 </h3>
                 <p className="mt-1 text-center text-sm font-medium text-stone-500">{director.role}</p>

@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CoverImage from "@/components/CoverImage";
 import CTASection from "@/components/CTASection";
+import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { getIndustry, industries } from "@/lib/content";
 import { company } from "@/lib/data";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, createServiceJsonLd, absoluteUrl, siteUrl } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,8 +39,29 @@ export default async function IndustryPage({ params }: Props) {
 
   if (!industry) notFound();
 
+  const industryServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/industries/${industry.slug}#service`,
+    name: industry.title,
+    description: industry.heroDescription,
+    url: absoluteUrl(`/industries/${industry.slug}`),
+    provider: { "@id": `${siteUrl}/#organization` },
+    areaServed: company.locations.map((city) => ({
+      "@type": "City",
+      name: city,
+      containedInPlace: { "@type": "AdministrativeArea", name: company.region },
+    })),
+    serviceType: industry.title,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: absoluteUrl("/contact"),
+    },
+  };
+
   return (
     <>
+      <JsonLdScript data={industryServiceJsonLd} />
       <PageHero
         eyebrow={industry.eyebrow}
         title={industry.title}

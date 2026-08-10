@@ -5,21 +5,14 @@ import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { company } from "@/lib/data";
-import { absoluteUrl, createPageMetadata, locationsLine, phoneE164 } from "@/lib/seo";
+import { homeKeywords } from "@/lib/keywords";
+import { absoluteUrl, createPageMetadata, phoneE164, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact Us — Get a Free Manpower Quote",
-  description: `Ready to hire security, housekeeping, or labour in ${company.region}? Contact ${company.shortName} at ${company.phone} or request a free quote online. Serving ${locationsLine}.`,
+  title: "Contact Us - Free Manpower Quote",
+  description: `Hire security, housekeeping or staffing in ${company.region}. Call ${company.shortName} at ${company.phone}. Serving Gurugram, Noida, Faridabad & nearby cities.`,
   path: "/contact",
-  keywords: [
-    "contact Rudra Manpower",
-    "manpower quote Delhi NCR",
-    "hire security guards Gurugram",
-    "housekeeping staff Noida",
-    "manpower supplier Sonipat",
-    "security agency Manesar",
-    "labour supplier Faridabad",
-  ],
+  keywords: homeKeywords(),
 });
 
 export default function ContactPage() {
@@ -32,14 +25,7 @@ export default function ContactPage() {
           name: `Contact ${company.shortName}`,
           description: `Get a free manpower quote from ${company.shortName} for security, housekeeping, and labour across ${company.region}.`,
           url: absoluteUrl("/contact"),
-          mainEntity: {
-            "@type": "LocalBusiness",
-            name: company.name,
-            telephone: phoneE164,
-            email: company.email,
-            areaServed: company.locations,
-            url: absoluteUrl("/"),
-          },
+          mainEntity: { "@id": `${siteUrl}/#localbusiness` },
         }}
       />
       <PageHero
@@ -51,6 +37,19 @@ export default function ContactPage() {
 
       <section className="py-10 sm:py-16">
         <SiteContainer>
+          {/* Open in Google Maps — replace with GBP embed once listing is live */}
+          <div className="mb-10 overflow-hidden rounded-lg border border-brand-border">
+            <iframe
+              title="Rudra Manpower Services — Gurugram, Haryana"
+              src="https://maps.google.com/maps?q=Gurugram%2C%20Haryana%2C%20India&z=12&output=embed"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div className="order-2 lg:order-1">
               <h2 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100 sm:text-2xl">

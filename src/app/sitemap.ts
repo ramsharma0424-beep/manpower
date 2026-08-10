@@ -1,52 +1,52 @@
 import type { MetadataRoute } from "next";
 import { blogs } from "@/lib/blogs";
 import { industries } from "@/lib/content";
-import { services } from "@/lib/data";
+import { locationPages, services } from "@/lib/data";
 import { siteUrl } from "@/lib/seo";
 
-const pageConfig: Array<{
-  path: string;
-  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
-  priority: number;
-}> = [
-  { path: "", changeFrequency: "weekly", priority: 1 },
-  { path: "/services", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/contact", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/careers", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/training", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/blogs", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/terms-of-use", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/disclaimer", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/cookie-policy", changeFrequency: "yearly", priority: 0.3 },
+// Static pages with accurate last-significant-change dates (ISO 8601).
+// Update these whenever the page content meaningfully changes.
+// Do NOT use `new Date()` here — dynamic timestamps are ignored by Google.
+const staticPages: Array<{ path: string; lastModified: string }> = [
+  { path: "", lastModified: "2026-08-01" },
+  { path: "/services", lastModified: "2026-07-01" },
+  { path: "/contact", lastModified: "2026-07-01" },
+  { path: "/about", lastModified: "2026-07-01" },
+  { path: "/blogs", lastModified: "2026-06-15" },
+  { path: "/careers", lastModified: "2026-06-01" },
+  { path: "/training", lastModified: "2026-06-01" },
+  { path: "/privacy-policy", lastModified: "2023-04-10" },
+  { path: "/terms-of-use", lastModified: "2023-04-10" },
+  { path: "/disclaimer", lastModified: "2023-04-10" },
+  { path: "/cookie-policy", lastModified: "2023-04-10" },
 ];
+
+// Service and industry pages share a common last-update date.
+// Update when content in data.ts / content.ts is meaningfully revised.
+const SERVICE_LAST_MOD = "2026-07-01";
+const INDUSTRY_LAST_MOD = "2026-07-01";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    ...pageConfig.map(({ path, changeFrequency, priority }) => ({
+    ...staticPages.map(({ path, lastModified }) => ({
       url: `${siteUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency,
-      priority,
+      lastModified,
     })),
     ...services.map((service) => ({
       url: `${siteUrl}/services/${service.id}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
+      lastModified: SERVICE_LAST_MOD,
     })),
     ...industries.map((industry) => ({
       url: `${siteUrl}/industries/${industry.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
+      lastModified: INDUSTRY_LAST_MOD,
     })),
     ...blogs.map((post) => ({
       url: `${siteUrl}/blogs/${post.slug}`,
-      lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
+      lastModified: post.isoDate,
+    })),
+    ...locationPages.map((loc) => ({
+      url: `${siteUrl}/locations/${loc.slug}`,
+      lastModified: SERVICE_LAST_MOD,
     })),
   ];
 }

@@ -23,34 +23,34 @@ const icons: Record<string, React.ReactElement> = {
 
 export default function Solutions() {
   return (
-    <section className="section-muted py-20">
+    <section className="bg-white py-16 sm:py-20">
       <SiteContainer>
         <Reveal>
           <SectionHeading
             eyebrow="How We Help"
             title="We Solve the Problems You Actually Face"
-            description="You shouldn't have to chase your manpower partner for answers. Here's how we fix the issues that keep facility managers up at night."
+            description="Delayed wages, weak verification, and poor accountability shouldn't be normal in manpower services. Here's how our verified manpower agency fixes what facility managers face every day."
           />
         </Reveal>
 
         <div className="card-grid grid auto-rows-fr gap-6 md:grid-cols-2">
           {solutions.map((item, i) => (
             <Reveal key={item.title} delay={i * 80} className="h-full">
-              <div className="card-elevated flex h-full min-h-full flex-col p-6">
-                <div className="mb-4 inline-flex rounded-sm bg-brand-cream p-3 text-brand-gold dark:bg-stone-800">
+              <div className="card-elevated flex h-full min-h-full flex-col border-t-4 border-t-brand-gold p-6">
+                <div className="mb-4 inline-flex text-brand-gold">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     {icons[item.icon]}
                   </svg>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-brand-navy dark:text-stone-100">
+                <h3 className="font-display text-lg font-extrabold uppercase tracking-wide text-brand-navy">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-stone-500 dark:text-stone-400">
-                  <span className="font-medium text-stone-700 dark:text-stone-300">Challenge: </span>
+                <p className="mt-2 text-sm text-stone-600">
+                  <span className="font-bold text-brand-navy">Challenge: </span>
                   {item.problem}
                 </p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-                  <span className="font-medium text-brand-gold">Our approach: </span>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-700">
+                  <span className="font-bold text-brand-gold">Our approach: </span>
                   {item.solution}
                 </p>
               </div>

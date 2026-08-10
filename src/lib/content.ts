@@ -1,21 +1,22 @@
 import { company } from "./data";
 import { images } from "./images";
+import { keywordsForService } from "./keywords";
 
 export const whyChooseRudra = [
   {
     title: "PASARA Licensed & Police Verified",
     description:
-      "Every security deployment is backed by PASARA licensing and police verification — so you know exactly who is on your gate, floor, or site in Gurugram, Noida, and across Delhi NCR.",
+      "Every security deployment is backed by PASARA licensing and police verified security guards — a trusted security partner for corporates, factories, and warehouses in Gurugram, Noida, and across Delhi NCR.",
   },
   {
     title: "Army Veteran-Led Operations",
     description:
-      "Led by a retired Indian Army Captain, our teams follow briefing-before-shift discipline, uniform standards, and on-ground accountability that corporates and industrial sites expect.",
+      "Led by a retired Indian Army Captain, our army veteran-led security company follows briefing-before-shift discipline, uniform standards, and on-ground accountability that corporates and industrial sites expect.",
   },
   {
     title: "Reliable Shift Coverage",
     description:
-      "Absent guards and no-show housekeeping staff disrupt your operations. We focus on attendance, supervisor-led reporting, and rapid replacement when coverage gaps appear.",
+      "Absent guards and no-show housekeeping staff disrupt your operations. As a reliable staffing company, we focus on attendance, supervisor-led reporting, and rapid replacement when coverage gaps appear.",
   },
   {
     title: "Training Every 15 Days",
@@ -24,7 +25,7 @@ export const whyChooseRudra = [
   },
   {
     title: "Deployed Across Delhi NCR",
-    description: `Active operations in ${company.locations.join(", ")} with scalable teams for single-site and multi-location contracts.`,
+    description: `Active manpower services and workforce deployment in ${company.locations.join(", ")} with scalable contract staffing for single-site and multi-location contracts.`,
   },
   {
     title: "Dedicated Retired Armed Forces Team",
@@ -258,6 +259,12 @@ export type ServiceDetail = {
   areas: string[];
   keywords: string[];
 };
+
+export type ServiceDetailEnriched = ServiceDetail & {
+  keywordParagraph: string;
+};
+
+export const homeKeywordSummary = `Rudra Manpower is a trusted manpower agency and PASARA licensed security partner in ${company.region}, delivering police-verified security guard services, housekeeping services, facility management, and contract staffing with army veteran-led oversight.`;
 
 export const serviceDetails: ServiceDetail[] = [
   {
@@ -727,6 +734,13 @@ export function getIndustry(slug: string) {
   return industries.find((item) => item.slug === slug);
 }
 
-export function getServiceDetail(id: string) {
-  return serviceDetails.find((item) => item.id === id);
+export function getServiceDetail(id: string): ServiceDetailEnriched | undefined {
+  const service = serviceDetails.find((item) => item.id === id);
+  if (!service) return undefined;
+
+  const pageKeywords = keywordsForService(id);
+  const keywords = [...new Set([...service.keywords, ...pageKeywords])];
+  const keywordParagraph = `Looking for ${service.title.toLowerCase()} in ${company.region}? Rudra Manpower is a PASARA licensed manpower agency offering police-verified teams across ${company.locations.join(", ")} — with supervisor accountability on every shift.`;
+
+  return { ...service, keywords, keywordParagraph };
 }

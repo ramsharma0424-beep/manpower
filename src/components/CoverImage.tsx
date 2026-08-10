@@ -6,13 +6,14 @@ type CoverImageProps = {
   priority?: boolean;
   sizes?: string;
   aspect?: "video" | "wide" | "hero" | "blog";
+  objectPosition?: string;
   className?: string;
 };
 
 const aspectClasses = {
   video: "aspect-video",
   wide: "aspect-[16/10]",
-  hero: "aspect-[5/4] sm:aspect-[16/10] lg:aspect-[3/2]",
+  hero: "aspect-[5/4] sm:aspect-[4/5] lg:aspect-[4/5]",
   blog: "aspect-[16/10] sm:aspect-video",
 };
 
@@ -22,6 +23,7 @@ export default function CoverImage({
   priority = false,
   sizes = "100vw",
   aspect = "wide",
+  objectPosition = "center",
   className = "",
 }: CoverImageProps) {
   return (
@@ -34,7 +36,8 @@ export default function CoverImage({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover object-center"
+        className="object-cover"
+        style={{ objectPosition }}
       />
     </div>
   );

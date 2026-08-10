@@ -3,41 +3,37 @@ import AboutIntro from "@/components/AboutIntro";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ComplianceBadges from "@/components/ComplianceBadges";
 import CoreValues from "@/components/CoreValues";
-import FAQSection from "@/components/FAQSection";
 import JsonLdScript from "@/components/JsonLdScript";
 import Leadership from "@/components/Leadership";
 import PageHero from "@/components/PageHero";
 import Solutions from "@/components/Solutions";
 import SiteContainer from "@/components/SiteContainer";
 import { aboutContent, company, mission, qualityAssurance, sectors, vision } from "@/lib/data";
-import { createPageMetadata, absoluteUrl, locationsLine } from "@/lib/seo";
+import { homeKeywords } from "@/lib/keywords";
+import { createPageMetadata, absoluteUrl, locationsLine, personJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "About Us — Who We Are, Mission & Leadership",
-  description: `Meet ${company.shortName}: army veteran-led manpower services in ${company.region}. PASARA licensed security and verified staff across ${locationsLine}.`,
+  description: `Meet ${company.shortName}: a verified manpower agency and PASARA licensed security agency in ${company.region}. Army veteran-led workforce solutions and corporate manpower solutions across ${locationsLine}.`,
   path: "/about",
-  keywords: [
-    "about Rudra Manpower",
-    "manpower company Delhi NCR",
-    "PASARA security agency Gurugram",
-    "army veteran manpower services",
-    "manpower agency Sonipat",
-    "security company Manesar",
-  ],
+  keywords: homeKeywords(),
 });
 
 export default function AboutPage() {
   return (
     <>
       <JsonLdScript
-        data={{
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          name: `About ${company.shortName}`,
-          description: aboutContent.summary,
-          url: absoluteUrl("/about"),
-          mainEntity: { "@id": `${absoluteUrl("/")}#organization` },
-        }}
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: `About ${company.shortName}`,
+            description: aboutContent.summary,
+            url: absoluteUrl("/about"),
+            mainEntity: { "@id": `${absoluteUrl("/")}#organization` },
+          },
+          ...personJsonLd,
+        ]}
       />
       <PageHero
         eyebrow="About Us"

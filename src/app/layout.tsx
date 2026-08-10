@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Montserrat } from "next/font/google";
+import Analytics from "@/components/Analytics";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -48,6 +49,7 @@ export default function RootLayout({
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full reference" />
       </head>
       <body className="flex min-h-full flex-col bg-background pb-20 font-sans text-foreground antialiased md:pb-0">
+        <Analytics />
         <ScrollToTop />
         <Header />
         <main className="flex-1">{children}</main>

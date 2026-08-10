@@ -185,7 +185,7 @@ export const services = [
     id: "security",
     title: "Security Services",
     description:
-      "PASARA licensed security guard services with police verified security guards for access control, fire safety, perimeter security, parking security, and night watch across corporate, factory, and warehouse sites.",
+      "PASARA licensed security guard services with police verified security guards for access control, fire safety, perimeter security, parking security, and night watch across corporate, factory, and warehouse sites in Gurugram, Noida, Manesar, and Delhi NCR.",
     icon: "shield",
     highlights: [
       "Corporate security guards & industrial security services",
@@ -198,7 +198,7 @@ export const services = [
     id: "housekeeping",
     title: "Housekeeping Services",
     description:
-      "Professional housekeeping services and commercial cleaning for corporate offices, hotel housekeeping, hospital housekeeping, mall and retail cleaning, and residential premises.",
+      "Professional housekeeping services and commercial cleaning for corporate offices, hotel housekeeping, hospital housekeeping, mall and retail cleaning, and residential premises across Gurugram, Noida, Faridabad, and Delhi NCR.",
     icon: "sparkles",
     highlights: [
       "Office cleaning & corporate housekeeping",

@@ -23,7 +23,7 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
 
 // Service and industry pages share a common last-update date.
 // Update when content in data.ts / content.ts is meaningfully revised.
-const SERVICE_LAST_MOD = "2026-07-01";
+const SERVICE_LAST_MOD = "2026-08-11";
 const INDUSTRY_LAST_MOD = "2026-07-01";
 
 export default function sitemap(): MetadataRoute.Sitemap {

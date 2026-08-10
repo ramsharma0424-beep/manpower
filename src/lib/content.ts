@@ -258,6 +258,9 @@ export type ServiceDetail = {
   whyUs: string[];
   areas: string[];
   keywords: string[];
+  /** Extra long-form SEO sections rendered below offerings */
+  sections?: { heading: string; paragraphs: string[] }[];
+  faqs?: { question: string; answer: string }[];
 };
 
 export type ServiceDetailEnriched = ServiceDetail & {
@@ -272,31 +275,31 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Security Services",
     eyebrow: "PASARA Licensed",
     heroDescription:
-      "Police-verified security guards for corporates, factories, warehouses, and residential premises across Delhi NCR.",
+      "PASARA-licensed, police-verified security guard services for corporates, factories, warehouses, and residential sites across Gurugram, Noida, Manesar, Faridabad, and Delhi NCR.",
     intro:
-      "Your first line of defence should be licensed, verified, and disciplined. Rudra Manpower deploys PASARA-compliant security personnel with army veteran-led oversight — covering access control, fire safety, parking, and perimeter security across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak, and Bhiwadi.",
+      "Your first line of defence should be licensed, verified, and disciplined. Rudra Manpower is a PASARA licensed security agency that deploys police-verified security guards with army veteran-led oversight — covering access control, fire safety, parking, perimeter security, and night watch across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak, and Bhiwadi.",
     image: images.security,
     imageAlt: "Professional security guard at a corporate facility",
     offerings: [
       {
         title: "Corporate & Industrial Security",
         description:
-          "Access control, visitor management, CCTV coordination, and perimeter patrolling for offices, plants, warehouses, and industrial estates.",
+          "Access control, visitor management, CCTV coordination, and perimeter patrolling for offices, plants, warehouses, and industrial estates in Gurugram, Manesar, and Noida.",
       },
       {
         title: "Fire Safety & Emergency Response",
         description:
-          "Guards trained in evacuation procedures, fire extinguisher use, and first-response reporting for malls, hospitals, and high-footfall sites.",
+          "Guards trained in evacuation procedures, fire extinguisher use, and first-response reporting for malls, hospitals, and high-footfall sites across Delhi NCR.",
       },
       {
         title: "Parking & Perimeter Security",
         description:
-          "Vehicle entry management, parking zone monitoring, and boundary patrolling for corporates, malls, and gated communities.",
+          "Vehicle entry management, parking zone monitoring, and boundary patrolling for corporates, malls, factories, and gated communities.",
       },
       {
         title: "Night Watch & Shift Coverage",
         description:
-          "Reliable day and night shift deployment with supervisor reporting and replacement support when coverage gaps arise.",
+          "Reliable day and night shift deployment with supervisor reporting and rapid replacement when coverage gaps arise — including factory and warehouse night watch.",
       },
     ],
     whyUs: [
@@ -304,6 +307,7 @@ export const serviceDetails: ServiceDetail[] = [
       "Retired Army Captain-led operational discipline",
       "Supervisor reporting and shift accountability",
       "Rapid replacement when coverage gaps arise",
+      "Deployment across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak & Bhiwadi",
     ],
     areas: company.locations,
     keywords: [
@@ -312,6 +316,58 @@ export const serviceDetails: ServiceDetail[] = [
       "corporate security Delhi NCR",
       "industrial security Manesar",
       "night watch security Haryana",
+      "police verified security guards",
+      "factory security guards Faridabad",
+      "warehouse security Sonipat",
+    ],
+    sections: [
+      {
+        heading: "PASARA-licensed security guard services in Delhi NCR",
+        paragraphs: [
+          "Businesses across Delhi NCR need more than a uniform at the gate. They need a PASARA licensed security agency that can prove who is on duty, how those guards were verified, and who is accountable when something goes wrong. Rudra Manpower provides security guard services built on police verification, documented briefings, and supervisor-led reporting for corporate offices, manufacturing plants, warehouses, malls, hospitals, and residential societies.",
+          "Our security personnel are briefed before every shift on dress code, visitor protocols, emergency contacts, and site-specific SOPs. Whether you need corporate security guards for a Gurugram tower or industrial security services for a Manesar plant, we deploy teams that understand access control, visitor management, and perimeter security — not just presence.",
+        ],
+      },
+      {
+        heading: "Corporate, factory, and warehouse security that stays accountable",
+        paragraphs: [
+          "Corporate campuses in Cyber City, Udyog Vihar, and Sector 44 Gurugram face constant visitor flow, vendor entries, and after-hours risk. Our corporate security guards manage reception desks, boom barriers, visitor logs, and lobby monitoring with clear escalation paths to your admin team.",
+          "Factories and warehouses in Manesar, Bhiwadi, Sonipat, and Rohtak need industrial security services that protect material, vehicles, and night operations. We supply factory security guards and warehouse security staff trained for gate control, material movement logging, parking security, and night watch — with replacement cover when absences occur.",
+          "For multi-site clients, one Rudra contract can cover Gurugram headquarters, a Noida warehouse, and a Faridabad plant with shared supervisors and consistent reporting formats.",
+        ],
+      },
+      {
+        heading: "Police-verified deployment and army veteran-led supervision",
+        paragraphs: [
+          "Every security deployment goes through police verification and document checks before day one. That reduces the risk of unverified staff on sensitive sites and gives facility managers a clearer compliance trail.",
+          "Operations are led by Capt Raj Kumar (Retd) and a retired armed forces supervisory team. That military-style discipline shows up in punctuality, uniform standards, briefing-before-shift routines, and on-ground accountability — the gap most staffing agencies leave open after the invoice is signed.",
+          "Training refreshers every 15 days cover fire safety and emergency response, access control drills, visitor handling, and conduct standards aligned to your facility type.",
+        ],
+      },
+      {
+        heading: "Where we deploy security teams",
+        paragraphs: [
+          "Rudra Manpower provides security guard agency services across Gurugram, Noida, Rohtak, Sonipat, Manesar, Faridabad, and Bhiwadi. Typical clients include corporates, BPOs, hospitals, malls and retail, industrial estates, residential societies, hotels, manufacturing units, and construction sites needing gate and material security.",
+          "Need a mix of armed or unarmed security guards, parking security, or night watch only? Share your site map, shift pattern, and headcount — we will propose a deployment plan and quote. You can also combine security with housekeeping, facility management, or contract staffing under one verified manpower partner.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Are your security guards PASARA licensed and police verified?",
+        answer:
+          "Yes. Rudra Manpower operates as a PASARA licensed security agency, and security personnel go through police verification and document checks before deployment on your site.",
+      },
+      {
+        question: "Do you provide night watch and 24×7 security in Gurugram and Noida?",
+        answer:
+          "Yes. We deploy day, night, and rotational shifts for corporate, industrial, and warehouse sites across Gurugram, Noida, Manesar, Faridabad, and other Delhi NCR locations, with supervisor reporting on each shift.",
+      },
+      {
+        question: "How quickly can you replace an absent security guard?",
+        answer:
+          "Replacement timelines depend on location and role. For standard corporate and industrial posts in Gurugram, Noida, and nearby areas, we prioritise rapid replacement through our standby pool after you report the gap.",
+      },
     ],
   },
   {
@@ -319,7 +375,7 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Housekeeping Services",
     eyebrow: "Facility Hygiene",
     heroDescription:
-      "Professional cleaning and hygiene teams for corporates, hotels, hospitals, malls, and residential premises across Delhi NCR.",
+      "Professional housekeeping services and commercial cleaning for corporates, hotels, hospitals, malls, and residential premises across Gurugram, Noida, Faridabad, and Delhi NCR.",
     intro:
       "Clean, well-maintained premises shape how clients, guests, and employees experience your facility. Rudra Manpower provides trained housekeeping staff with sector-specific SOPs — whether you run a corporate tower in Gurugram, a hotel in Noida, a hospital, or a retail mall in Faridabad.",
     image: images.housekeeping,
@@ -328,29 +384,30 @@ export const serviceDetails: ServiceDetail[] = [
       {
         title: "Corporate & Office Cleaning",
         description:
-          "Daily and periodic cleaning for workstations, meeting rooms, washrooms, and common areas with supervisor-led quality checks.",
+          "Daily and periodic office cleaning services for workstations, meeting rooms, washrooms, and common areas with supervisor-led quality checks.",
       },
       {
         title: "Hotel & Hospitality Housekeeping",
         description:
-          "Room cleaning, lobby upkeep, back-of-house hygiene, and guest-area presentation aligned to hospitality standards.",
+          "Hotel housekeeping services covering room cleaning, lobby upkeep, back-of-house hygiene, and guest-area presentation for hotels and serviced apartments.",
       },
       {
         title: "Hospital & Healthcare Hygiene",
         description:
-          "Infection-control aware cleaning for patient areas, corridors, and support zones with trained, disciplined staff.",
+          "Hospital housekeeping services with infection-control aware cleaning for patient areas, corridors, and support zones using trained, disciplined staff.",
       },
       {
         title: "Mall, Retail & Residential Upkeep",
         description:
-          "High-footfall area maintenance, retail floor cleaning, and residential society housekeeping across Delhi NCR.",
+          "Mall and retail cleaning plus residential housekeeping support for high-footfall zones, parking levels, and society common areas across Delhi NCR.",
       },
     ],
     whyUs: [
       "Site-specific training refreshers every 15 days",
       "Supervisors for attendance and quality audits",
       "Flexible headcount for peak seasons and expansions",
-      "Experience with hotels, corporates, and commercial sites",
+      "Experience with hotels, corporates, hospitals, and malls",
+      "Bundled with security or facility management if needed",
     ],
     areas: company.locations,
     keywords: [
@@ -358,6 +415,59 @@ export const serviceDetails: ServiceDetail[] = [
       "hotel housekeeping Noida",
       "corporate cleaning Delhi NCR",
       "facility housekeeping Faridabad",
+      "hospital housekeeping services",
+      "commercial cleaning services",
+      "deep cleaning Gurugram",
+      "housekeeping staffing agency",
+    ],
+    sections: [
+      {
+        heading: "Housekeeping services that match how your facility actually runs",
+        paragraphs: [
+          "Office tenants, hotel operators, and facility managers in Delhi NCR often face the same problems: no-shows, uneven washroom standards, and housekeeping teams that look busy but leave quality gaps. Rudra Manpower delivers housekeeping services with clear SOPs, supervisor checks, and attendance discipline — so your premises look and feel professionally maintained every shift.",
+          "We provide commercial cleaning services and corporate housekeeping for IT parks, business centres, BPOs, and office towers in Gurugram and Noida. Shift patterns can cover early morning floor care, daytime washroom rounds, and evening deep cleans without disrupting your operations.",
+        ],
+      },
+      {
+        heading: "Hotel, hospital, mall, and residential housekeeping",
+        paragraphs: [
+          "Hotel housekeeping services need guest-facing polish: room turnaround, lobby presentation, and back-of-house hygiene. Our teams follow hospitality-oriented briefings so linen areas, restaurants, and corridors stay consistent with brand standards.",
+          "Hospital housekeeping services require more than mop-and-bucket routines. We deploy sanitation staff trained for corridor discipline, washroom hygiene, and support-zone cleaning with awareness of infection-control expectations in healthcare environments.",
+          "For mall and retail cleaning, footfall is high and spills are constant. We staff common areas, food courts, restrooms, and parking interfaces with supervisors who can reallocate people during peak hours. Residential societies get reliable housekeeping staffing for lobbies, stairs, parks, and clubhouses across Faridabad, Gurugram, and Noida.",
+        ],
+      },
+      {
+        heading: "Training, supervisors, and scalable headcount",
+        paragraphs: [
+          "Every 15 days we run site-specific training refreshers on cleaning standards, chemical handling basics, waste segregation, and guest-area presentation. That keeps standards from drifting after the first month of a contract.",
+          "A named supervisor tracks attendance, quality audits, and client escalations. When you expand floors, open a new wing, or need deep cleaning services before an audit or festive season, we scale headcount through our housekeeping staffing agency model without forcing you to rebuild vendor relationships.",
+          "Many clients combine housekeeping with security guard services or technical facility management under one Rudra contract — one invoice, one accountability chain, one army veteran-led operations culture.",
+        ],
+      },
+      {
+        heading: "Housekeeping coverage across Delhi NCR",
+        paragraphs: [
+          "We deploy housekeeping teams in Gurugram, Noida, Rohtak, Sonipat, Manesar, Faridabad, and Bhiwadi. Tell us your facility type, areas to cover, preferred shift timings, and whether you need daily cleaning, periodic deep cleaning, or full sanitation staff supply.",
+          "Looking for a housekeeping partner who also understands PASARA-grade discipline on multi-service campuses? Request a free quote and we will propose staffing levels, supervisory structure, and a mobilisation timeline suited to your site.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide housekeeping for hotels and hospitals?",
+        answer:
+          "Yes. We deploy hotel housekeeping and hospital housekeeping teams with sector-specific SOPs, supervisor oversight, and training refreshers every 15 days across Delhi NCR.",
+      },
+      {
+        question: "Can you scale housekeeping staff for peak seasons?",
+        answer:
+          "Yes. As a housekeeping staffing agency, we mobilise additional cleaners and sanitation staff for festive peaks, audits, deep cleaning programmes, and new floor takeovers.",
+      },
+      {
+        question: "Which cities do you cover for commercial cleaning?",
+        answer:
+          "We provide commercial cleaning and corporate housekeeping across Gurugram, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.",
+      },
     ],
   },
   {

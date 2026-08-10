@@ -25,8 +25,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return { title: "Service Not Found" };
 
   return createPageMetadata({
-    title: `${service.title} in ${company.region}`,
-    description: service.heroDescription,
+    title:
+      service.id === "security"
+        ? "Security Guard Services in Delhi NCR | PASARA Licensed"
+        : service.id === "housekeeping"
+          ? "Housekeeping Services in Delhi NCR | Corporate & Hotel"
+          : `${service.title} in ${company.region}`,
+    description: service.heroDescription.slice(0, 155),
     path: `/services/${service.id}`,
     image: service.image,
     keywords: service.keywords,
@@ -79,6 +84,22 @@ export default async function ServiceDetailPage({ params }: Props) {
             {service.keywordParagraph}
           </p>
 
+          {service.sections?.map((section) => (
+            <div key={section.heading} className="mt-10 max-w-3xl">
+              <h2 className="font-display text-xl font-semibold text-brand-navy sm:text-2xl dark:text-stone-100">
+                {section.heading}
+              </h2>
+              {section.paragraphs.map((para) => (
+                <p
+                  key={para.slice(0, 48)}
+                  className="mt-3 text-sm leading-relaxed text-stone-600 sm:text-base dark:text-stone-300"
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+          ))}
+
           <h2 className="mt-10 font-display text-2xl font-semibold text-brand-navy dark:text-stone-100">
             What We Offer
           </h2>
@@ -118,16 +139,42 @@ export default async function ServiceDetailPage({ params }: Props) {
               </h2>
               <div className="mt-4 flex flex-wrap gap-2">
                 {service.areas.map((city) => (
-                  <span
+                  <Link
                     key={city}
-                    className="rounded-sm border border-brand-border bg-brand-cream px-3 py-1 text-sm font-medium text-brand-navy dark:border-stone-700 dark:bg-stone-800 dark:text-stone-200"
+                    href={`/locations/${city.toLowerCase()}`}
+                    className="rounded-sm border border-brand-border bg-brand-cream px-3 py-1 text-sm font-medium text-brand-navy transition hover:border-brand-gold hover:text-brand-gold dark:border-stone-700 dark:bg-stone-800 dark:text-stone-200"
                   >
                     {city}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
+
+          {service.faqs && service.faqs.length > 0 && (
+            <div className="mt-12 max-w-3xl">
+              <h2 className="font-display text-xl font-semibold text-brand-navy sm:text-2xl dark:text-stone-100">
+                Frequently Asked Questions
+              </h2>
+              <div className="mt-4 space-y-3">
+                {service.faqs.map((faq) => (
+                  <details key={faq.question} className="group card-elevated overflow-hidden">
+                    <summary className="cursor-pointer list-none px-5 py-4 text-sm font-semibold text-brand-navy marker:content-none dark:text-stone-100 [&::-webkit-details-marker]:hidden">
+                      <span className="flex items-start justify-between gap-4">
+                        {faq.question}
+                        <span className="mt-0.5 shrink-0 text-brand-gold transition group-open:rotate-45">
+                          +
+                        </span>
+                      </span>
+                    </summary>
+                    <div className="border-t border-brand-border px-5 py-4 text-sm leading-relaxed text-stone-600 dark:border-stone-700 dark:text-stone-300">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row">
             <Link href="/contact" className="btn-primary">

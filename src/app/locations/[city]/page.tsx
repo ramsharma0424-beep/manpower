@@ -22,12 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const loc = locationPages.find((l) => l.slug === city);
   if (!loc) return { title: "Location Not Found" };
 
-  return createPageMetadata({
-    title: `Manpower Services in ${loc.city} — Security, Housekeeping & Labour`,
+  const base = createPageMetadata({
+    title: `Manpower & Security Agency in ${loc.city} | Guards & Housekeeping`,
     description: `${company.shortName} provides PASARA-licensed security guard services, housekeeping services, and contract staffing in ${loc.city}, ${loc.state}. Police-verified teams, army veteran-led operations. Call ${company.phone} for a free quote.`,
     path: `/locations/${loc.slug}`,
     keywords: [
-      `manpower services ${loc.city}`,
+      `manpower services in ${loc.city}`,
+      `manpower agency ${loc.city}`,
+      `security services in ${loc.city}`,
       `security guard services ${loc.city}`,
       `housekeeping services ${loc.city}`,
       `staffing agency ${loc.city}`,
@@ -36,8 +38,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `contract staffing ${loc.city}`,
       `labour supply ${loc.city}`,
       `manpower agency ${loc.city} ${loc.state}`,
+      `security guards near me ${loc.city}`,
+      `best manpower agency ${loc.city}`,
     ],
   });
+
+  return {
+    ...base,
+    other: {
+      "geo.region": loc.geoRegion,
+      "geo.placename": loc.city,
+      "geo.position": `${loc.geo.latitude};${loc.geo.longitude}`,
+      ICBM: `${loc.geo.latitude}, ${loc.geo.longitude}`,
+    },
+  };
 }
 
 export default async function LocationPage({ params }: Props) {
@@ -61,6 +75,11 @@ export default async function LocationPage({ params }: Props) {
       postalCode: loc.postalCode,
       addressCountry: "IN",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: loc.geo.latitude,
+      longitude: loc.geo.longitude,
+    },
     areaServed: {
       "@type": "City",
       name: loc.city,
@@ -69,19 +88,33 @@ export default async function LocationPage({ params }: Props) {
     parentOrganization: { "@id": `${siteUrl}/#organization` },
   };
 
+  const faqSchema =
+    loc.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: loc.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }
+      : null;
+
   const featuredServices = services.slice(0, 6);
 
   return (
     <>
       <JsonLdScript data={locationSchema} />
+      {faqSchema && <JsonLdScript data={faqSchema} />}
       <PageHero
         eyebrow={`${loc.city}, ${loc.state}`}
-        title={`Manpower Services in ${loc.city}`}
+        title={`Security Guards, Housekeeping & Manpower Services in ${loc.city}`}
         description={`PASARA-licensed security guards, housekeeping staff, and contract labour deployed across ${loc.city} by ${company.shortName} — army veteran-led, police verified.`}
       />
       <Breadcrumbs
         items={[
-          { name: "Locations", path: "/contact" },
+          { name: "Service Areas", path: "/locations" },
           { name: loc.city, path: `/locations/${loc.slug}` },
         ]}
       />
@@ -96,6 +129,14 @@ export default async function LocationPage({ params }: Props) {
               <p className="mt-4 leading-relaxed text-stone-600 dark:text-stone-300">
                 {loc.summary}
               </p>
+              {loc.paragraphs.map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 48)}
+                  className="mt-4 leading-relaxed text-stone-600 dark:text-stone-300"
+                >
+                  {paragraph}
+                </p>
+              ))}
               <p className="mt-4 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
                 {loc.deploymentNote}
               </p>
@@ -193,6 +234,33 @@ export default async function LocationPage({ params }: Props) {
           </div>
         </SiteContainer>
       </section>
+
+      {loc.faqs.length > 0 && (
+        <section className="py-10 sm:py-14">
+          <SiteContainer>
+            <h2 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100 sm:text-2xl">
+              Frequently Asked Questions — {loc.city}
+            </h2>
+            <div className="mt-4 max-w-3xl space-y-3">
+              {loc.faqs.map((faq) => (
+                <details key={faq.question} className="group card-elevated overflow-hidden">
+                  <summary className="cursor-pointer list-none px-5 py-4 text-sm font-semibold text-brand-navy marker:content-none dark:text-stone-100 [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-start justify-between gap-4">
+                      {faq.question}
+                      <span className="mt-0.5 shrink-0 text-brand-gold transition group-open:rotate-45">
+                        +
+                      </span>
+                    </span>
+                  </summary>
+                  <div className="border-t border-brand-border px-5 py-4 text-sm leading-relaxed text-stone-600 dark:border-stone-700 dark:text-stone-300">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </SiteContainer>
+        </section>
+      )}
 
       <CTASection />
     </>

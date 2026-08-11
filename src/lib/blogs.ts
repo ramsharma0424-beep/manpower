@@ -363,4 +363,327 @@ export const blogs: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "security-guard-cost-guide-delhi-ncr",
+    title: "Security Guard Cost Guide for Delhi NCR Businesses (2026)",
+    excerpt:
+      "What does it actually cost to hire security guards in Gurugram, Noida, or Faridabad? This guide explains the factors that determine pricing — without made-up numbers.",
+    metaDescription:
+      "Understand security guard costs in Delhi NCR for 2026. Factors affecting pricing: PASARA licensing, shift type, statutory compliance (EPFO/ESIC), site type, and headcount. Guide by Rudra Manpower.",
+    keywords: [
+      "security guard cost Delhi NCR",
+      "security guard salary Gurugram 2026",
+      "PASARA security agency pricing",
+      "hire security guard Noida cost",
+      "security guard service charges",
+    ],
+    image: images.security,
+    imageAlt: "Security guard at a corporate facility entrance in Delhi NCR",
+    category: "Security",
+    date: "July 10, 2026",
+    isoDate: "2026-07-10",
+    readTime: "8 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "One of the most common questions we get from facility managers and HR heads in Delhi NCR: 'How much does it cost to hire security guards?' The honest answer is: it depends — but not in the vague, sales-y way. There are specific, understandable factors that drive the number. This guide breaks them down so you can evaluate any proposal you receive, including ours.",
+      },
+      {
+        type: "h2",
+        text: "Why there's no single 'market rate' for security guards",
+      },
+      {
+        type: "p",
+        text: "Security guard pricing in Delhi NCR varies because it rolls up several distinct cost components — not just the guard's salary. A quote from a PASARA-licensed, EPFO-compliant agency like Rudra Manpower will look different from a quote from an unlicensed vendor, and understanding why matters more than comparing headline numbers.",
+      },
+      {
+        type: "h2",
+        text: "Factor 1: Minimum wage notifications (state-specific)",
+      },
+      {
+        type: "p",
+        text: "Security guard wages in Haryana and Uttar Pradesh are governed by state minimum wage notifications, which are revised periodically. A licensed agency must pay at or above these rates — and those rates differ between Haryana (covering Gurugram, Faridabad, Manesar, Sonipat) and Uttar Pradesh (covering Noida, Greater Noida). Any quote significantly below the minimum wage floor should be a red flag: someone isn't being paid what they're owed, and that liability can come back to the client.",
+      },
+      {
+        type: "h2",
+        text: "Factor 2: Statutory compliance costs — EPFO and ESIC",
+      },
+      {
+        type: "p",
+        text: "EPFO (Employees' Provident Fund) and ESIC (Employees' State Insurance) contributions are mandatory for establishments above the threshold headcount. The employer's share of these contributions — 12% EPFO + 3.25% ESIC on applicable wages — is a real cost that compliant agencies build into their pricing. Non-compliant agencies skip these, quote lower, and pass the statutory audit risk to your business if they're your contractor of record.",
+      },
+      {
+        type: "h2",
+        text: "Factor 3: Shift pattern — day, night, or rotational",
+      },
+      {
+        type: "p",
+        text: "Night shift and rotational shift guards typically carry a higher cost than standard day shift deployment, because night allowances may apply under applicable minimum wage rules, and scheduling rotational shifts requires more staffing buffer to ensure no-show coverage. A 24×7 three-shift model at a single post requires at minimum 3–4 guards to account for weekly offs and leave.",
+      },
+      {
+        type: "h2",
+        text: "Factor 4: Armed vs unarmed security guards",
+      },
+      {
+        type: "p",
+        text: "Armed guards command a higher rate than unarmed guards — they require additional licensing, weapon training, and a more extensive verification process. For most corporate offices, IT parks, hospitals, and residential societies, unarmed security guards are appropriate. Armed deployment is relevant for cash-intensive businesses, sensitive installations, or high-risk sites. Overpaying for armed guards on a standard corporate premises is as common as underpaying for unarmed guards on high-risk sites.",
+      },
+      {
+        type: "h2",
+        text: "Factor 5: Supervision and accountability model",
+      },
+      {
+        type: "p",
+        text: "A reputable agency charges for supervisor overhead — the on-site or cluster supervisor who manages attendance, conducts shift briefings, and handles client escalations. This is an overhead worth paying for. Agencies that quote zero supervisor cost typically mean you're managing the guards directly, which is the operational burden you're trying to outsource in the first place.",
+      },
+      {
+        type: "h2",
+        text: "What you should actually ask for in a quote",
+      },
+      {
+        type: "ul",
+        items: [
+          "Guard wages per month (and whether they align with current state minimum wage)",
+          "EPFO and ESIC contribution breakdown (employer share clearly stated)",
+          "Supervisor cost (how many sites per supervisor, what's included)",
+          "Relief guard policy (who pays for replacement coverage on weekly offs and absences)",
+          "Service margin (agency's fee on top of direct costs)",
+          "Any one-time mobilisation cost for new deployments",
+        ],
+      },
+      {
+        type: "h2",
+        text: "PASARA licensing and why it affects your cost",
+      },
+      {
+        type: "p",
+        text: "Operating as a PASARA-licensed security agency requires state-level registration, renewal fees, police verification costs per guard, and training compliance. These aren't negligible costs. When you work with a licensed agency, you're paying for a layer of legal protection: your deployment is backed by a regulated provider, and any incident investigation or audit has a documented compliance trail. Unlicensed vendors skip these costs — and transfer the regulatory risk to you.",
+      },
+      {
+        type: "h2",
+        text: "How to get an accurate quote for your site",
+      },
+      {
+        type: "p",
+        text: `When you contact Rudra Manpower for a quote, we'll ask for your site location (city and area), number of security posts, shift pattern (day/night/24×7), and any site-specific requirements — armed or unarmed, access control type, visitor management needs. With that information, we provide a structured proposal with cost components broken down, not a single black-box number. Call us at ${company.phone} or use the contact form on our website.`,
+      },
+    ],
+  },
+  {
+    slug: "office-housekeeping-checklist-gurugram-noida",
+    title: "Office Housekeeping Checklist for Corporate Offices in Gurugram and Noida",
+    excerpt:
+      "A practical checklist for facility managers to evaluate daily, weekly, and monthly housekeeping standards — and spot the gaps before your next client visit.",
+    metaDescription:
+      "Free office housekeeping checklist for corporate offices in Gurugram and Noida. Daily, weekly, and monthly cleaning tasks, hygiene SOPs, and what to look for in a housekeeping vendor.",
+    keywords: [
+      "office housekeeping checklist Gurugram",
+      "corporate cleaning standards Noida",
+      "facility hygiene checklist Delhi NCR",
+      "office cleaning SOP corporate",
+      "housekeeping vendor evaluation checklist",
+    ],
+    image: images.housekeeping,
+    imageAlt: "Professional housekeeping staff cleaning a modern corporate office",
+    category: "Housekeeping",
+    date: "July 28, 2026",
+    isoDate: "2026-07-28",
+    readTime: "9 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Every facility manager in Gurugram or Noida knows the feeling: a senior client is walking through tomorrow, and the office looks… almost right. That 'almost' is what a structured housekeeping checklist prevents. Whether you're managing your own cleaning team or evaluating an outsourced housekeeping partner, this is the checklist we use — and recommend.",
+      },
+      {
+        type: "h2",
+        text: "Daily housekeeping tasks — what should happen every shift",
+      },
+      {
+        type: "ul",
+        items: [
+          "Workstation surface wipe-down (desks, monitors, keyboards) before business hours",
+          "Washroom cleaning and restocking (soap, tissue, air freshener) — minimum twice daily",
+          "Pantry and kitchenette wipe-down: countertops, sink, microwave exterior",
+          "Reception and lobby sweeping, mopping, and surface dusting",
+          "Lift interiors: floor mop, button panels, mirrors if present",
+          "Conference room sanitisation after every meeting (table, chairs, whiteboard ledge)",
+          "Waste bin emptying across all zones — not just common areas",
+          "Glass door and partition cleaning — fingerprints and smudges accumulate fast",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Weekly housekeeping tasks — depth beyond the daily round",
+      },
+      {
+        type: "ul",
+        items: [
+          "Venetian blind or window sill dusting",
+          "Under-desk and behind-furniture vacuuming",
+          "Washroom tile scrubbing (beyond daily mop)",
+          "Pantry deep clean: inside microwave, refrigerator wipe-down, drain cleaning",
+          "Staircase and corridor wall wipe-down",
+          "Server room and electrical area dry dusting (with supervisor confirmation)",
+          "Ceiling fan and AC vent surface dusting — critical in North India's dusty climate",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Monthly and periodic housekeeping tasks",
+      },
+      {
+        type: "ul",
+        items: [
+          "Deep carpet or flooring shampooing or machine scrubbing",
+          "Full washroom descaling (taps, tiles, commode)",
+          "High-surface dusting: false ceilings, cornices, top of partitions",
+          "Full glass façade cleaning (exterior, if accessible)",
+          "Pantry appliance deep clean",
+          "Fire exit and staircase thorough sweep",
+          "Pest control coordination (usually quarterly)",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Evaluating your housekeeping vendor — 8 questions to ask",
+      },
+      {
+        type: "p",
+        text: "If you outsource housekeeping, these questions separate vendors who will maintain standards from those who coast after month one:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Is there a named supervisor for our site — or are we managing the team directly?",
+          "What is the replacement protocol when a housekeeper is absent?",
+          "Do they conduct pre-shift briefings and dress code checks before every shift?",
+          "How are cleaning chemicals selected for different surfaces — are staff trained on chemical handling?",
+          "What is the training frequency? Site-specific refreshers or generic one-time induction?",
+          "How do they handle guest-area and client-facing zones differently from back-of-house?",
+          "Is attendance tracked digitally or manually — and can we access records?",
+          "What happens if we raise a quality complaint — who responds and how fast?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Common housekeeping gaps we see in Gurugram and Noida offices",
+      },
+      {
+        type: "p",
+        text: "Across the corporate offices, BPO floors, and IT parks we've worked with in Gurugram's Cyber City, Udyog Vihar, and Noida's Sectors 62–63 belt, the most common gaps are consistent:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Washroom standards drop after the morning peak — no second round scheduled",
+          "Ceiling fans and AC vents never dusted, leading to dusty exhaust visible to guests",
+          "Conference rooms not sanitised between consecutive meetings — smell and clutter accumulate",
+          "Vendor substitutes a trained worker with an untrained replacement without informing the facility manager",
+          "No supervisor presence means quality varies by individual, not by standard",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra Manpower's housekeeping model addresses these gaps",
+      },
+      {
+        type: "p",
+        text: "At Rudra Manpower, we assign a named supervisor per client site or cluster of nearby sites. Before any shift starts, we run a briefing on dress code, assigned zones, SOP priorities for the day, and client-specific requirements. Training refreshers happen every 15 days — not as a formality, but because standards drift without them. If a housekeeper is absent, the supervisor initiates replacement before the client's shift starts — not after a complaint.",
+      },
+      {
+        type: "p",
+        text: `We deploy housekeeping teams across Gurugram, Noida, Faridabad, Manesar, and the wider Delhi NCR region. If you're evaluating housekeeping vendors or your current contract isn't meeting the checklist above, reach out at ${company.phone} or fill in our contact form. We'll walk you through a tailored housekeeping deployment plan for your facility type.`,
+      },
+    ],
+  },
+  {
+    slug: "manpower-services-delhi-ncr-buyers-guide",
+    title: "Manpower Services in Delhi NCR: How to Choose the Right Agency (2026)",
+    excerpt:
+      "A practical buyer's guide to hiring manpower services, security guards, and housekeeping staff in Delhi NCR — what to check before you sign.",
+    metaDescription:
+      "Guide to choosing manpower services in Delhi NCR. Compare PASARA licensing, police verification, EPFO/ESIC compliance, and supervision for security, housekeeping & labour agencies in Gurugram and Noida.",
+    keywords: [
+      "manpower services in Delhi NCR",
+      "best manpower agency Gurugram",
+      "security services in Delhi NCR",
+      "housekeeping services Delhi NCR",
+      "how to choose manpower agency",
+      "PASARA licensed security agency Gurugram",
+    ],
+    image: images.team,
+    imageAlt: "Manpower agency team discussion for Delhi NCR deployment",
+    category: "Manpower",
+    date: "August 11, 2026",
+    isoDate: "2026-08-11",
+    readTime: "9 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "If you searched for manpower services in Delhi NCR or security services in Delhi NCR, you already know the market is crowded. Quotes look similar on paper. The difference shows up after deployment — when attendance slips, verification is incomplete, or no one answers after 8 PM.",
+      },
+      {
+        type: "h2",
+        text: "What “manpower services” usually includes in Delhi NCR",
+      },
+      {
+        type: "p",
+        text: "In Gurugram, Delhi, Noida, Faridabad, and Manesar, buyers typically bundle three needs: security guard services, housekeeping/cleaning staff, and general or construction labour. Some also need facility technical staff (electricians, DG operators) or event bouncers and PSOs. A strong agency can cover integrated manpower outsourcing under one contract instead of juggling three vendors.",
+      },
+      {
+        type: "h2",
+        text: "7 checks before you hire a manpower agency",
+      },
+      {
+        type: "ul",
+        items: [
+          "PASARA licence if security guards are part of scope",
+          "Police verification process with document trail for every guard",
+          "EPFO/ESIC handling for eligible contract staff",
+          "Named supervisor and replacement SLA (who covers absenteeism and how fast)",
+          "Clear wage payment cycle — delayed wages create attendance risk on your site",
+          "City coverage proof for your exact location (Cyber City, IMT Manesar, RIICO Bhiwadi, etc.)",
+          "Army veteran or professional operations leadership if discipline is a priority",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Security services in Delhi NCR: what good looks like",
+      },
+      {
+        type: "p",
+        text: "Top-performing security agency deployments are not just uniforms at a gate. They include access control SOPs, visitor logs, night-watch routes, fire emergency awareness, and reporting your facility manager can audit. For searches like “PASARA licensed security agency Gurugram” or “police verified security guards Manesar”, those documents and processes are the ranking signal for quality — not brochure claims.",
+      },
+      {
+        type: "h2",
+        text: "Housekeeping services that protect brand image",
+      },
+      {
+        type: "p",
+        text: "Office and hospital housekeeping in Delhi NCR fail when zones are unclear and supervisors are missing. Ask for daily task boards, washroom round frequency, deep-clean cadence, and chemical handling training. Cheap quotes that skip supervision often cost more through client complaints and staff churn.",
+      },
+      {
+        type: "h2",
+        text: "Quick city guide for buyers",
+      },
+      {
+        type: "ul",
+        items: [
+          "Gurugram / Gurgaon: Cyber City, Udyog Vihar, DLF, Sohna Road corporate & malls",
+          "Delhi: offices, hotels, hospitals, institutional facilities",
+          "Noida / Greater Noida: IT parks, manufacturing, Expressway sites",
+          "Manesar & Bhiwadi: industrial security + labour supply",
+          "Faridabad, Sonipat, Rohtak: factories, warehouses, construction labour",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra Manpower approaches Delhi NCR contracts",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower is a PASARA-licensed, army veteran-led agency based in Gurugram. We deploy police-verified security guards, trained housekeeping teams, and contract labour across Delhi NCR with supervisor accountability. Call ${company.phone} or visit our contact page with your city, headcount, and shift plan — we will respond with a practical deployment proposal.`,
+      },
+    ],
+  },
 ];

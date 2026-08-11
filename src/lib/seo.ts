@@ -10,25 +10,30 @@ export const phoneE164 = `+91${company.phone}`;
 export const locationsLine = company.locations.join(", ");
 
 export const defaultKeywords = [
+  "manpower services in Delhi NCR",
   "manpower agency Delhi NCR",
-  "security guard services near me Gurugram",
+  "security services in Delhi NCR",
+  "security guard services Delhi NCR",
+  "security agency Gurugram",
   "security agency Gurgaon",
+  "housekeeping services Delhi NCR",
   "housekeeping services Noida",
-  "manpower supplier Faridabad",
-  "PASARA licensed security agency",
-  "police verified security guards",
+  "best manpower agency Gurugram",
+  "PASARA licensed security agency Gurugram",
+  "police verified security guards Delhi NCR",
   "contract staffing Delhi NCR",
   "facility management services Gurugram",
   "security guards Manesar",
-  "housekeeping staff for office Gurgaon",
-  "labour contractor Sonipat",
-  "manpower services Bhiwadi",
+  "labour supply Sonipat",
+  "manpower contractor Faridabad",
+  "security guard company Bhiwadi",
+  "manpower services near me",
   "Rudra Manpower Services",
   ...seoKeywords.slice(0, 15),
 ];
 
 export const defaultDescription =
-  "Looking for a manpower agency near Delhi NCR? Hire PASARA-licensed security guards, housekeeping staff & labour in Gurugram, Noida, Faridabad, Manesar & nearby. Free quote.";
+  "Looking for manpower services in Delhi NCR? Hire a PASARA-licensed security agency for police-verified security guards, housekeeping staff & contract labour in Gurugram, Noida, Delhi, Faridabad, Manesar & nearby. Free quote.";
 
 type PageMetaOptions = {
   title: string;
@@ -103,13 +108,13 @@ export function createPageMetadata({
 
 export const rootMetadata: Metadata = {
   ...createPageMetadata({
-    title: "Manpower Agency Delhi NCR | Security & Housekeeping",
+    title: "Manpower Agency Delhi NCR | PASARA Security & Housekeeping",
     description: defaultDescription,
     path: "/",
     keywords: defaultKeywords,
   }),
   title: {
-    default: `${company.shortName} | Manpower Agency Delhi NCR — Security & Housekeeping`,
+    default: `${company.shortName} | Manpower Agency Delhi NCR — PASARA Security & Housekeeping`,
     template: `%s | ${company.shortName}`,
   },
   icons: {
@@ -193,6 +198,25 @@ export function createServicesJsonLd() {
   };
 }
 
+/**
+ * Social / citation profile URLs for sameAs.
+ * Set these env vars in .env.local (and Vercel) once profiles are live.
+ * Each is optional — falsy values are filtered out automatically.
+ *
+ *   NEXT_PUBLIC_GBP_URL=https://maps.google.com/?cid=YOUR_CID
+ *   NEXT_PUBLIC_JUSTDIAL_URL=https://www.justdial.com/...
+ *   NEXT_PUBLIC_INDIAMART_URL=https://www.indiamart.com/...
+ *   NEXT_PUBLIC_LINKEDIN_URL=https://www.linkedin.com/company/...
+ *   NEXT_PUBLIC_FACEBOOK_URL=https://www.facebook.com/...
+ */
+const sameAsProfiles = [
+  process.env.NEXT_PUBLIC_GBP_URL,
+  process.env.NEXT_PUBLIC_JUSTDIAL_URL,
+  process.env.NEXT_PUBLIC_INDIAMART_URL,
+  process.env.NEXT_PUBLIC_LINKEDIN_URL,
+  process.env.NEXT_PUBLIC_FACEBOOK_URL,
+].filter(Boolean) as string[];
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -222,7 +246,7 @@ export const organizationJsonLd = {
     containedInPlace: { "@type": "AdministrativeArea", name: "Delhi NCR" },
   })),
   foundingDate: "2023-04-10",
-  // sameAs: ["https://www.google.com/maps?cid=YOUR_GBP_CID", ...] — add once profiles are live
+  ...(sameAsProfiles.length > 0 ? { sameAs: sameAsProfiles } : {}),
 };
 
 export const localBusinessJsonLd = {
@@ -274,7 +298,8 @@ export const localBusinessJsonLd = {
       closes: "18:00",
     },
   ],
-  // Populate once GBP reviews are live — prevents schema errors from zero-count
+  ...(sameAsProfiles.length > 0 ? { sameAs: sameAsProfiles } : {}),
+  // Uncomment and update once GBP reviews are live (prevents schema errors from zero-count):
   // aggregateRating: {
   //   "@type": "AggregateRating",
   //   ratingValue: "4.8",

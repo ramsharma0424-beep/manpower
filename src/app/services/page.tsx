@@ -25,7 +25,7 @@ export default function ServicesPage() {
       <JsonLdScript data={createServicesJsonLd()} />
       <PageHero
         eyebrow="Solutions"
-        title="Our Services"
+        title="Security, Housekeeping & Manpower Services Across Delhi NCR"
         description={`Manpower services, security services, housekeeping services, facility management services, and labour supply across ${sectors.join(", ")} in ${company.region}.`}
       />
       <Breadcrumbs items={[{ name: "Services", path: "/services" }]} />

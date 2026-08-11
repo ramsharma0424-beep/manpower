@@ -13,10 +13,15 @@ import { homeKeywords } from "@/lib/keywords";
 import { createPageMetadata, absoluteUrl, locationsLine, personJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About Rudra Manpower — Agency in Gurugram, Delhi NCR",
-  description: `Meet ${company.shortName}: a verified manpower agency and PASARA licensed security agency in ${company.region}. Army veteran-led workforce solutions and corporate manpower solutions across ${locationsLine}.`,
+  title: "About Rudra Manpower | Army Veteran-Led Security Agency",
+  description: `Meet ${company.shortName}: a verified manpower agency and PASARA licensed security agency in ${company.region}. Led by a retired Army Captain with workforce solutions across ${locationsLine}.`,
   path: "/about",
-  keywords: homeKeywords(),
+  keywords: [
+    ...homeKeywords(),
+    "army veteran security company Delhi NCR",
+    "retired army captain security agency Gurugram",
+    "PASARA licensed security agency Gurugram",
+  ],
 });
 
 export default function AboutPage() {
@@ -37,7 +42,7 @@ export default function AboutPage() {
       />
       <PageHero
         eyebrow="About Us"
-        title={company.name}
+        title="Led by a Retired Army Captain — PASARA-Licensed Manpower Agency, Gurugram"
         description={aboutContent.summary}
       />
       <Breadcrumbs items={[{ name: "About Us", path: "/about" }]} />

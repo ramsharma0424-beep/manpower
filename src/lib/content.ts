@@ -267,7 +267,7 @@ export type ServiceDetailEnriched = ServiceDetail & {
   keywordParagraph: string;
 };
 
-export const homeKeywordSummary = `Looking for a manpower agency near Delhi NCR? Rudra Manpower is a PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, office housekeeping staff, facility management, and contract labour across Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
+export const homeKeywordSummary = `Looking for manpower services in Delhi NCR or security services in Delhi NCR? Rudra Manpower is an army veteran-led, PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, office housekeeping staff, facility management, and contract labour across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
 
 export const serviceDetails: ServiceDetail[] = [
   {
@@ -345,6 +345,24 @@ export const serviceDetails: ServiceDetail[] = [
         ],
       },
       {
+        heading: "How our security deployment process works",
+        paragraphs: [
+          "Step 1 — Site assessment: Before any guard sets foot on your premises, we conduct a site visit to understand access points, shift patterns, risk zones, and client-specific protocols. For Gurugram and Noida clients, same-day assessments are often available.",
+          "Step 2 — Staff selection and verification: Guards are selected from our trained pool based on your site profile. Police verification and document checks are completed before any deployment. You receive confirmation of verification status.",
+          "Step 3 — Briefing and mobilisation: Selected guards undergo a pre-deployment briefing covering your site's SOPs, visitor management rules, emergency contacts, dress code, and reporting chain. Supervisors confirm readiness before shift start.",
+          "Step 4 — Ongoing supervision and reporting: A named supervisor monitors attendance, conducts shift briefings, and reports daily. Any absence triggers rapid replacement from our standby roster. You get visibility — not surprises.",
+          "Step 5 — Quality audits every 15 days: Site-specific refreshers on fire safety, access control, and conduct standards keep performance from drifting after month one.",
+        ],
+      },
+      {
+        heading: "What determines security guard service costs in Delhi NCR",
+        paragraphs: [
+          "Security guard service pricing in Delhi NCR depends on several factors — not just headcount. Shift pattern (day, night, or 24×7), site type (corporate, industrial, or residential), number of posts, armed vs unarmed deployment, and location all influence what a contract looks like.",
+          "PASARA-licensed agencies like Rudra Manpower price transparently: you receive a breakdown covering guard wages (aligned to minimum wage notifications), statutory compliance costs (EPFO, ESIC), supervisor costs, and a service margin — no hidden charges. Non-licensed agencies often quote lower upfront but pass statutory non-compliance risk back to the client.",
+          "To get an accurate quote for your site, share your location, shift requirement, number of posts, and any specific security challenges. We will respond with a structured proposal. Call 8278065927 or use the contact form.",
+        ],
+      },
+      {
         heading: "Where we deploy security teams",
         paragraphs: [
           "Rudra Manpower provides security guard agency services across Gurugram, Noida, Rohtak, Sonipat, Manesar, Faridabad, and Bhiwadi. Typical clients include corporates, BPOs, hospitals, malls and retail, industrial estates, residential societies, hotels, manufacturing units, and construction sites needing gate and material security.",
@@ -367,6 +385,26 @@ export const serviceDetails: ServiceDetail[] = [
         question: "How quickly can you replace an absent security guard?",
         answer:
           "Replacement timelines depend on location and role. For standard corporate and industrial posts in Gurugram, Noida, and nearby areas, we prioritise rapid replacement through our standby pool after you report the gap.",
+      },
+      {
+        question: "What is the difference between armed and unarmed security guards?",
+        answer:
+          "Unarmed security guards handle access control, visitor management, perimeter patrolling, and general site security — suitable for most corporate offices, malls, hospitals, and residential societies. Armed guards are deployed for high-risk sites, cash-in-transit, or locations requiring a licensed weapon presence. Both categories go through police verification under our PASARA-licensed operations.",
+      },
+      {
+        question: "Do you provide security guards for residential societies in Delhi NCR?",
+        answer:
+          "Yes. We deploy security guards for gated residential societies, apartment complexes, and housing colonies across Gurugram, Noida, Faridabad, and nearby areas. Services include gate security, visitor management, parking security, and night watch — with supervisor reporting and rapid replacement when guards are absent.",
+      },
+      {
+        question: "What does working with a PASARA-licensed agency mean for us legally?",
+        answer:
+          "Under the Private Security Agencies Regulation Act (PASARA), security agencies must be licensed in each state they operate in, and guards must meet age, education, and training criteria. Working with a PASARA-licensed agency like Rudra Manpower means your site's security operations are backed by compliant personnel and documented verification — which matters during audits, insurance claims, and any incident investigations.",
+      },
+      {
+        question: "Can you provide security for corporate events and conferences?",
+        answer:
+          "Yes. We deploy security for corporate events, product launches, conferences, and exhibitions across Gurugram and Noida. Event security requirements — entry screening, crowd flow, VIP access control — are briefed specifically before the event date. For large-scale events, we coordinate bouncer or crowd management teams alongside standard security.",
       },
     ],
   },
@@ -445,6 +483,24 @@ export const serviceDetails: ServiceDetail[] = [
         ],
       },
       {
+        heading: "How our housekeeping deployment process works",
+        paragraphs: [
+          "Step 1 — Facility walkthrough: We visit your premises to map cleaning zones, understand footfall patterns, identify high-hygiene areas (washrooms, pantries, reception), and agree on shift timings that don't disrupt your operations.",
+          "Step 2 — Staff selection and briefing: Housekeeping staff are assigned based on your facility type — hotel, hospital, office, or mall — with sector-specific briefing on SOPs before day one. No staff arrives without a site induction.",
+          "Step 3 — Supervisor assignment: A named supervisor is accountable for attendance, quality rounds, and client escalations. You get a direct line — not a call centre queue.",
+          "Step 4 — Ongoing quality audits: Every 15 days, our training team runs refreshers on cleaning standards, chemical handling, waste segregation, and guest-area presentation. Standards don't drift after month one.",
+          "Step 5 — Scaling and adjustments: New floor, festive season, or audit prep? We scale headcount or shift frequency with short notice — no rebuilding vendor relationships.",
+        ],
+      },
+      {
+        heading: "Deep cleaning vs daily housekeeping — which do you need?",
+        paragraphs: [
+          "Daily housekeeping covers routine maintenance: workstation wipe-downs, washroom rounds, floor mopping, waste collection, and lobby upkeep. It keeps your facility presentable every shift and is the foundation of any commercial cleaning contract.",
+          "Deep cleaning goes beyond the surface: behind fixtures, ceiling fans, AC vents, tile grout, pantry appliances, and high-touch points that daily cleaning doesn't reach. Most corporate offices benefit from monthly or quarterly deep cleaning schedules alongside daily maintenance.",
+          "For hospitals and food-adjacent facilities, deep sanitation with disinfectants and infection-control protocols may be required more frequently — and needs trained staff, not general cleaners. Rudra Manpower provides both daily and periodic deep cleaning services with staffing scaled to your schedule.",
+        ],
+      },
+      {
         heading: "Housekeeping coverage across Delhi NCR",
         paragraphs: [
           "We deploy housekeeping teams in Gurugram, Noida, Rohtak, Sonipat, Manesar, Faridabad, and Bhiwadi. Tell us your facility type, areas to cover, preferred shift timings, and whether you need daily cleaning, periodic deep cleaning, or full sanitation staff supply.",
@@ -467,6 +523,26 @@ export const serviceDetails: ServiceDetail[] = [
         question: "Which cities do you cover for commercial cleaning?",
         answer:
           "We provide commercial cleaning and corporate housekeeping across Gurugram, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.",
+      },
+      {
+        question: "What is the minimum contract period for housekeeping services?",
+        answer:
+          "Minimum engagement periods depend on facility type and headcount. For standard corporate and commercial housekeeping, we typically work on monthly or quarterly contracts. For event or one-time deep cleaning, single-day or week-long engagements are available. Contact us with your requirement for a tailored proposal.",
+      },
+      {
+        question: "Do you supply housekeeping equipment and cleaning materials?",
+        answer:
+          "Our model focuses on trained manpower supply — the housekeeping staff, supervisors, and operational accountability. Equipment and cleaning materials can be discussed as part of your contract scope. Many clients provide site-specific equipment and materials; we supply the trained workforce and management oversight.",
+      },
+      {
+        question: "How do you ensure consistent quality once the contract starts?",
+        answer:
+          "A named supervisor conducts quality rounds and is accountable for attendance and client complaints. We also run training refreshers every 15 days on your facility's specific standards. If quality drops, you have a direct escalation contact — not a generic helpline. This structure is what separates our housekeeping staffing model from agencies that deploy and disappear.",
+      },
+      {
+        question: "Can you handle housekeeping for multiple floors or branches?",
+        answer:
+          "Yes. We manage multi-floor and multi-site housekeeping contracts with centralised supervisor coordination and site-wise reporting. Corporate clients with offices across Gurugram and Noida can consolidate under one Rudra housekeeping contract for consistent standards and single-invoice billing.",
       },
     ],
   },
@@ -698,6 +774,42 @@ export const serviceDetails: ServiceDetail[] = [
       "factory helper Manesar",
       "manufacturing labour Noida",
       "warehouse helpers Delhi NCR",
+      "labour supply Sonipat",
+      "labour supply Delhi NCR",
+      "manpower contractor Manesar",
+    ],
+    sections: [
+      {
+        heading: "When factories and warehouses need reliable labour supply",
+        paragraphs: [
+          "Production lines stall when helpers are late, undocumented, or unmanaged. Rudra Manpower provides verified general labour supply across Delhi NCR for manufacturing plants, mills, warehouses, and logistics yards — with attendance discipline and supervisor coordination built into the contract.",
+          "Clients in Manesar, Sonipat, Bhiwadi, Gurugram, and Noida typically request loading teams, packaging helpers, and shift-based industrial manpower that can scale up for peak seasons without long recruitment cycles.",
+        ],
+      },
+      {
+        heading: "How our labour deployment works",
+        paragraphs: [
+          "1) Share location, headcount, shift pattern, and skill mix. 2) We propose wage bands and compliance scope (EPFO/ESIC where applicable). 3) Document checks and briefing before join. 4) Mobilise with a named supervisor. 5) Track attendance and replacements through weekly reporting.",
+          "This process keeps your shop-floor managers focused on output while we handle workforce reliability for general labour and helpers.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide labour supply in Sonipat and Manesar industrial areas?",
+        answer:
+          "Yes. We deploy general labour and helpers for factories and warehouses across Sonipat, Kundli, IMT Manesar, and nearby industrial belts. Call 8278065927 with your headcount requirement.",
+      },
+      {
+        question: "Is your contract labour EPFO and ESIC compliant?",
+        answer:
+          "Where statutory coverage applies, our contract manpower model supports EPFO and ESIC compliance along with attendance and wage documentation so your site stays organised.",
+      },
+      {
+        question: "Can you ramp labour headcount quickly for production peaks?",
+        answer:
+          "Yes. After site assessment and confirmation, we can mobilise additional helpers for seasonal demand, loading peaks, or temporary production increases across Delhi NCR.",
+      },
     ],
   },
   {
@@ -833,9 +945,57 @@ export const serviceDetails: ServiceDetail[] = [
     areas: company.locations,
     keywords: [
       "contract manpower Delhi NCR",
+      "manpower services in Delhi NCR",
       "staffing agency Gurugram",
       "manpower supplier Noida",
-      "EPFO ESIC manpower Haryana",
+      "EPFO ESIC compliant staffing agency Gurugram",
+      "best manpower agency Gurugram",
+      "manpower outsourcing Delhi NCR",
+    ],
+    sections: [
+      {
+        heading: "Verified manpower services across Delhi NCR",
+        paragraphs: [
+          "Searching for manpower services in Delhi NCR usually means you need one accountable partner for security, housekeeping, labour, and project staffing — not five vendors with fragmented billing. Rudra Manpower delivers contract staffing with PASARA-licensed security capability, police-verified deployments, and army veteran-led supervision from Gurugram across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.",
+          "Our contract manpower model covers short-term project teams, seasonal peaks, and long-term facility contracts. You get clear headcount tracking, supervisor reporting, and EPFO/ESIC compliant staffing support where statutory rules apply.",
+        ],
+      },
+      {
+        heading: "What buyers should ask before hiring a manpower agency",
+        paragraphs: [
+          "Ask for PASARA licensing if the scope includes security guards. Ask how police verification is documented. Ask who pays wages and on what cycle. Ask how absentee replacements are handled within 24–48 hours. Ask whether EPFO and ESIC are included for eligible categories.",
+          "Those answers separate a reliable manpower agency from a body-shopping broker. We design every proposal around those checkpoints so finance, admin, and site teams stay aligned.",
+        ],
+      },
+      {
+        heading: "How contract staffing deployment works with Rudra",
+        paragraphs: [
+          "1) Requirement capture — roles, locations, shifts, and compliance needs. 2) Proposal with wage bands and deployment timeline. 3) Screening and verification. 4) Site induction with supervisor assignment. 5) Ongoing attendance, quality, and replacement management.",
+          "Whether you need 10 people for a warehouse opening or multi-site corporate manpower solutions, we keep one operations owner accountable end to end.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide manpower services across Delhi NCR?",
+        answer:
+          "Yes. Rudra Manpower provides contract staffing, security manpower, housekeeping staff, and labour supply across Delhi, Gurugram, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.",
+      },
+      {
+        question: "Is Rudra an EPFO ESIC compliant staffing agency in Gurugram?",
+        answer:
+          "Yes. Where statutory coverage applies, our contract manpower deployment includes EPFO and ESIC compliance support along with organised wage and attendance documentation.",
+      },
+      {
+        question: "Can one contract cover security, housekeeping, and labour together?",
+        answer:
+          "Yes. Many Delhi NCR clients prefer an integrated manpower outsourcing model so security guards, housekeeping staff, and helpers are managed under one verified partner with single-point reporting.",
+      },
+      {
+        question: "How fast can you deploy contract manpower after confirmation?",
+        answer:
+          "Timelines depend on role mix and location. For standard security and housekeeping requirements in Gurugram, Delhi, and Noida, we can often mobilise within a few days after site assessment and document clearance.",
+      },
     ],
   },
 ];

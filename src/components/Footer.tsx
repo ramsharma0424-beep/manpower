@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import SiteContainer from "@/components/SiteContainer";
-import { aboutDropdown, company, footerPolicies, industryLinks, navLinks } from "@/lib/data";
+import { aboutDropdown, company, footerPolicies, industryLinks, locationPages, navLinks } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -78,17 +78,22 @@ export default function Footer() {
 
           <div>
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
-              Service Areas
+              <Link href="/locations" className="transition hover:text-white">
+                Service Areas
+              </Link>
             </h3>
             <p className="mb-3 text-sm text-stone-400">
               Manpower deployment across {company.region}:
             </p>
             <ul className="flex flex-wrap gap-2">
-              {company.locations.map((city) => (
-                <li key={city}>
-                  <span className="rounded-sm border border-stone-700 px-2.5 py-1 text-xs text-stone-400">
-                    {city}
-                  </span>
+              {locationPages.map((loc) => (
+                <li key={loc.slug}>
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    className="rounded-sm border border-stone-700 px-2.5 py-1 text-xs text-stone-400 transition hover:border-brand-gold hover:text-brand-gold"
+                  >
+                    {loc.city}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -3,9 +3,9 @@ export const company = {
   shortName: "Rudra Manpower",
   tagline:
     "Manpower agency in Delhi NCR for security guard services, housekeeping staff & contract staffing",
-  heroHeadline: "Security, Housekeeping & Manpower Near You in Delhi NCR",
+  heroHeadline: "Security, Housekeeping & Manpower Services Across Delhi NCR",
   heroSubtext:
-    "Hire a PASARA-licensed manpower agency in Gurugram for police-verified security guards, office housekeeping staff, and labour supply across Noida, Faridabad, Manesar, Sonipat, Rohtak & Bhiwadi — with army veteran-led supervision on every shift.",
+    "Army veteran-led manpower agency in Gurugram — hire PASARA-licensed security guards, office housekeeping staff, and contract labour across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak & Bhiwadi with police verification on every deployment.",
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
   phone: "8278065927",
@@ -13,7 +13,16 @@ export const company = {
   website: "https://www.rudramanpowerservice.com",
   contactPerson: "Mr. Raj Kumar",
   region: "Delhi NCR",
-  locations: ["Gurugram", "Noida", "Rohtak", "Sonipat", "Manesar", "Faridabad", "Bhiwadi"],
+  locations: [
+    "Gurugram",
+    "Delhi",
+    "Noida",
+    "Rohtak",
+    "Sonipat",
+    "Manesar",
+    "Faridabad",
+    "Bhiwadi",
+  ],
   address: "Gurugram, Haryana, India",
 };
 
@@ -498,6 +507,7 @@ export const aboutDropdown = [
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/locations", label: "Areas" },
   { href: "/training", label: "Training" },
   { href: "/careers", label: "Careers" },
   { href: "/blogs", label: "Blogs" },
@@ -516,12 +526,20 @@ export type LocationData = {
   state: string;
   region: string;
   postalCode: string;
+  /** WGS-84 coordinates for LocalBusiness geo schema (5 decimal places) */
+  geo: { latitude: number; longitude: number };
+  /** ISO 3166-2 region code for geo.region meta tag */
+  geoRegion: string;
   /** Key client types or industries that dominate this city */
   dominantSectors: string[];
   /** 2-3 sentence unique description of why this city matters for Rudra */
   summary: string;
   /** City-specific deployment detail sentence */
   deploymentNote: string;
+  /** Extra SEO body paragraphs for local ranking depth */
+  paragraphs: string[];
+  /** City-specific FAQs rendered on the location page and in FAQPage schema */
+  faqs: { question: string; answer: string }[];
 };
 
 export const locationPages: LocationData[] = [
@@ -531,11 +549,71 @@ export const locationPages: LocationData[] = [
     state: "Haryana",
     region: "Delhi NCR",
     postalCode: "122001",
+    geo: { latitude: 28.45952, longitude: 77.02660 },
+    geoRegion: "IN-HR",
     dominantSectors: ["Corporate Offices", "BPOs", "Malls & Retail", "Hospitals"],
     summary:
       "Gurugram is Rudra Manpower's primary base of operations and home to our registered office. We deploy PASARA-licensed security guards, trained housekeeping staff, and facility management teams across Cyber City, Udyog Vihar, Sohna Road, Golf Course Road, and the Manesar industrial belt.",
     deploymentNote:
       "Same-day site assessments available for Gurugram clients — contact us at 8278065927 to confirm your location.",
+    paragraphs: [
+      "Businesses searching for manpower services in Gurugram and security guard services in Gurgaon need a partner who understands Corporate Sector 18–57, Cyber City, DLF phases, Udyog Vihar, Sohna Road, and Golf Course Road. Rudra Manpower is a PASARA-licensed security agency headquartered in Gurugram with army veteran-led supervisors on every major deployment.",
+      "Our Gurugram clients typically hire a mix of police-verified security guards for access control and night watch, housekeeping staff for offices and malls, and contract labour for facility support. We also cover IMT Manesar from our Gurugram operations base when factories need combined security and industrial manpower.",
+      "If you are comparing security agencies in Gurugram, look for PASARA licensing, document verification trails, supervisor attendance reporting, and EPFO/ESIC compliance. Those are the baseline standards we operate on for corporates, hospitals, hotels, and industrial sites across Gurugram.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide security guards in Cyber City and Udyog Vihar, Gurugram?",
+        answer:
+          "Yes. We have active security guard deployments in Cyber City, Udyog Vihar, Sohna Road, and Golf Course Road. Call 8278065927 for a same-day site assessment.",
+      },
+      {
+        question: "How quickly can you deploy housekeeping staff in Gurugram?",
+        answer:
+          "For Gurugram clients, site assessments can be arranged the same day. We can typically mobilise trained housekeeping teams within 2–3 days of confirmed requirement.",
+      },
+      {
+        question: "Do you cover DLF phases and Sector 44–57 in Gurugram?",
+        answer:
+          "Yes. We serve clients across DLF phases, HUDA sectors, NH-48 corridor, and MG Road — covering corporates, malls, hospitals, and residential complexes throughout Gurugram.",
+      },
+    ],
+  },
+  {
+    slug: "delhi",
+    city: "Delhi",
+    state: "Delhi",
+    region: "Delhi NCR",
+    postalCode: "110001",
+    geo: { latitude: 28.61394, longitude: 77.20902 },
+    geoRegion: "IN-DL",
+    dominantSectors: ["Corporate Offices", "Hospitals", "Hotels", "Retail"],
+    summary:
+      "Delhi is a core demand market for manpower services, security guard services, and commercial housekeeping. From our Gurugram base, Rudra Manpower deploys PASARA-licensed, police-verified teams for offices, hotels, hospitals, warehouses, and institutional sites across Delhi and adjoining NCR corridors.",
+    deploymentNote:
+      "Need security or housekeeping staff in Delhi? Call 8278065927 for a free requirement assessment and quote.",
+    paragraphs: [
+      "Searching for manpower services in Delhi NCR or security services in Delhi? Rudra Manpower is a Gurugram-based PASARA-licensed agency serving Delhi clients with army veteran-led supervision, police-verified security guards, and trained housekeeping staff.",
+      "Delhi deployments commonly cover corporate campuses, hotels, hospitals, malls, embassies/institutions (where permitted), and warehouse sites connected to the Outer Ring Road, NH-48, and major commercial belts. We coordinate shifts, replacements, and compliance reporting from one accountable operations desk.",
+      "Businesses comparing the best manpower agency options in Delhi should verify licensing, document checks, EPFO/ESIC handling, and on-ground supervision — the same standards we operate on for every security and housekeeping contract.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide security guard services in Delhi?",
+        answer:
+          "Yes. We deploy PASARA-licensed, police-verified security guards for corporate, hospital, hotel, and facility sites across Delhi. Call 8278065927 to share your location and headcount.",
+      },
+      {
+        question: "Can you supply housekeeping staff for Delhi offices and hospitals?",
+        answer:
+          "Yes. We provide trained office and hospital housekeeping teams with supervisor-led quality checks for Delhi clients, including multi-floor commercial facilities.",
+      },
+      {
+        question: "Are you a manpower agency serving all of Delhi NCR including Delhi?",
+        answer:
+          "Yes. Rudra Manpower serves Delhi along with Gurugram, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi for security, housekeeping, and contract staffing.",
+      },
+    ],
   },
   {
     slug: "noida",
@@ -543,11 +621,35 @@ export const locationPages: LocationData[] = [
     state: "Uttar Pradesh",
     region: "Delhi NCR",
     postalCode: "201301",
+    geo: { latitude: 28.53547, longitude: 77.39105 },
+    geoRegion: "IN-UP",
     dominantSectors: ["IT Parks", "Corporate Offices", "Manufacturing", "Hospitals"],
     summary:
       "Noida and Greater Noida host a concentration of IT parks, manufacturing units, and large residential complexes that need reliable, police-verified security and housekeeping teams. Rudra Manpower provides multi-shift security guard deployment, corporate housekeeping, and contract labour for clients across Sectors 62, 63, and 135.",
     deploymentNote:
       "We cover Noida, Greater Noida, and the Expressway industrial corridor — call 8278065927 to get a quote for your site.",
+    paragraphs: [
+      "Looking for manpower services in Noida or security guard services for IT parks? Rudra Manpower deploys PASARA-licensed guards and housekeeping teams across Sectors 62, 63, 135, 136, Knowledge Park, and Greater Noida industrial zones.",
+      "Noida offices and manufacturing units often need multi-shift security, visitor management, corporate housekeeping, and flexible contract staffing. We provide police-verified teams with site supervisors so attendance and SLA reporting stay clear.",
+      "Whether your requirement is hospital housekeeping in Noida, factory security near the Expressway, or temporary project manpower, we can scope headcount, shifts, and compliance before you sign.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide manpower services in Greater Noida and the Expressway belt?",
+        answer:
+          "Yes. We cover Noida, Greater Noida, and the Yamuna Expressway industrial corridor including sectors 62, 63, 135, 136, and the Knowledge Park area.",
+      },
+      {
+        question: "Can you deploy security guards for IT parks in Noida on short notice?",
+        answer:
+          "Yes. We maintain a ready pool of PASARA-licensed, police-verified security guards trained for IT park access control, visitor management, and CCTV monitoring. Contact us at 8278065927 for deployment timelines.",
+      },
+      {
+        question: "Do you supply housekeeping staff for hospitals in Noida?",
+        answer:
+          "Yes. We provide trained hospital housekeeping teams with experience in infection control SOPs, biomedical waste handling awareness, and clinical hygiene standards for Noida hospitals and diagnostic centres.",
+      },
+    ],
   },
   {
     slug: "rohtak",
@@ -555,11 +657,29 @@ export const locationPages: LocationData[] = [
     state: "Haryana",
     region: "Delhi NCR",
     postalCode: "124001",
+    geo: { latitude: 28.89530, longitude: 76.58630 },
+    geoRegion: "IN-HR",
     dominantSectors: ["Manufacturing", "Industrial Sites", "Construction"],
     summary:
       "Rohtak is a growing industrial hub in Haryana with rising demand for verified security guards, construction labour, and facility staff. Rudra Manpower deploys EPFO-compliant teams for factories, warehouses, and construction sites across Rohtak and the surrounding industrial areas.",
     deploymentNote:
       "Serving Rohtak with police-verified security and construction labour — reach us at 8278065927 to discuss your manpower requirement.",
+    paragraphs: [
+      "Rohtak businesses searching for a security agency or manpower contractor need reliable industrial staffing — not paper quotes. Rudra Manpower supplies police-verified security guards, construction labour, and EPFO-compliant contract staff for factories and project sites around Rohtak.",
+      "Our deployments focus on manufacturing units, warehouses, and construction corridors where attendance, shift discipline, and wage compliance matter every day. Call 8278065927 for a site-wise quote.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide EPFO-compliant contract labour in Rohtak?",
+        answer:
+          "Yes. All our contract labour deployments in Rohtak are EPFO and ESIC compliant. We handle statutory registrations, monthly compliance, and wage disbursal so clients can focus on operations.",
+      },
+      {
+        question: "Can you supply construction site labour for projects near Rohtak?",
+        answer:
+          "Yes. We supply masons, helpers, bar benders, and general site labour for construction projects across Rohtak, Asthal Bohar, and surrounding industrial zones.",
+      },
+    ],
   },
   {
     slug: "sonipat",
@@ -567,11 +687,29 @@ export const locationPages: LocationData[] = [
     state: "Haryana",
     region: "Delhi NCR",
     postalCode: "131001",
+    geo: { latitude: 28.99318, longitude: 77.02127 },
+    geoRegion: "IN-HR",
     dominantSectors: ["Manufacturing", "Industrial Sites", "Warehousing"],
     summary:
       "Sonipat's industrial corridors — including the KMP Expressway belt — attract large manufacturing and logistics operations that need dependable security and general labour. Rudra Manpower provides police-verified security guards and shift-based general labour for Sonipat's factories and warehouses.",
     deploymentNote:
       "Contact us at 8278065927 for security guard and labour deployment across Sonipat's industrial zones.",
+    paragraphs: [
+      "Sonipat industrial clients searching for labour supply and security guard services along the KMP Expressway need fast mobilisation and clear supervisor reporting. Rudra Manpower deploys police-verified guards and shift-based general labour for factories and warehouses in Sonipat and Kundli.",
+      "From perimeter security to loading helpers and warehouse manpower, we structure contracts around your shift pattern and EPFO/ESIC compliance requirements.",
+    ],
+    faqs: [
+      {
+        question: "Do you serve factories along the KMP Expressway in Sonipat?",
+        answer:
+          "Yes. We deploy security guards and general labour for manufacturing plants and warehouses along the KMP Expressway corridor in Sonipat and Kundli industrial area.",
+      },
+      {
+        question: "Can you provide warehouse security staff in Sonipat?",
+        answer:
+          "Yes. We supply round-the-clock warehouse security guards trained for perimeter patrol, access control, and goods-in/goods-out verification for logistics and warehousing clients in Sonipat.",
+      },
+    ],
   },
   {
     slug: "manesar",
@@ -579,11 +717,30 @@ export const locationPages: LocationData[] = [
     state: "Haryana",
     region: "Delhi NCR",
     postalCode: "122051",
+    geo: { latitude: 28.35729, longitude: 76.93813 },
+    geoRegion: "IN-HR",
     dominantSectors: ["Automotive", "Manufacturing", "Industrial Sites"],
     summary:
       "Manesar is home to automotive OEMs, Tier-1 suppliers, and industrial parks that require round-the-clock perimeter security, access control, and technical facility staff. Rudra Manpower has active deployments at Manesar's IMT industrial area with experienced guards trained for factory and shift-work environments.",
     deploymentNote:
       "Active in IMT Manesar — call 8278065927 for PASARA-licensed security and technical workforce.",
+    paragraphs: [
+      "IMT Manesar plants searching for an industrial manpower contractor or PASARA-licensed security guards need teams trained for factory access control, shift handovers, and automotive vendor protocols. Rudra Manpower has active deployments in Manesar for perimeter security, gate management, and technical facility staff.",
+      "We also supply electricians, DG operators, and multi-skilled helpers for manufacturing facilities that want one accountable partner for security plus facility manpower.",
+      "If you searched for police verified security guards Manesar or contract labour Manesar, share your headcount and shift plan — we will propose a compliant deployment.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide industrial security guards for IMT Manesar?",
+        answer:
+          "Yes. We have active deployments at IMT Manesar with PASARA-licensed, police-verified security guards trained for factory perimeter security, shift handovers, and automotive OEM access control protocols.",
+      },
+      {
+        question: "Can you supply technical manpower — electricians and DG operators — in Manesar?",
+        answer:
+          "Yes. We deploy electricians, DG operators, AC operators, and multi-skilled maintenance technicians for industrial facilities and manufacturing plants across Manesar and the IMT belt.",
+      },
+    ],
   },
   {
     slug: "faridabad",
@@ -591,11 +748,29 @@ export const locationPages: LocationData[] = [
     state: "Haryana",
     region: "Delhi NCR",
     postalCode: "121001",
+    geo: { latitude: 28.40843, longitude: 77.31708 },
+    geoRegion: "IN-HR",
     dominantSectors: ["Manufacturing", "Industrial Sites", "Residential"],
     summary:
       "Faridabad's mix of heavy industry, residential societies, and commercial spaces creates diverse manpower requirements. Rudra Manpower serves manufacturing plants, residential complexes, and retail outlets across Faridabad with security guards, housekeeping staff, and facility management teams.",
     deploymentNote:
       "Serving clients across Faridabad's industrial and residential zones — reach out at 8278065927 for a free quote.",
+    paragraphs: [
+      "Faridabad companies looking for housekeeping staff, security guards, or a local manpower agency need coverage across NIT, Ballabhgarh, and major industrial stretches. Rudra Manpower deploys police-verified security, commercial housekeeping, and facility teams for factories, societies, and offices.",
+      "Whether your priority is residential society security, plant gate management, or office cleaning staff, we build shift-wise plans with supervisor accountability.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide security guards for residential societies in Faridabad?",
+        answer:
+          "Yes. We deploy police-verified security guards for residential complexes across Faridabad — covering gate security, visitor management, and night patrolling under supervisor-led shift reporting.",
+      },
+      {
+        question: "Can you supply housekeeping staff for commercial properties in Faridabad?",
+        answer:
+          "Yes. We provide trained housekeeping and cleaning staff for corporate offices, retail outlets, hospitals, and commercial complexes across Faridabad's NIT, Sector 15, and Ballabhgarh areas.",
+      },
+    ],
   },
   {
     slug: "bhiwadi",
@@ -603,10 +778,28 @@ export const locationPages: LocationData[] = [
     state: "Rajasthan",
     region: "Delhi NCR",
     postalCode: "301019",
+    geo: { latitude: 28.19769, longitude: 76.85929 },
+    geoRegion: "IN-RJ",
     dominantSectors: ["Manufacturing", "Industrial Sites", "Warehousing"],
     summary:
       "Bhiwadi's RIICO industrial area is one of the fastest-growing manufacturing belts in the Delhi NCR region. Rudra Manpower deploys PASARA-licensed security guards, construction labour, and facility management staff for factories, logistics parks, and warehouses across Bhiwadi and Neemrana.",
     deploymentNote:
       "Covering Bhiwadi RIICO and Neemrana industrial zones — call 8278065927 to confirm deployment availability.",
+    paragraphs: [
+      "Factories searching for a security guard company in Bhiwadi or contract labour near RIICO / Neemrana need partners who understand NH-48 industrial operations. Rudra Manpower deploys PASARA-licensed security guards, construction labour, and facility staff across Bhiwadi and nearby Tapukara–Neemrana belts.",
+      "Our industrial deployments emphasise night watch, goods movement checks, and EPFO-compliant labour supply so plant managers get attendance reliability without admin overload.",
+    ],
+    faqs: [
+      {
+        question: "Do you serve the RIICO industrial area in Bhiwadi?",
+        answer:
+          "Yes. We have deployments in the RIICO industrial area and Neemrana zone — providing PASARA-licensed security guards, general labour, and facility management staff for factories and logistics parks.",
+      },
+      {
+        question: "Can you supply manpower for factories near Neemrana and Tapukara?",
+        answer:
+          "Yes. We cover Bhiwadi, Neemrana, and Tapukara — the main manufacturing belt along NH-48 in Rajasthan's Delhi NCR periphery. Call 8278065927 for availability and a free quote.",
+      },
+    ],
   },
 ];

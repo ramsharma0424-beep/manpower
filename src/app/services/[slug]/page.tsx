@@ -27,10 +27,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     title:
       service.id === "security"
-        ? "Security Guard Services in Delhi NCR | PASARA Licensed"
+        ? "Security Guard Services Delhi NCR | PASARA Licensed Agency"
         : service.id === "housekeeping"
-          ? "Housekeeping Services in Delhi NCR | Corporate & Hotel"
-          : `${service.title} in ${company.region}`,
+          ? "Housekeeping Services Delhi NCR | Office & Corporate"
+          : service.id === "contract-staffing"
+            ? "Manpower Services Delhi NCR | Contract Staffing & Labour"
+            : service.id === "labour"
+              ? "Labour Supply Delhi NCR | Industrial & Warehouse Manpower"
+              : service.id === "construction-labour"
+                ? "Construction Labour Supply Delhi NCR | Site Manpower"
+                : service.id === "bouncer"
+                  ? "Bouncer Services Delhi NCR | Event & Hotel Security"
+                  : service.id === "pso"
+                    ? "PSO Services Delhi NCR | Personal Security Officer"
+                    : `${service.title} in ${company.region}`,
     description: service.heroDescription.slice(0, 155),
     path: `/services/${service.id}`,
     image: service.image,

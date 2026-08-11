@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -8,34 +6,10 @@ type RevealProps = {
   delay?: number;
 };
 
+/** CSS-only reveal — no IntersectionObserver / client JS hydration cost. */
 export default function Reveal({ children, className = "", delay = 0 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(node);
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={ref}
-      className={`${visible ? "reveal-visible" : "reveal-hidden"} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+    <div className={`reveal-in ${className}`} style={{ animationDelay: `${delay}ms` }}>
       {children}
     </div>
   );

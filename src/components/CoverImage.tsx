@@ -35,8 +35,12 @@ export default function CoverImage({
         alt={alt}
         fill
         priority={priority}
+        // priority=true → Next.js sets fetchpriority="high" + eager loading automatically.
+        // For non-priority images, async decode keeps the main thread free.
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
         sizes={sizes}
-        quality={priority ? 72 : 70}
+        quality={priority ? 65 : 60}
         className="object-cover"
         style={{ objectPosition }}
       />

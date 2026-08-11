@@ -353,6 +353,10 @@ body {
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.reveal-in {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .animate-rise {
   animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -364,6 +368,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .animate-rise,
   .animate-fade-in,
+  .reveal-in,
   .reveal-visible,
   .card-elevated,
   .btn-primary,
@@ -371,5 +376,6 @@ body {
     animation: none !important;
     transition: none !important;
     transform: none !important;
+    opacity: 1 !important;
   }
 }

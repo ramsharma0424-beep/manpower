@@ -64,7 +64,7 @@ export default function Hero() {
                 priority
                 aspect="hero"
                 objectPosition="center 30%"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 540px"
                 className="transition-transform duration-700 group-hover:scale-[1.02]"
               />
               <div className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-t from-stone-950/70 via-stone-950/15 via-45% to-transparent sm:block" />

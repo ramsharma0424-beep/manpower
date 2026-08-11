@@ -10,6 +10,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
+// Limited weights keep font payloads small on mobile (smaller than full variable files).
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -23,7 +24,6 @@ const dmSans = DM_Sans({
   weight: ["400", "600", "700"],
   display: "swap",
 });
-
 export const metadata: Metadata = rootMetadata;
 
 export const viewport: Viewport = {

@@ -267,7 +267,7 @@ export type ServiceDetailEnriched = ServiceDetail & {
   keywordParagraph: string;
 };
 
-export const homeKeywordSummary = `Rudra Manpower is a trusted manpower agency and PASARA licensed security partner in ${company.region}, delivering police-verified security guard services, housekeeping services, facility management, and contract staffing with army veteran-led oversight.`;
+export const homeKeywordSummary = `Looking for a manpower agency near Delhi NCR? Rudra Manpower is a PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, office housekeeping staff, facility management, and contract labour across Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
 
 export const serviceDetails: ServiceDetail[] = [
   {

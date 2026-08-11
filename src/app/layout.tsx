@@ -13,13 +13,15 @@ import "./globals.css";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
+  weight: ["700", "800"],
+  display: "swap",
 });
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = rootMetadata;
@@ -45,6 +47,10 @@ export default function RootLayout({
       <head>
         <ThemeScript />
         <JsonLd />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icon-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM site summary" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full reference" />
       </head>

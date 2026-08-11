@@ -13,8 +13,8 @@ import { servicesMainKeywords } from "@/lib/keywords";
 import { absoluteUrl, createPageMetadata, createServicesJsonLd, locationsLine } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Our Services — Security, Housekeeping & Labour",
-  description: `Need security guard services, bouncer services, PSO services, housekeeping services, or construction labour supply in ${company.region}? Explore integrated facility management and contract staffing from ${company.shortName} across ${locationsLine}.`,
+  title: "Security, Housekeeping & Manpower Services Near Delhi NCR",
+  description: `Hire security guards in Gurugram, housekeeping staff in Noida, or contract manpower across Faridabad, Manesar & Delhi NCR. PASARA-licensed teams from ${company.shortName}.`,
   path: "/services",
   keywords: servicesMainKeywords(),
 });

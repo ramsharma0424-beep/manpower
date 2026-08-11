@@ -36,9 +36,9 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-background">
       <SiteContainer className="relative grid items-center gap-6 py-10 sm:gap-10 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:py-28">
         <div className="order-2 lg:order-1">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-brand-gold">
-            Trusted Manpower Agency & Staffing Partner
-          </p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-brand-gold">
+              Manpower Agency · Security · Housekeeping · Delhi NCR
+            </p>
           <h1 className="font-display text-3xl font-extrabold uppercase leading-[1.1] tracking-wide text-brand-navy dark:text-stone-50 sm:text-5xl lg:text-6xl">
             {company.heroHeadline}
           </h1>

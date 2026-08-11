@@ -1,10 +1,11 @@
 export const company = {
   name: "Rudra Manpower Services Pvt. Ltd.",
   shortName: "Rudra Manpower",
-  tagline: "Your trusted manpower agency for security, housekeeping & workforce solutions in Delhi NCR",
-  heroHeadline: "Need a Workforce You Can Actually Rely On?",
+  tagline:
+    "Manpower agency in Delhi NCR for security guard services, housekeeping staff & contract staffing",
+  heroHeadline: "Security, Housekeeping & Manpower Near You in Delhi NCR",
   heroSubtext:
-    "As a verified manpower agency and reliable staffing company, Rudra Manpower deploys police-verified security guard services, housekeeping services, and labour supply across Delhi NCR — with army veteran-led supervision on every shift.",
+    "Hire a PASARA-licensed manpower agency in Gurugram for police-verified security guards, office housekeeping staff, and labour supply across Noida, Faridabad, Manesar, Sonipat, Rohtak & Bhiwadi — with army veteran-led supervision on every shift.",
   founded: "April 10, 2023",
   email: "rudramanpowerservices@gmail.com",
   phone: "8278065927",

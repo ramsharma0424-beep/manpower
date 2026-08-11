@@ -10,20 +10,25 @@ export const phoneE164 = `+91${company.phone}`;
 export const locationsLine = company.locations.join(", ");
 
 export const defaultKeywords = [
-  "manpower services Delhi NCR",
-  "security guard services Gurugram",
+  "manpower agency Delhi NCR",
+  "security guard services near me Gurugram",
+  "security agency Gurgaon",
   "housekeeping services Noida",
+  "manpower supplier Faridabad",
   "PASARA licensed security agency",
-  "Rudra Manpower Services",
-  "contract staffing Delhi NCR",
   "police verified security guards",
-  "facility management manpower",
-  "Bhiwadi manpower agency",
-  ...seoKeywords.slice(0, 20),
+  "contract staffing Delhi NCR",
+  "facility management services Gurugram",
+  "security guards Manesar",
+  "housekeeping staff for office Gurgaon",
+  "labour contractor Sonipat",
+  "manpower services Bhiwadi",
+  "Rudra Manpower Services",
+  ...seoKeywords.slice(0, 15),
 ];
 
 export const defaultDescription =
-  "PASARA-licensed manpower agency in Delhi NCR. Police-verified security, housekeeping & labour across Gurugram, Noida, Faridabad & more. Free quote.";
+  "Looking for a manpower agency near Delhi NCR? Hire PASARA-licensed security guards, housekeeping staff & labour in Gurugram, Noida, Faridabad, Manesar & nearby. Free quote.";
 
 type PageMetaOptions = {
   title: string;
@@ -98,14 +103,24 @@ export function createPageMetadata({
 
 export const rootMetadata: Metadata = {
   ...createPageMetadata({
-    title: "Security, Housekeeping & Manpower Solutions in Delhi NCR",
+    title: "Manpower Agency Delhi NCR | Security & Housekeeping",
     description: defaultDescription,
     path: "/",
     keywords: defaultKeywords,
   }),
   title: {
-    default: `${company.shortName} | Security, Housekeeping & Manpower in Delhi NCR`,
+    default: `${company.shortName} | Manpower Agency Delhi NCR — Security & Housekeeping`,
     template: `%s | ${company.shortName}`,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   formatDetection: {
     telephone: true,

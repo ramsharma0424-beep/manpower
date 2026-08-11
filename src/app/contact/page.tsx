@@ -9,8 +9,8 @@ import { homeKeywords } from "@/lib/keywords";
 import { absoluteUrl, createPageMetadata, phoneE164, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact Us - Free Manpower Quote",
-  description: `Hire security, housekeeping or staffing in ${company.region}. Call ${company.shortName} at ${company.phone}. Serving Gurugram, Noida, Faridabad & nearby cities.`,
+  title: "Contact Manpower Agency Gurugram | Free Quote",
+  description: `Get a free quote for security guards, housekeeping staff or labour near you in Delhi NCR. Call ${company.phone}. Serving Gurugram, Noida, Faridabad, Manesar & nearby.`,
   path: "/contact",
   keywords: homeKeywords(),
 });

@@ -13,7 +13,7 @@ import { homeKeywords } from "@/lib/keywords";
 import { createPageMetadata, absoluteUrl, locationsLine, personJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About Us — Who We Are, Mission & Leadership",
+  title: "About Rudra Manpower — Agency in Gurugram, Delhi NCR",
   description: `Meet ${company.shortName}: a verified manpower agency and PASARA licensed security agency in ${company.region}. Army veteran-led workforce solutions and corporate manpower solutions across ${locationsLine}.`,
   path: "/about",
   keywords: homeKeywords(),

@@ -71,7 +71,7 @@ export default function Services({ showAll = false }: ServicesProps) {
           <SectionHeading
             eyebrow="What We Do"
             title="Whatever Your Site Needs, We've Got You Covered"
-            description="From security guard services and housekeeping services to general labour supply and contract staffing — tell us your challenge and we'll deploy the right workforce across Delhi NCR."
+            description="From security guard hire in Gurugram and housekeeping staff in Noida to labour supply in Faridabad & Manesar — tell us your site needs and we'll deploy verified teams across Delhi NCR."
           />
         </Reveal>
 

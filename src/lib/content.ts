@@ -267,7 +267,7 @@ export type ServiceDetailEnriched = ServiceDetail & {
   keywordParagraph: string;
 };
 
-export const homeKeywordSummary = `Looking for manpower services in Delhi NCR or security services in Delhi NCR? Rudra Manpower is an army veteran-led, PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, office housekeeping staff, facility management, and contract labour across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
+export const homeKeywordSummary = `Looking for manpower services in Delhi NCR or security services in Delhi NCR? Rudra Manpower is an army veteran-led, PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, housekeeping, bouncers, PSO protection, facility/technical staff, horticulture, labour, construction manpower, supervisors, and contract staffing across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
 
 export const serviceDetails: ServiceDetail[] = [
   {
@@ -587,9 +587,58 @@ export const serviceDetails: ServiceDetail[] = [
     areas: company.locations,
     keywords: [
       "bouncer services Gurugram",
+      "bouncer services Delhi NCR",
       "event security Noida",
       "hotel bouncer Delhi NCR",
       "banquet security Haryana",
+      "wedding security Gurugram",
+      "corporate event security Delhi NCR",
+      "nightclub security Gurgaon",
+    ],
+    sections: [
+      {
+        heading: "Professional bouncer services for hotels, banquets & events in Delhi NCR",
+        paragraphs: [
+          "Hotels, wedding venues, clubs, and corporate event organisers in Gurugram and Noida need bouncer services that protect guests without damaging brand experience. Rudra Manpower supplies police-verified venue security staff trained for entry screening, guest-list checks, queue management, and calm conflict handling.",
+          "Our bouncers work under a PASARA-licensed security agency model with pre-event briefing on dress code, VIP movement, prohibited items, and escalation contacts — so hospitality teams get disciplined cover instead of last-minute freelancers.",
+        ],
+      },
+      {
+        heading: "Where bouncer and event security deployments work best",
+        paragraphs: [
+          "Typical deployments include hotel banquet floors on Golf Course Road and Sohna Road, wedding venues across Gurugram–Faridabad, nightlife venues in Cyber Hub corridors, product launches in Noida, and exhibition or conference security for corporate clients.",
+          "For multi-bouncer events we assign a lead coordinator, define entry and VIP zones, and set reporting checkpoints before doors open. Clients can also combine bouncer services with parking security and housekeeping for full venue support.",
+        ],
+      },
+      {
+        heading: "How our event security process works",
+        paragraphs: [
+          "1) Share date, venue, expected headcount, VIP needs, and dress preference. 2) We propose staffing plan and shift timings. 3) Police-verified staff are briefed on your SOP. 4) On-site lead starts before guest arrival. 5) End-of-event handover and incident notes are shared with your host team.",
+          "Need wedding security, hotel banquet security, or corporate event security in Delhi NCR? Call 8278065927 with your event date for a quick quote.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide bouncer services in Gurugram and Noida?",
+        answer:
+          "Yes. We deploy trained bouncers and event security staff across Gurugram, Noida, Delhi, Faridabad, and nearby NCR venues for hotels, weddings, clubs, and corporate events.",
+      },
+      {
+        question: "Are your bouncers police verified?",
+        answer:
+          "Yes. Bouncer and event security deployments use police-verified personnel under our PASARA-licensed agency process, with pre-event briefing and supervisor coordination for multi-staff events.",
+      },
+      {
+        question: "Can you supply bouncers for one-day weddings or short events?",
+        answer:
+          "Yes. We support single-day weddings, banquet bookings, product launches, and multi-day conferences. Share date, venue, and headcount for a tailored event security plan.",
+      },
+      {
+        question: "Do you handle VIP entry and guest-list screening?",
+        answer:
+          "Yes. Our teams manage guest-list checks, VIP lane control, queue management, and calm de-escalation so hospitality hosts maintain a professional guest experience.",
+      },
     ],
   },
   {
@@ -633,9 +682,58 @@ export const serviceDetails: ServiceDetail[] = [
     areas: company.locations,
     keywords: [
       "PSO services Gurugram",
+      "PSO services Delhi NCR",
       "personal security officer Noida",
       "executive protection Delhi NCR",
       "VIP security Haryana",
+      "bodyguard services Gurugram",
+      "close protection officer Delhi",
+      "personal bodyguard agency Noida",
+    ],
+    sections: [
+      {
+        heading: "Personal Security Officer (PSO) services in Delhi NCR",
+        paragraphs: [
+          "Executives, directors, and VIP guests in Gurugram, Delhi, and Noida need discreet close protection — not conspicuous show of force. Rudra Manpower deploys police-verified Personal Security Officers for executive protection, residential cover, office movement, and travel escort duties across Delhi NCR.",
+          "As an army veteran-led, PASARA-licensed agency, we emphasise verification, conduct, communication discipline, and low-profile professionalism. Assignments can be full-time, rotation-based, or short VIP visit cover.",
+        ],
+      },
+      {
+        heading: "What PSO deployments typically cover",
+        paragraphs: [
+          "Common scopes include director residence and office cover, airport or meeting escorts, visiting dignitary protection at hotels, and sensitive site accompaniment during high-risk travel windows.",
+          "Before deployment we capture routes, schedules, emergency contacts, vehicle preference, and discretion requirements. Clients receive a named operations contact for daily coordination and replacements.",
+        ],
+      },
+      {
+        heading: "How to request PSO services",
+        paragraphs: [
+          "Share the protectee profile (without unnecessary personal data in email), locations, duration, and travel pattern. We propose PSO count, shifts, and reporting format. Document verification is completed before assignment start.",
+          "Call 8278065927 for confidential PSO staffing in Gurugram, Delhi, Noida, and nearby NCR corridors.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide PSO services in Gurugram and Delhi?",
+        answer:
+          "Yes. We deploy Personal Security Officers for executive and VIP protection across Gurugram, Delhi, Noida, and the wider Delhi NCR region.",
+      },
+      {
+        question: "Are PSO personnel police verified?",
+        answer:
+          "Yes. PSO deployments use police-verified personnel screened through our agency process, with clear conduct and reporting standards before assignment.",
+      },
+      {
+        question: "Can you provide short-term VIP protection for visiting guests?",
+        answer:
+          "Yes. We support assignment-based VIP and guest protection for meetings, hotel stays, events, and travel windows in addition to long-term executive cover.",
+      },
+      {
+        question: "Is PSO service discreet?",
+        answer:
+          "Yes. Our PSO model prioritises professional, low-profile protection aligned to corporate and residential environments rather than unnecessary visibility.",
+      },
     ],
   },
   {
@@ -678,10 +776,59 @@ export const serviceDetails: ServiceDetail[] = [
     ],
     areas: company.locations,
     keywords: [
-      "facility management Gurugram",
+      "facility management services Gurugram",
+      "facility management Delhi NCR",
       "electrician manpower Noida",
       "AC operator staffing Delhi NCR",
-      "technical staff Manesar",
+      "DG operator supply Delhi NCR",
+      "technical manpower Manesar",
+      "MEP manpower services Gurugram",
+      "building maintenance staff Noida",
+    ],
+    sections: [
+      {
+        heading: "Facility management & technical manpower in Delhi NCR",
+        paragraphs: [
+          "Corporate campuses and industrial sites searching for facility management services in Gurugram or technical manpower in Manesar need electricians, plumbers, AC operators, DG operators, and coordinators who keep building systems stable every shift. Rudra Manpower supplies skilled technical staff with supervisor-led attendance and escalation reporting.",
+          "We support offices, malls, hospitals, hotels, and factories across Delhi NCR with single-trade or multi-technician teams under one contract — useful when soft services (housekeeping/security) and hard services (MEP) must stay coordinated.",
+        ],
+      },
+      {
+        heading: "Roles we commonly deploy",
+        paragraphs: [
+          "Electricians and plumbers for routine and breakdown work, AC/HVAC operators for comfort systems, DG operators for power backup, carpenters for fit-out support, and facility supervisors who own daily checklists and vendor coordination.",
+          "Industrial clients in Manesar and Bhiwadi often need multi-skilled technicians who understand plant timings and permit-to-work discipline. Corporate clients in Cyber City and Noida IT parks focus on response SLAs and visitor-facing presentation.",
+        ],
+      },
+      {
+        heading: "How technical staffing is set up",
+        paragraphs: [
+          "1) Asset and shift review. 2) Role mix and skill matrix. 3) Screening and documentation. 4) Site induction with your facility SOP. 5) Daily/weekly reporting through a named supervisor.",
+          "Ask for DG operator supply, electrician manpower, or integrated facility management support by calling 8278065927 with your site location and headcount.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide facility management staff in Gurugram and Noida?",
+        answer:
+          "Yes. We deploy facility coordinators and technical manpower for corporates and industrial sites across Gurugram, Noida, Manesar, Faridabad, Delhi, and nearby NCR locations.",
+      },
+      {
+        question: "Can you supply DG operators and AC operators on shifts?",
+        answer:
+          "Yes. We supply AC/HVAC operators and DG operators for day, night, and rotational shifts based on your plant room and comfort system requirements.",
+      },
+      {
+        question: "Do you bundle technical staff with housekeeping and security?",
+        answer:
+          "Yes. Many clients prefer integrated facility contracts covering security, housekeeping, and technical manpower under one accountable partner.",
+      },
+      {
+        question: "How quickly can you replace an absent technician?",
+        answer:
+          "Replacement depends on trade and location. After confirmation we mobilise from our screened pool and keep your facility supervisor informed on ETA and handover.",
+      },
     ],
   },
   {
@@ -725,9 +872,57 @@ export const serviceDetails: ServiceDetail[] = [
     areas: company.locations,
     keywords: [
       "horticulture services Gurugram",
+      "horticulture services Delhi NCR",
       "landscaping manpower Noida",
       "garden maintenance Delhi NCR",
       "facility landscaping Haryana",
+      "lawn care services Gurugram",
+      "corporate landscaping Noida",
+      "indoor plant care office Gurugram",
+    ],
+    sections: [
+      {
+        heading: "Horticulture and landscaping manpower for Delhi NCR campuses",
+        paragraphs: [
+          "Corporate parks, hotels, hospitals, and residential societies searching for horticulture services in Gurugram or garden maintenance in Noida need consistent lawn care, seasonal planting, and indoor greenery upkeep — not occasional visit teams. Rudra Manpower deploys horticulture staff on defined weekly schedules with supervisor checks.",
+          "Green spaces affect first impressions at receptions, driveways, and common areas. Our teams handle lawn mowing, hedge work, planter care, watering routines, and indoor plant maintenance for commercial properties across Delhi NCR.",
+        ],
+      },
+      {
+        heading: "Schedules that match facility standards",
+        paragraphs: [
+          "We set visit frequency by campus size and season — monsoon growth control, summer watering discipline, and winter presentation for lawns and planters. Indoor plant care routes cover lobbies, atriums, and meeting floors.",
+          "Horticulture can be bundled with housekeeping and facility management so soft services and grounds maintenance report through one operations desk.",
+        ],
+      },
+      {
+        heading: "How to start a horticulture contract",
+        paragraphs: [
+          "Share your location, open area size, indoor plant count, and preferred visit days. We propose headcount, tools expectations, and a monthly work calendar. Call 8278065927 for landscaping manpower quotes in Gurugram, Noida, Faridabad, and Delhi.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide horticulture services in Gurugram and Noida?",
+        answer:
+          "Yes. We deploy gardening and landscaping manpower for corporates, hotels, hospitals, and residential societies across Gurugram, Noida, Faridabad, Delhi, and nearby NCR areas.",
+      },
+      {
+        question: "Can you maintain indoor plants for corporate offices?",
+        answer:
+          "Yes. Indoor plant care for lobbies, atriums, and office floors is a standard part of our horticulture offering for commercial clients.",
+      },
+      {
+        question: "Do you offer weekly garden maintenance schedules?",
+        answer:
+          "Yes. We create weekly or multi-visit schedules based on lawn size, seasonal growth, and presentation standards required by your facility team.",
+      },
+      {
+        question: "Can horticulture be combined with housekeeping?",
+        answer:
+          "Yes. Many campuses prefer bundled housekeeping plus horticulture under one Rudra contract for simpler supervision and billing.",
+      },
     ],
   },
   {
@@ -853,9 +1048,58 @@ export const serviceDetails: ServiceDetail[] = [
     areas: company.locations,
     keywords: [
       "construction labour Noida",
+      "construction labour supply Delhi NCR",
       "mason helper Faridabad",
       "site labour Gurugram",
       "construction manpower Delhi NCR",
+      "bar bender labour Noida",
+      "daily wage labour supply Haryana",
+      "construction site manpower Rohtak",
+    ],
+    sections: [
+      {
+        heading: "Construction labour supply across Delhi NCR project corridors",
+        paragraphs: [
+          "Builders and contractors searching for construction labour supply in Noida, Faridabad, Gurugram, Sonipat, or Rohtak need masons, helpers, and bar benders who are safety-briefed and mobilised on time. Rudra Manpower provides construction site labour with supervisor coordination so project phases do not stall on manpower gaps.",
+          "We support residential towers, villa projects, warehouses, commercial build-outs, and infrastructure sites with daily-wage or contract deployment models matched to your timeline.",
+        ],
+      },
+      {
+        heading: "Roles and site readiness",
+        paragraphs: [
+          "Typical requests include mason and helper gangs, bar bender labour, material helpers, and general site workforce for finishing or structural phases. Before joining, workers receive PPE awareness and site conduct briefing.",
+          "Clients often combine construction labour with site security under one agency so material protection and workforce attendance stay with a single accountable partner.",
+        ],
+      },
+      {
+        heading: "How construction manpower mobilisation works",
+        paragraphs: [
+          "1) Share project location, skill mix, and headcount by phase. 2) Confirm wage model and reporting. 3) Mobilise screened workforce. 4) On-site supervisor tracking. 5) Scale up/down as casting or finishing cycles change.",
+          "Call 8278065927 for construction manpower quotes in Noida, Faridabad, Gurugram, and surrounding Delhi NCR corridors.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you supply construction labour in Noida and Faridabad?",
+        answer:
+          "Yes. We mobilise masons, helpers, bar benders, and general site labour for residential and commercial projects across Noida, Faridabad, Gurugram, Sonipat, Rohtak, and nearby belts.",
+      },
+      {
+        question: "Can you scale labour headcount as project phases change?",
+        answer:
+          "Yes. Construction contracts are built to ramp up for peak casting weeks and taper during finishing stages with supervisor coordination.",
+      },
+      {
+        question: "Do workers receive safety briefing before entering site?",
+        answer:
+          "Yes. Workers are briefed on PPE usage, site conduct, and hazard awareness before deployment to your construction zone.",
+      },
+      {
+        question: "Can you provide site security along with construction labour?",
+        answer:
+          "Yes. Many builders prefer combined site security and construction labour under one Rudra contract for simpler control of gate access and workforce attendance.",
+      },
     ],
   },
   {
@@ -902,6 +1146,55 @@ export const serviceDetails: ServiceDetail[] = [
       "facility coordinator Noida",
       "manpower supervisor Delhi NCR",
       "operations lead Haryana",
+      "supervisory staff services Delhi NCR",
+      "site supervisor supply Gurugram",
+      "facility supervisor Manesar",
+      "manpower supervision services",
+    ],
+    sections: [
+      {
+        heading: "Supervisory staff who keep security, housekeeping & labour accountable",
+        paragraphs: [
+          "Manpower contracts fail when there is no on-ground leader. Rudra Manpower supplies site supervisors, facility coordinators, and operations leads who manage attendance, shift briefings, quality checks, and client escalations across Delhi NCR deployments.",
+          "Whether your site needs a security supervisor in Gurugram, a housekeeping supervisor for a Noida campus, or a multi-service facility coordinator in Manesar, we place experienced leads who report clearly and enforce SOPs daily.",
+        ],
+      },
+      {
+        heading: "What supervisors handle day to day",
+        paragraphs: [
+          "Attendance and replacement coordination, dress and conduct checks, handover logs, incident reporting, client liaison during audits, and coordination between security, housekeeping, technical, and labour teams on the same campus.",
+          "Army veteran-led standards shape how supervisors run morning briefs and escalate issues — so facility managers get answers, not silence.",
+        ],
+      },
+      {
+        heading: "When to add dedicated supervisory staff",
+        paragraphs: [
+          "Add a dedicated supervisor when you run multi-shift security, multi-floor housekeeping, multi-site labour, or combined facility services. One strong lead often costs less than repeated rework, absenteeism, and quality complaints.",
+          "Call 8278065927 to discuss site supervisor supply for Gurugram, Noida, Delhi, Manesar, and nearby locations.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you provide site supervisors in Gurugram and Noida?",
+        answer:
+          "Yes. We deploy site supervisors and facility coordinators for security, housekeeping, labour, and multi-service contracts across Gurugram, Noida, Manesar, Delhi, and other Delhi NCR locations.",
+      },
+      {
+        question: "Can one supervisor manage both security and housekeeping teams?",
+        answer:
+          "Yes, for mid-size sites. Larger campuses may need service-wise leads plus a facility coordinator. We recommend structure based on headcount and shift complexity.",
+      },
+      {
+        question: "What reporting do supervisors provide?",
+        answer:
+          "Typical reporting includes attendance, shift handover notes, incident logs, and escalation updates to your admin or facility manager on an agreed daily/weekly cadence.",
+      },
+      {
+        question: "Are supervisors experienced in manpower operations?",
+        answer:
+          "Yes. Supervisory staff are selected for on-ground leadership experience and aligned to our army veteran-led operating standards for punctuality, briefing discipline, and accountability.",
+      },
     ],
   },
   {

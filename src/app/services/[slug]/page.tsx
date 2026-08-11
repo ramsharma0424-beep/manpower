@@ -24,29 +24,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceDetail(slug);
   if (!service) return { title: "Service Not Found" };
 
+  const titles: Record<string, string> = {
+    security: "Security Guard Services Delhi NCR | PASARA Licensed Agency",
+    housekeeping: "Housekeeping Services Delhi NCR | Office & Corporate",
+    bouncer: "Bouncer Services Delhi NCR | Event & Hotel Security",
+    pso: "PSO Services Delhi NCR | Personal Security Officer",
+    technical: "Facility Management Services Gurugram | Technical Manpower",
+    horticulture: "Horticulture Services Gurugram | Landscaping Manpower",
+    labour: "Labour Supply Delhi NCR | Industrial & Warehouse Manpower",
+    "construction-labour": "Construction Labour Supply Delhi NCR | Site Manpower",
+    professional: "Site Supervisor Supply Delhi NCR | Facility Coordinators",
+    "contract-staffing": "Manpower Services Delhi NCR | Contract Staffing & Labour",
+  };
+
   return createPageMetadata({
-    title:
-      service.id === "security"
-        ? "Security Guard Services Delhi NCR | PASARA Licensed Agency"
-        : service.id === "housekeeping"
-          ? "Housekeeping Services Delhi NCR | Office & Corporate"
-          : service.id === "contract-staffing"
-            ? "Manpower Services Delhi NCR | Contract Staffing & Labour"
-            : service.id === "labour"
-              ? "Labour Supply Delhi NCR | Industrial & Warehouse Manpower"
-              : service.id === "construction-labour"
-                ? "Construction Labour Supply Delhi NCR | Site Manpower"
-                : service.id === "bouncer"
-                  ? "Bouncer Services Delhi NCR | Event & Hotel Security"
-                  : service.id === "pso"
-                    ? "PSO Services Delhi NCR | Personal Security Officer"
-                    : `${service.title} in ${company.region}`,
+    title: titles[service.id] ?? `${service.title} in ${company.region}`,
     description: service.heroDescription.slice(0, 155),
     path: `/services/${service.id}`,
     image: service.image,
     keywords: service.keywords,
   });
 }
+
+const serviceH1: Record<string, string> = {
+  security: "Hire PASARA-Licensed Security Guards in Delhi NCR",
+  housekeeping: "Professional Housekeeping Services for Offices in Delhi NCR",
+  bouncer: "Professional Bouncer Services for Events & Hotels in Delhi NCR",
+  pso: "Personal Security Officers for VIP & Executive Protection, Delhi NCR",
+  technical: "Integrated Facility Management & Technical Manpower in Delhi NCR",
+  horticulture: "Horticulture & Landscaping Manpower Services in Delhi NCR",
+  labour: "Verified Labour Supply for Factories & Warehouses – Delhi NCR",
+  "construction-labour":
+    "Construction Labour Supply for Residential & Commercial Sites, Delhi NCR",
+  professional: "Site Supervisors & Facility Coordinators Across Delhi NCR",
+  "contract-staffing": "Verified Manpower Services Across Delhi NCR",
+};
 
 export default async function ServiceDetailPage({ params }: Props) {
   const { slug } = await params;
@@ -64,9 +76,22 @@ export default async function ServiceDetailPage({ params }: Props) {
           areas: service.areas,
         })}
       />
+      {service.faqs && service.faqs.length > 0 && (
+        <JsonLdScript
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: service.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          }}
+        />
+      )}
       <PageHero
         eyebrow={service.eyebrow}
-        title={service.title}
+        title={serviceH1[service.id] ?? service.title}
         description={service.heroDescription}
       />
       <Breadcrumbs

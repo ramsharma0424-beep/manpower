@@ -15,4 +15,5 @@ When adding or changing photos on this site (hero, services, blogs, industries, 
 4. **Do not** pull random Unsplash/Pexels people photos that read as US/Europe unless the subject is clearly India (e.g. existing Gurugram Cyber City hero).
 5. **Alt text** should describe the Indian context naturally when relevant (e.g. “Security guard at a Gurugram corporate gate”).
 6. Compress JPEGs (~1400×900, quality ~70–75) before committing large assets.
+7. **Blog covers must be unique** — each blog slug gets its own image via `blogImages` in `src/lib/images.ts`. Never reuse the same cover across two blog posts.
 <!-- END:indian-imagery-rules -->

@@ -4,16 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     // 390 covers iPhone 12/13/14 Pro portrait; 414 covers Plus/Max.
-    // Without these, a 390-wide screen receives a 640w image (39% over-sized).
     deviceSizes: [390, 414, 640, 828, 1080, 1200, 1920],
-    // Cache optimised images for 30 days (default is 60 s).
     minimumCacheTTL: 2592000,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
   },
   async redirects() {
     return [

@@ -279,7 +279,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Your first line of defence should be licensed, verified, and disciplined. Rudra Manpower is a PASARA licensed security agency that deploys police-verified security guards with army veteran-led oversight — covering access control, fire safety, parking, perimeter security, and night watch across Gurugram, Noida, Manesar, Faridabad, Sonipat, Rohtak, and Bhiwadi.",
     image: images.security,
-    imageAlt: "Professional security guard at a corporate facility",
+    imageAlt: "Indian security guard at a Gurugram corporate facility gate",
     offerings: [
       {
         title: "Corporate & Industrial Security",
@@ -417,7 +417,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Clean, well-maintained premises shape how clients, guests, and employees experience your facility. Rudra Manpower provides trained housekeeping staff with sector-specific SOPs — whether you run a corporate tower in Gurugram, a hotel in Noida, a hospital, or a retail mall in Faridabad.",
     image: images.housekeeping,
-    imageAlt: "Professional housekeeping team cleaning a commercial facility",
+    imageAlt: "Housekeeping staff cleaning a corporate office in Gurugram",
     offerings: [
       {
         title: "Corporate & Office Cleaning",
@@ -555,7 +555,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Events and hospitality venues need more than a guard at the gate — they need trained personnel who can manage crowds professionally, screen entries, and represent your brand with discipline. Rudra Manpower supplies uniformed bouncers for hotels, banquets, clubs, and corporate events with pre-deployment briefing and supervisor oversight.",
     image: images.bouncer,
-    imageAlt: "Professional event and venue security staff",
+    imageAlt: "Indian event security bouncers at a Gurugram hotel banquet",
     offerings: [
       {
         title: "Hotel & Banquet Security",
@@ -650,7 +650,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "When you need close protection for a director, executive, VIP guest, or high-profile individual, you cannot compromise on verification, conduct, or reliability. Rudra Manpower deploys experienced PSOs with police verification, escort protocols, and professional discretion across Gurugram, Noida, and the wider Delhi NCR region.",
     image: images.pso,
-    imageAlt: "Personal security officer providing executive protection",
+    imageAlt: "Indian personal security officer with executive in Delhi NCR",
     offerings: [
       {
         title: "Executive & Director Protection",
@@ -745,7 +745,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Facility breakdowns cost time and money. Rudra Manpower provides skilled technical staff and facility coordinators who keep your building systems running — from electrical and plumbing work to AC, DG operations, and on-site facility management across Gurugram, Noida, Manesar, and Faridabad.",
     image: images.technical,
-    imageAlt: "Technical facility management and maintenance staff",
+    imageAlt: "Indian facility technician checking systems in Delhi NCR",
     offerings: [
       {
         title: "Facility Managers & Supervisors",
@@ -840,7 +840,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Well-kept green spaces reflect the quality of your facility. Rudra Manpower provides horticulture teams for lawn care, garden maintenance, seasonal planting, and indoor greenery across corporate campuses, hotels, hospitals, and residential societies in Delhi NCR.",
     image: images.horticulture,
-    imageAlt: "Professional horticulture and landscaping maintenance",
+    imageAlt: "Gardener maintaining a corporate campus garden in Gurugram",
     offerings: [
       {
         title: "Landscaping & Garden Design Support",
@@ -934,7 +934,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Production lines, warehouses, and industrial sites depend on helpers who show up, follow instructions, and stay. Rudra Manpower deploys general labour and helper staff for manufacturing units, mills, FMCG plants, and fitness centres — with supervisor coordination and flexible shift arrangements in Gurugram, Manesar, Noida, Rohtak, and Sonipat.",
     image: images.labour,
-    imageAlt: "Industrial labour and helper workforce",
+    imageAlt: "Indian industrial labour helpers at a Manesar warehouse",
     offerings: [
       {
         title: "Manufacturing & Mill Operations",
@@ -1016,7 +1016,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Construction timelines slip when labour doesn't show up or isn't safety-briefed. Rudra Manpower supplies skilled and semi-skilled construction workforce for builders and contractors across Noida, Faridabad, Gurugram, Sonipat, and Rohtak — including masons, helpers, bar benders, and general site workers for residential, commercial, and infrastructure projects.",
     image: images.construction,
-    imageAlt: "Construction site labour workforce",
+    imageAlt: "Indian construction workers on a Delhi NCR building site",
     offerings: [
       {
         title: "Masons, Helpers & Bar Benders",
@@ -1111,7 +1111,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Good manpower needs good leadership on the ground. Rudra Manpower provides experienced supervisors and facility coordinators who manage attendance, conduct shift briefings, liaise with clients, and ensure your security, housekeeping, or labour teams deliver to standard — across single sites or multi-location contracts in Delhi NCR.",
     image: images.facility,
-    imageAlt: "Site supervisor coordinating facility operations",
+    imageAlt: "Indian facility supervisor in a Gurugram office campus",
     offerings: [
       {
         title: "Site Supervisors & Team Leads",
@@ -1206,7 +1206,7 @@ export const serviceDetails: ServiceDetail[] = [
     intro:
       "Whether you need 10 people for a three-month project or 100 across multiple sites on a long-term contract, Rudra Manpower handles recruitment, deployment, supervision, and compliance — so you get a single accountable partner for workforce operations across Delhi NCR.",
     image: images.team,
-    imageAlt: "Contract manpower deployment team",
+    imageAlt: "Indian operations team planning manpower deployment in Gurugram",
     offerings: [
       {
         title: "Project-Based & Long-Term Contracts",

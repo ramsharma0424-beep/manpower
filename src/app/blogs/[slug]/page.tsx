@@ -44,8 +44,8 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.metaDescription,
     image: [absoluteImageUrl(post.image)],
-    datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.date).toISOString(),
+    datePublished: post.isoDate,
+    dateModified: post.isoDate,
     author: { "@type": "Organization", name: company.name, url: absoluteUrl("/") },
     publisher: {
       "@type": "Organization",
@@ -103,14 +103,31 @@ export default async function BlogPostPage({ params }: Props) {
 
         <BlogContent blocks={post.blocks} />
 
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link href="/services" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
+            All services
+          </Link>
+          <Link href="/locations" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
+            Service areas
+          </Link>
+          <Link href="/services/security" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
+            Security
+          </Link>
+          <Link href="/services/housekeeping" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
+            Housekeeping
+          </Link>
+          <Link href="/services/contract-staffing" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
+            Contract staffing
+          </Link>
+        </div>
+
         <div className="card-elevated mt-12 p-8">
           <h2 className="font-display text-lg font-semibold text-brand-navy dark:text-stone-100">
             Need help with your site?
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-            Whether it&apos;s security, housekeeping, or construction labour — we&apos;d love to hear
-            about your requirements. Drop us a message and our team will get back to you with a
-            tailored plan for {company.region}.
+            Whether it&apos;s security, housekeeping, facility staff, or construction labour — tell us
+            your location and headcount. We&apos;ll respond with a tailored plan for {company.region}.
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Link href="/contact" className="btn-primary">

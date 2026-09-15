@@ -8,14 +8,14 @@ import { siteUrl } from "@/lib/seo";
 // Update these whenever the page content meaningfully changes.
 // Do NOT use `new Date()` here — dynamic timestamps are ignored by Google.
 const staticPages: Array<{ path: string; lastModified: string }> = [
-  { path: "", lastModified: "2026-08-11" },
-  { path: "/services", lastModified: "2026-08-11" },
+  { path: "", lastModified: "2026-09-15" },
+  { path: "/services", lastModified: "2026-09-15" },
   { path: "/contact", lastModified: "2026-08-11" },
   { path: "/about", lastModified: "2026-08-11" },
-  { path: "/blogs", lastModified: "2026-08-11" },
+  { path: "/blogs", lastModified: "2026-09-15" },
   { path: "/careers", lastModified: "2026-06-01" },
   { path: "/training", lastModified: "2026-06-01" },
-  { path: "/locations", lastModified: "2026-08-11" },
+  { path: "/locations", lastModified: "2026-09-15" },
   { path: "/privacy-policy", lastModified: "2023-04-10" },
   { path: "/terms-of-use", lastModified: "2023-04-10" },
   { path: "/disclaimer", lastModified: "2023-04-10" },
@@ -24,9 +24,9 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
 
 // Service and industry pages share a common last-update date.
 // Update when content in data.ts / content.ts is meaningfully revised.
-const SERVICE_LAST_MOD = "2026-08-11";
+const SERVICE_LAST_MOD = "2026-09-15";
 const INDUSTRY_LAST_MOD = "2026-07-01";
-const LOCATION_LAST_MOD = "2026-08-11";
+const LOCATION_LAST_MOD = "2026-09-15";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

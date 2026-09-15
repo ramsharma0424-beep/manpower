@@ -2,7 +2,7 @@ import { images } from "./images";
 import { company } from "./data";
 import type { BlogPost } from "./blog-types";
 
-export const blogs: BlogPost[] = [
+const blogPosts: BlogPost[] = [
   {
     slug: "why-police-verification-matters",
     title: "Why Police Verification Should Be Your First Question When Hiring Security",
@@ -686,4 +686,350 @@ export const blogs: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "night-shift-security-guards-gurugram",
+    title: "Night Shift Security Guards in Gurugram: What Facility Managers Must Check",
+    excerpt:
+      "Night watch is where most security contracts fail. Here’s what to verify before you hire night shift security guards in Gurugram and Delhi NCR.",
+    metaDescription:
+      "Hiring night shift security guards in Gurugram? Checklist for police verification, PASARA licensing, supervisor reporting, and 24×7 coverage across Cyber City, Udyog Vihar & Manesar.",
+    keywords: [
+      "night shift security guards Gurugram",
+      "night watch security Delhi NCR",
+      "24x7 security guards Gurgaon",
+      "warehouse night security Manesar",
+      "PASARA night security agency",
+    ],
+    image: images.security,
+    imageAlt: "Night shift security guard monitoring a corporate facility gate",
+    category: "Security",
+    date: "August 25, 2026",
+    isoDate: "2026-08-25",
+    readTime: "8 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Most security failures in Gurugram don’t happen at 11 AM. They happen after midnight — when visitor traffic drops, supervisors leave, and night shift security guards are left alone at the gate. If you manage a corporate tower, warehouse, or factory in Cyber City, Udyog Vihar, or IMT Manesar, night watch quality decides whether your contract is real security or just a uniform after dark.",
+      },
+      {
+        type: "h2",
+        text: "Why night shift security is harder than day duty",
+      },
+      {
+        type: "ul",
+        items: [
+          "Fatigue and absenteeism are higher on night posts",
+          "Material movement and vehicle exits need stricter logging",
+          "Emergency response (fire, medical, intrusion) has fewer people on site",
+          "Replacement cover is harder to arrange at 2 AM unless the agency keeps a standby pool",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Checklist before hiring night shift security guards in Gurugram",
+      },
+      {
+        type: "ul",
+        items: [
+          "PASARA-licensed agency with documented police verification for every guard",
+          "Named night supervisor or roaming check-ins (not only WhatsApp attendance)",
+          "Clear SOP for boom barrier, visitor after-hours, and goods-out slips",
+          "Fire extinguisher and emergency contact briefing before first night duty",
+          "Written replacement SLA if a night guard doesn’t report",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Corporate vs warehouse night watch",
+      },
+      {
+        type: "p",
+        text: "Corporate campuses in DLF and Golf Course Road need lobby discipline, visitor protocol, and CCTV coordination. Warehouses and factories in Manesar, Bhiwadi, and Sonipat need perimeter patrols, loading-bay control, and material seal checks. One generic ‘security guard’ profile rarely fits both — ask your agency to map the post before quoting.",
+      },
+      {
+        type: "h2",
+        text: "How Rudra Manpower runs night deployments",
+      },
+      {
+        type: "p",
+        text: `As a PASARA-licensed, army veteran-led agency, Rudra Manpower deploys police-verified night shift security guards across Gurugram, Delhi, Noida, Manesar, and Faridabad with pre-shift briefings and supervisor reporting. Call ${company.phone} with your site type and shift pattern for a night-watch proposal — or see our security services page for full coverage details.`,
+      },
+    ],
+  },
+  {
+    slug: "industrial-manpower-manesar-bhiwadi",
+    title: "Industrial Manpower in Manesar & Bhiwadi: Security, Labour & Shift Staffing",
+    excerpt:
+      "IMT Manesar and RIICO Bhiwadi need a different manpower model than Cyber City offices. Here’s how factories should hire security and labour.",
+    metaDescription:
+      "Industrial manpower for Manesar and Bhiwadi factories — PASARA security guards, shift labour, EPFO-compliant staffing, and technical helpers for IMT and RIICO plants.",
+    keywords: [
+      "industrial manpower Manesar",
+      "factory security guards Manesar",
+      "manpower contractor Bhiwadi",
+      "RIICO labour supply",
+      "IMT Manesar security agency",
+      "contract labour Neemrana",
+    ],
+    image: images.labour,
+    imageAlt: "Industrial manpower and factory helpers at a manufacturing plant",
+    category: "Industry Insights",
+    date: "September 1, 2026",
+    isoDate: "2026-09-01",
+    readTime: "8 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Office manpower and industrial manpower are not the same product. Plants in IMT Manesar, RIICO Bhiwadi, and Neemrana need shift discipline, gate control for trucks, and helpers who understand production floors — not corporate lobby etiquette. If your last agency treated a factory like a BPO reception desk, you already know the cost.",
+      },
+      {
+        type: "h2",
+        text: "What industrial sites in Manesar & Bhiwadi usually need",
+      },
+      {
+        type: "ul",
+        items: [
+          "PASARA-licensed perimeter and gate security for OEM / Tier-1 vendor protocols",
+          "General labour and helpers for packaging, loading, and material handling",
+          "DG operators, electricians, and multi-skilled technicians for plant utilities",
+          "EPFO/ESIC-compliant contract staffing with attendance visibility",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Common hiring mistakes on industrial belts",
+      },
+      {
+        type: "p",
+        text: "The cheapest quote often skips police verification, supervisor rounds, and statutory compliance. On an industrial belt, that shows up as gate gaps during night loading, unexplained absenteeism on peak production days, and compliance risk during audits. Ask for site references in Manesar or Bhiwadi — not only Gurugram office deployments.",
+      },
+      {
+        type: "h2",
+        text: "A practical deployment model that works",
+      },
+      {
+        type: "ul",
+        items: [
+          "Site assessment of gates, shifts, and high-risk zones",
+          "Role mix: security + labour + technical as needed under one contract",
+          "Named supervisor for attendance and replacement",
+          "Weekly reporting your plant HR or admin can audit",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra supports Manesar and Bhiwadi plants",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower has active industrial deployments for security and labour across Manesar, Bhiwadi, and nearby Delhi NCR manufacturing corridors. Call ${company.phone} with your headcount and shift plan, or open our Manesar and Bhiwadi location pages for local coverage details.`,
+      },
+    ],
+  },
+  {
+    slug: "epfo-esic-compliant-contract-staffing-delhi-ncr",
+    title: "EPFO & ESIC Compliant Contract Staffing in Delhi NCR: Why It Matters",
+    excerpt:
+      "Low manpower quotes that skip EPFO/ESIC create audit and attrition risk. Here’s how compliant contract staffing should work in Delhi NCR.",
+    metaDescription:
+      "EPFO ESIC compliant contract staffing in Delhi NCR explained — what Gurugram and Noida buyers should demand from manpower agencies for security, housekeeping and labour.",
+    keywords: [
+      "EPFO ESIC compliant staffing agency Gurugram",
+      "contract staffing Delhi NCR",
+      "EPFO compliant manpower",
+      "ESIC contract labour Noida",
+      "compliant staffing agency Gurgaon",
+    ],
+    image: images.team,
+    imageAlt: "HR and operations team reviewing compliant contract staffing documents",
+    category: "Manpower",
+    date: "September 5, 2026",
+    isoDate: "2026-09-05",
+    readTime: "7 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "When two manpower quotes look similar in Gurugram or Noida, the difference is often statutory compliance. EPFO and ESIC are not paperwork for the agency alone — they affect worker retention, audit readiness, and whether your site stays stable month after month.",
+      },
+      {
+        type: "h2",
+        text: "What EPFO/ESIC compliant staffing actually means",
+      },
+      {
+        type: "p",
+        text: "For eligible contract categories, compliant staffing includes timely wage cycles, applicable provident fund and ESI contributions, and attendance documentation you can verify. Agencies that undercut on price by ignoring this usually pass churn and risk back to the client through sudden no-shows.",
+      },
+      {
+        type: "h2",
+        text: "Questions every Delhi NCR buyer should ask",
+      },
+      {
+        type: "ul",
+        items: [
+          "Which roles are covered under EPFO/ESIC in this proposal?",
+          "Who pays wages and on what cycle?",
+          "Can we see attendance and compliance summaries monthly?",
+          "How are replacements documented when someone exits mid-month?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Security and housekeeping still need compliance discipline",
+      },
+      {
+        type: "p",
+        text: "Even when the commercial conversation starts with ‘security guards’ or ‘housekeeping staff’, the staffing engine behind the deployment decides reliability. PASARA licensing covers security agency rules; EPFO/ESIC discipline covers how people are employed and retained. Strong agencies handle both.",
+      },
+      {
+        type: "h2",
+        text: "Rudra’s contract staffing approach",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower provides EPFO/ESIC-aligned contract staffing for eligible manpower across Delhi NCR — including security, housekeeping, labour, and multi-site facility teams. Share your role mix and locations at ${company.phone}, or review our contract manpower services for deployment options.`,
+      },
+    ],
+  },
+  {
+    slug: "bouncer-services-gurugram-events-hotels",
+    title: "Bouncer Services in Gurugram for Hotels, Weddings & Corporate Events",
+    excerpt:
+      "Event security is not the same as gate guarding. Here’s how to hire professional bouncer services in Gurugram and Noida without brand risk.",
+    metaDescription:
+      "Hire bouncer services in Gurugram for hotels, weddings, clubs and corporate events. Police-verified event security with crowd control across Delhi NCR venues.",
+    keywords: [
+      "bouncer services Gurugram",
+      "event security Noida",
+      "wedding security Gurugram",
+      "hotel banquet security Delhi NCR",
+      "corporate event security Gurgaon",
+    ],
+    image: images.bouncer,
+    imageAlt: "Professional bouncers managing entry at a hotel banquet event",
+    category: "Security",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    readTime: "7 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Hotels on Golf Course Road, wedding venues across Gurugram, and corporate launches in Noida need bouncer services that protect guests without creating a scene. Assigning a daytime gate guard to a banquet floor is one of the fastest ways to damage guest experience.",
+      },
+      {
+        type: "h2",
+        text: "What professional event security covers",
+      },
+      {
+        type: "ul",
+        items: [
+          "Guest-list and invite screening at entry",
+          "VIP lane and stage-perimeter control",
+          "Queue management for high-footfall arrivals",
+          "Calm conflict de-escalation without brand damage",
+          "Coordination with hotel security and parking teams",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Wedding and banquet security tips",
+      },
+      {
+        type: "p",
+        text: "Share expected headcount, VIP movement, alcohol service zones, and dress code early. For multi-bouncer weddings, ask for a lead coordinator who arrives before guest inflow and runs a short briefing on emergency exits and escalation contacts.",
+      },
+      {
+        type: "h2",
+        text: "Corporate events and product launches",
+      },
+      {
+        type: "p",
+        text: "Product launches and conferences need quieter control — bag checks where required, media lane discipline, and discreet PSO support for visiting executives. Bundle bouncer services with parking security when the venue has mixed public and invite-only access.",
+      },
+      {
+        type: "h2",
+        text: "Book verified bouncers with Rudra",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower supplies police-verified bouncer and event security teams across Gurugram, Noida, Delhi, and Faridabad under a PASARA-licensed agency model. Call ${company.phone} with your event date and venue, or visit our bouncer services page for scope options.`,
+      },
+    ],
+  },
+  {
+    slug: "facility-management-services-gurugram-guide",
+    title: "Facility Management Services in Gurugram: Soft Services + Technical Staff",
+    excerpt:
+      "A practical guide to facility management in Gurugram — housekeeping, security coordination, electricians, DG/AC operators, and supervisor accountability.",
+    metaDescription:
+      "Facility management services in Gurugram explained — integrate housekeeping, security coordination, electricians, DG operators and supervisors for Delhi NCR campuses.",
+    keywords: [
+      "facility management services Gurugram",
+      "facility management Delhi NCR",
+      "DG operator supply Gurugram",
+      "electrician manpower Noida",
+      "integrated facility management Gurgaon",
+      "technical manpower Delhi NCR",
+    ],
+    image: images.technical,
+    imageAlt: "Facility management technician checking building systems in an office campus",
+    category: "Facility Management",
+    date: "September 15, 2026",
+    isoDate: "2026-09-15",
+    readTime: "8 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Facility management in Gurugram is rarely one vendor anymore. Cyber City campuses, Sohna Road offices, and industrial sites near Manesar need soft services (housekeeping, security coordination) and hard services (electricians, AC operators, DG operators) to work as one system. When those teams report to different agencies, small issues become ticket ping-pong.",
+      },
+      {
+        type: "h2",
+        text: "What integrated facility management usually includes",
+      },
+      {
+        type: "ul",
+        items: [
+          "Housekeeping and washroom hygiene with supervisor rounds",
+          "Security coordination at gates and reception",
+          "Electricians, plumbers, and multi-technicians for breakdown response",
+          "AC/HVAC operators and DG operators for comfort and backup power",
+          "Horticulture for lawns, planters, and lobby greenery",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to evaluate an FM partner in Delhi NCR",
+      },
+      {
+        type: "ul",
+        items: [
+          "One accountable operations owner across services",
+          "Clear SLAs for attendance, breakdown response, and replacements",
+          "PASARA-compliant security if guards are in scope",
+          "Documented skill matrix for technical roles",
+          "City coverage for your exact campus (Gurugram, Noida, Faridabad, etc.)",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Soft + hard services under one contract",
+      },
+      {
+        type: "p",
+        text: "Bundling housekeeping with technical manpower reduces finger-pointing when a washroom leak or lobby AC failure overlaps with cleaning schedules. Add security under the same partner when you want one escalation number after hours.",
+      },
+      {
+        type: "h2",
+        text: "Rudra’s FM and technical staffing model",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower provides facility management and technical manpower across Gurugram and Delhi NCR — from electricians and DG operators to housekeeping and supervisor-led campus support. Call ${company.phone} for a site assessment, or explore our technical & facility management services for role details.`,
+      },
+    ],
+  },
 ];
+
+/** Newest first — keeps homepage preview, /blogs listing, and sitemap timeline accurate. */
+export const blogs: BlogPost[] = [...blogPosts].sort((a, b) =>
+  b.isoDate.localeCompare(a.isoDate),
+);

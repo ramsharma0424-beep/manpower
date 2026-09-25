@@ -1027,6 +1027,98 @@ const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "pso-services-delhi-ncr-executive-protection",
+    title: "PSO Services in Delhi NCR: When Your Executives Need Personal Security Officers",
+    excerpt:
+      "A practical buyer’s guide to personal security officer (PSO) services in Gurugram, Noida, Delhi, and Faridabad — risk triggers, shift models, verification, and what to demand before you hire.",
+    metaDescription:
+      "Hire PSO services in Delhi NCR the right way. Learn when executives need personal security officers, shift models, police verification, and how Rudra Manpower deploys trained PSOs across Gurugram & Noida.",
+    keywords: [
+      "PSO services Delhi NCR",
+      "personal security officer Gurugram",
+      "executive protection Noida",
+      "PSO agency Faridabad",
+      "close protection officer Delhi",
+      "personal bodyguard services Gurgaon",
+      "police verified PSO",
+    ],
+    image: blogImages["pso-services-delhi-ncr-executive-protection"],
+    imageAlt: "Personal security officer accompanying an executive outside a Gurugram corporate campus",
+    category: "Security",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    readTime: "8 min read",
+    blocks: [
+      {
+        type: "p",
+        text: "Gate guards protect buildings. Personal security officers (PSOs) protect people. If your CXO travels between Cyber City, Udyog Vihar, and Noida Sector 62 — or if a family lives in a high-profile Gurugram society — a static guard at one address is not enough. Buyers searching for PSO services in Delhi NCR usually need discreet, police-verified close protection that can move with the protectee.",
+      },
+      {
+        type: "h2",
+        text: "When do businesses and families need a PSO?",
+      },
+      {
+        type: "ul",
+        items: [
+          "High-visibility executives with public profiles, investor meetings, or media exposure",
+          "Cash-intensive or dispute-prone business travel across Gurugram, Delhi, and Noida",
+          "Family members of promoters who need discreet cover at home, school runs, and social events",
+          "Visiting foreign guests or board members unfamiliar with local routes and venues",
+          "Threat indicators — stalking, workplace disputes, or recent security incidents",
+        ],
+      },
+      {
+        type: "h2",
+        text: "PSO vs security guard: what buyers get wrong",
+      },
+      {
+        type: "p",
+        text: "A PASARA-licensed security guard at a gate follows site SOPs — access control, visitor logs, perimeter rounds. A PSO follows the protectee: vehicle embuss/debuss, hotel and restaurant seating awareness, crowd spacing, and calm escalation if a situation develops. Deploying an untrained gate guard as a “bodyguard” for a day is a common — and risky — shortcut.",
+      },
+      {
+        type: "h2",
+        text: "What a professional PSO deployment includes",
+      },
+      {
+        type: "ul",
+        items: [
+          "Police verification and identity documentation before the first shift",
+          "Briefing on movement plan, venues, VIP preferences, and emergency contacts",
+          "Shift models: day cover, 12-hour, or 24×7 with relief PSO for travel days",
+          "Coordination with driver, hotel security, and venue access teams",
+          "Discreet uniform or plain-clothes options based on brand and risk profile",
+          "Named supervisor for quality checks and rapid replacement if needed",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Questions to ask any PSO agency in Gurugram or Noida",
+      },
+      {
+        type: "ul",
+        items: [
+          "Are you PASARA licensed, and will the assigned PSO be police-verified?",
+          "What close-protection or soft-skills training has the PSO completed?",
+          "How do you handle multi-city days (Gurugram HQ → Delhi meeting → Noida dinner)?",
+          "Who is the escalation contact after 10 PM?",
+          "Can you share a sample briefing checklist and replacement SLA?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra Manpower deploys PSOs across Delhi NCR",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower is a PASARA-licensed, army veteran-led agency. Our PSO deployments start with a short risk and itinerary discussion — without asking for unnecessary personal data over email — then we propose headcount, shifts, and reporting format. Every PSO is police-verified before assignment. We cover Gurugram, Delhi, Noida, Faridabad, Manesar, and nearby NCR cities.`,
+      },
+      {
+        type: "p",
+        text: `If you are evaluating personal security officer services for an executive, visiting guest, or family detail, call ${company.phone} or use our contact form. Share travel pattern, duration, and preferred cover style — we will respond with a clear PSO proposal.`,
+      },
+    ],
+  },
 ];
 
 /** Newest first — keeps homepage preview, /blogs listing, and sitemap timeline accurate. */

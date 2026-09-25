@@ -36,4 +36,5 @@ export const blogImages = {
   "epfo-esic-compliant-contract-staffing-delhi-ncr": "/images/blogs/epfo-compliance.jpg",
   "bouncer-services-gurugram-events-hotels": "/images/blogs/bouncer-wedding.jpg",
   "facility-management-services-gurugram-guide": "/images/blogs/facility-management.jpg",
+  "pso-services-delhi-ncr-executive-protection": "/images/blogs/pso-delhi-ncr.jpg",
 } as const;

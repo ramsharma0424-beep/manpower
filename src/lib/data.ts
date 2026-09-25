@@ -7,7 +7,7 @@ export const company = {
   heroSubtext:
     "Army veteran-led manpower agency in Gurugram — hire PASARA-licensed security guards, office housekeeping staff, and contract labour across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak & Bhiwadi with police verification on every deployment.",
   founded: "April 10, 2023",
-  email: "rudramanpowerservices@gmail.com",
+  email: "rudramanpowerservicespvtltd@gmail.com",
   phone: "8278065927",
   whatsappPhone: "7005851441",
   website: "https://www.rudramanpowerservice.com",

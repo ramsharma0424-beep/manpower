@@ -20,7 +20,7 @@ function getSmtpConfig() {
   const user = process.env.SMTP_USER?.trim();
   const pass = process.env.SMTP_PASS?.trim().replace(/^["']|["']$/g, "");
   const port = Number(process.env.SMTP_PORT ?? "587");
-  const to = process.env.CONTACT_TO_EMAIL?.trim() ?? "souravkumar4297@gmail.com";
+  const to = process.env.CONTACT_TO_EMAIL?.trim() ?? "rudramanpowerservicespvtltd@gmail.com";
   const fromName = process.env.SMTP_FROM_NAME?.trim() ?? "Rudra Manpower Website";
 
   if (!host || !user || !pass) {

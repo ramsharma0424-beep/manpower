@@ -13,12 +13,23 @@ export const defaultKeywords = [
   "manpower services in Delhi NCR",
   "manpower agency Delhi NCR",
   "security services in Delhi NCR",
+  "best security services Delhi NCR",
   "security guard services Delhi NCR",
   "security agency Gurugram",
   "security agency Gurgaon",
+  "manpower services Gurgaon",
+  "manpower services Gurugram",
+  "manpower services Delhi",
+  "manpower services Noida",
+  "manpower services Sonipat",
+  "manpower services Panipat",
+  "labour provider near me",
+  "labour provider Delhi NCR",
+  "labour supply agency Gurugram",
   "housekeeping services Delhi NCR",
   "housekeeping services Noida",
   "best manpower agency Gurugram",
+  "best security agency Gurgaon",
   "PASARA licensed security agency Gurugram",
   "police verified security guards Delhi NCR",
   "contract staffing Delhi NCR",
@@ -28,9 +39,48 @@ export const defaultKeywords = [
   "manpower contractor Faridabad",
   "security guard company Bhiwadi",
   "manpower services near me",
+  "security services near me",
   "Rudra Manpower Services",
   ...seoKeywords.slice(0, 15),
 ];
+
+/** High-intent local keywords for each city location page */
+export function locationSeoKeywords(city: string, state: string): string[] {
+  const places = city === "Gurugram" ? ["Gurugram", "Gurgaon"] : [city];
+
+  return places
+    .flatMap((place) => [
+      `manpower services ${place}`,
+      `manpower services in ${place}`,
+      `manpower agency ${place}`,
+      `best manpower agency ${place}`,
+      `security services ${place}`,
+      `security services in ${place}`,
+      `best security services ${place}`,
+      `security guard services ${place}`,
+      `security agency ${place}`,
+      `best security agency ${place}`,
+      `housekeeping services ${place}`,
+      `labour provider ${place}`,
+      `labour provider near ${place}`,
+      `labour supply ${place}`,
+      `labour supply agency ${place}`,
+      `contract staffing ${place}`,
+      `staffing agency ${place}`,
+      `facility management ${place}`,
+      `PASARA licensed security ${place}`,
+      `police verified security guards ${place}`,
+      `manpower contractor ${place}`,
+      `security guards near me ${place}`,
+      `manpower services near me ${place}`,
+    ])
+    .concat([
+      `manpower agency ${city} ${state}`,
+      `security agency ${city} ${state}`,
+      `labour provider near me`,
+      `best security services near me`,
+    ]);
+}
 
 export const defaultDescription =
   "Looking for manpower services in Delhi NCR? Hire a PASARA-licensed security agency for police-verified security guards, housekeeping staff & contract labour in Gurugram, Noida, Delhi, Faridabad, Manesar & nearby. Free quote.";

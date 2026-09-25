@@ -7,7 +7,7 @@ import JsonLdScript from "@/components/JsonLdScript";
 import PageHero from "@/components/PageHero";
 import SiteContainer from "@/components/SiteContainer";
 import { company, locationPages, services } from "@/lib/data";
-import { absoluteUrl, createPageMetadata, phoneE164, siteUrl } from "@/lib/seo";
+import { absoluteUrl, createPageMetadata, locationSeoKeywords, phoneE164, siteUrl } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ city: string }>;
@@ -23,24 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!loc) return { title: "Location Not Found" };
 
   const base = createPageMetadata({
-    title: `Manpower & Security Agency in ${loc.city} | Guards & Housekeeping`,
-    description: `${company.shortName} provides PASARA-licensed security guard services, housekeeping services, and contract staffing in ${loc.city}, ${loc.state}. Police-verified teams, army veteran-led operations. Call ${company.phone} for a free quote.`,
+    title: `Manpower & Security Services in ${loc.city} | Labour Provider Near You`,
+    description: `Best manpower & security services in ${loc.city}, ${loc.state}. Hire PASARA-licensed security guards, housekeeping staff, and labour providers near ${loc.city} from ${company.shortName}. Police-verified teams. Call ${company.phone}.`,
     path: `/locations/${loc.slug}`,
-    keywords: [
-      `manpower services in ${loc.city}`,
-      `manpower agency ${loc.city}`,
-      `security services in ${loc.city}`,
-      `security guard services ${loc.city}`,
-      `housekeeping services ${loc.city}`,
-      `staffing agency ${loc.city}`,
-      `PASARA licensed security ${loc.city}`,
-      `facility management ${loc.city}`,
-      `contract staffing ${loc.city}`,
-      `labour supply ${loc.city}`,
-      `manpower agency ${loc.city} ${loc.state}`,
-      `security guards near me ${loc.city}`,
-      `best manpower agency ${loc.city}`,
-    ],
+    keywords: locationSeoKeywords(loc.city, loc.state),
   });
 
   return {
@@ -142,6 +128,23 @@ export default async function LocationPage({ params }: Props) {
               </p>
 
               <h2 className="mt-10 font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
+                Manpower, security &amp; labour providers near {loc.city}
+              </h2>
+              <p className="mt-4 leading-relaxed text-stone-600 dark:text-stone-300">
+                If you searched for manpower services in {loc.city}, best security services in{" "}
+                {loc.city}, a labour provider near {loc.city}, or a security agency in {loc.city},{" "}
+                {company.shortName} is built for local deployment — PASARA-licensed security guards,
+                trained housekeeping staff, and EPFO-aligned contract labour with supervisor
+                accountability on every shift.
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-stone-600 dark:text-stone-300 sm:text-base">
+                <li>Security guard services &amp; night watch in {loc.city}</li>
+                <li>Housekeeping and facility hygiene staff for offices, factories &amp; societies</li>
+                <li>Labour supply / labour provider for warehouses, plants &amp; project sites</li>
+                <li>Contract staffing with clear attendance and replacement SLAs</li>
+              </ul>
+
+              <h2 className="mt-10 font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
                 Services We Provide in {loc.city}
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -205,7 +208,7 @@ export default async function LocationPage({ params }: Props) {
                 </a>
                 <a
                   href={`mailto:${company.email}`}
-                  className="mt-1 block text-sm text-brand-gold hover:underline"
+                  className="mt-1 block break-all text-sm text-brand-gold hover:underline"
                 >
                   {company.email}
                 </a>

@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Common search spelling — consolidate SEO equity on /locations/gurugram
+      {
+        source: "/locations/gurgaon",
+        destination: "/locations/gurugram",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -8,18 +8,36 @@ import { company, locationPages } from "@/lib/data";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Manpower Services Across Delhi NCR — All Service Areas",
-  description: `${company.shortName} deploys PASARA-licensed security guards, housekeeping staff, and contract labour across ${company.locations.join(", ")} in Delhi NCR. Select your city for a free quote.`,
+  title: "Manpower & Security Services Near You — Delhi NCR Locations",
+  description: `Hire manpower services, best security services, and labour providers near you across ${company.locations.join(", ")}. PASARA-licensed guards, housekeeping & contract staffing by ${company.shortName}. Free quote.`,
   path: "/locations",
   keywords: [
+    "manpower services near me",
+    "security services near me",
+    "best security services Delhi NCR",
+    "labour provider near me",
+    "labour provider Delhi NCR",
     "manpower agency Delhi NCR",
     "security guard services Delhi NCR",
     "housekeeping services Delhi NCR",
     "staffing agency Gurugram Noida Faridabad",
     "PASARA licensed security NCR",
     "contract staffing Delhi NCR",
-    "manpower services near me",
-    ...company.locations.map((c) => `manpower services ${c}`),
+    "manpower services Gurgaon",
+    "manpower services Gurugram",
+    "manpower services Delhi",
+    "manpower services Noida",
+    "manpower services Sonipat",
+    "manpower services Panipat",
+    "security services Gurgaon",
+    "security services Noida",
+    "labour supply agency Haryana",
+    ...company.locations.flatMap((c) => [
+      `manpower services ${c}`,
+      `security services ${c}`,
+      `labour provider ${c}`,
+      `best security services ${c}`,
+    ]),
   ],
 });
 
@@ -36,11 +54,13 @@ export default function LocationsHubPage() {
       <section className="py-10 sm:py-16">
         <SiteContainer>
           <p className="max-w-3xl text-sm leading-relaxed text-stone-600 dark:text-stone-300 sm:text-base">
-            Rudra Manpower is a PASARA-licensed security and staffing agency headquartered in
-            Gurugram with active deployments across Delhi NCR. We provide police-verified security
-            guards, trained housekeeping staff, facility management, and contract labour — scalable
-            for single sites and multi-location operations. Select your city below to learn more
-            about services and contact us for a free quote.
+            Looking for manpower services, best security services, or a labour provider near you in
+            Delhi NCR? Rudra Manpower is a PASARA-licensed security and staffing agency
+            headquartered in Gurugram (Gurgaon) with active deployments across{" "}
+            {company.locations.join(", ")}. We provide police-verified security guards, trained
+            housekeeping staff, facility management, and contract labour — scalable for single sites
+            and multi-location operations. Select your city below for local service details and a
+            free quote.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -62,3 +62,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# Local archives — never commit
+manpower.zip

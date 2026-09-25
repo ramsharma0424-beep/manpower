@@ -19,6 +19,7 @@ export const company = {
     "Noida",
     "Rohtak",
     "Sonipat",
+    "Panipat",
     "Manesar",
     "Faridabad",
     "Bhiwadi",
@@ -557,9 +558,9 @@ export const locationPages: LocationData[] = [
     deploymentNote:
       "Same-day site assessments available for Gurugram clients — contact us at 8278065927 to confirm your location.",
     paragraphs: [
-      "Businesses searching for manpower services in Gurugram and security guard services in Gurgaon need a partner who understands Corporate Sector 18–57, Cyber City, DLF phases, Udyog Vihar, Sohna Road, and Golf Course Road. Rudra Manpower is a PASARA-licensed security agency headquartered in Gurugram with army veteran-led supervisors on every major deployment.",
-      "Our Gurugram clients typically hire a mix of police-verified security guards for access control and night watch, housekeeping staff for offices and malls, and contract labour for facility support. We also cover IMT Manesar from our Gurugram operations base when factories need combined security and industrial manpower.",
-      "If you are comparing security agencies in Gurugram, look for PASARA licensing, document verification trails, supervisor attendance reporting, and EPFO/ESIC compliance. Those are the baseline standards we operate on for corporates, hospitals, hotels, and industrial sites across Gurugram.",
+      "Businesses searching for manpower services in Gurugram, security services in Gurgaon, or the best security agency in Gurugram need a partner who understands Corporate Sector 18–57, Cyber City, DLF phases, Udyog Vihar, Sohna Road, and Golf Course Road. Rudra Manpower is a PASARA-licensed security agency headquartered in Gurugram with army veteran-led supervisors on every major deployment.",
+      "Our Gurugram clients typically hire a mix of police-verified security guards for access control and night watch, housekeeping staff for offices and malls, and labour providers / contract labour for facility support. We also cover IMT Manesar from our Gurugram operations base when factories need combined security and industrial manpower.",
+      "If you are comparing best security services in Gurgaon or manpower agencies in Gurugram, look for PASARA licensing, document verification trails, supervisor attendance reporting, and EPFO/ESIC compliance. Those are the baseline standards we operate on for corporates, hospitals, hotels, and industrial sites across Gurugram.",
     ],
     faqs: [
       {
@@ -611,7 +612,7 @@ export const locationPages: LocationData[] = [
       {
         question: "Are you a manpower agency serving all of Delhi NCR including Delhi?",
         answer:
-          "Yes. Rudra Manpower serves Delhi along with Gurugram, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi for security, housekeeping, and contract staffing.",
+          "Yes. Rudra Manpower serves Delhi along with Gurugram, Noida, Faridabad, Manesar, Sonipat, Panipat, Rohtak, and Bhiwadi for security, housekeeping, and contract staffing.",
       },
     ],
   },
@@ -708,6 +709,42 @@ export const locationPages: LocationData[] = [
         question: "Can you provide warehouse security staff in Sonipat?",
         answer:
           "Yes. We supply round-the-clock warehouse security guards trained for perimeter patrol, access control, and goods-in/goods-out verification for logistics and warehousing clients in Sonipat.",
+      },
+    ],
+  },
+  {
+    slug: "panipat",
+    city: "Panipat",
+    state: "Haryana",
+    region: "Delhi NCR",
+    postalCode: "132103",
+    geo: { latitude: 29.39013, longitude: 76.96347 },
+    geoRegion: "IN-HR",
+    dominantSectors: ["Textiles", "Manufacturing", "Warehousing", "Industrial Sites"],
+    summary:
+      "Panipat is a major textile and industrial hub in Haryana with steady demand for verified security guards, factory labour, and warehouse manpower. Rudra Manpower deploys PASARA-licensed security teams and EPFO-compliant labour providers for mills, warehouses, and manufacturing units across Panipat.",
+    deploymentNote:
+      "Need a labour provider or security agency in Panipat? Call 8278065927 for a free site assessment and quote.",
+    paragraphs: [
+      "Searching for manpower services in Panipat, best security services in Panipat, or a labour provider near Panipat? Rudra Manpower is a PASARA-licensed agency serving textile mills, warehouses, and industrial units with police-verified security guards and contract labour.",
+      "Panipat deployments often need multi-shift gate security, loading labour, and housekeeping for factory floors and godowns. We structure contracts around your shift pattern with supervisor reporting and statutory compliance.",
+      "Businesses comparing security agencies or labour supply agencies in Panipat should verify licensing, document checks, and on-ground accountability — the same standards we operate on across Delhi NCR.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide labour providers and contract labour in Panipat?",
+        answer:
+          "Yes. We supply EPFO/ESIC-compliant general labour, helpers, and warehouse manpower for textile units, factories, and logistics sites across Panipat. Call 8278065927 with your headcount and shift plan.",
+      },
+      {
+        question: "Can you deploy security guards for factories and warehouses in Panipat?",
+        answer:
+          "Yes. We deploy PASARA-licensed, police-verified security guards for industrial gates, night watch, and warehouse security across Panipat and nearby industrial belts.",
+      },
+      {
+        question: "Are you a manpower agency serving Panipat from Delhi NCR?",
+        answer:
+          "Yes. Rudra Manpower covers Panipat along with Sonipat, Rohtak, Gurugram, Delhi, Noida, Faridabad, Manesar, and Bhiwadi for security, housekeeping, and labour supply.",
       },
     ],
   },

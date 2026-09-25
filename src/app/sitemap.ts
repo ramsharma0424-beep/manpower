@@ -15,7 +15,7 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
   { path: "/blogs", lastModified: "2026-09-15" },
   { path: "/careers", lastModified: "2026-06-01" },
   { path: "/training", lastModified: "2026-06-01" },
-  { path: "/locations", lastModified: "2026-09-15" },
+  { path: "/locations", lastModified: "2026-09-25" },
   { path: "/privacy-policy", lastModified: "2023-04-10" },
   { path: "/terms-of-use", lastModified: "2023-04-10" },
   { path: "/disclaimer", lastModified: "2023-04-10" },
@@ -26,7 +26,7 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
 // Update when content in data.ts / content.ts is meaningfully revised.
 const SERVICE_LAST_MOD = "2026-09-15";
 const INDUSTRY_LAST_MOD = "2026-07-01";
-const LOCATION_LAST_MOD = "2026-09-15";
+const LOCATION_LAST_MOD = "2026-09-25";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

@@ -5,10 +5,10 @@ import { aboutDropdown, company, footerPolicies, industryLinks, locationPages, n
 
 export default function Footer() {
   return (
-    <footer className="section-dark border-t-4 border-brand-gold text-stone-300">
-      <SiteContainer className="py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-7">
-          <div className="sm:col-span-2">
+    <footer className="section-dark overflow-x-hidden border-t-4 border-brand-gold text-stone-300">
+      <SiteContainer className="py-10 sm:py-14">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-12">
+          <div className="min-w-0 sm:col-span-2 lg:col-span-4">
             <div className="mb-4">
               <Logo size="lg" variant="light" />
             </div>
@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="min-w-0 lg:col-span-2">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
               Quick Links
             </h3>
@@ -40,7 +40,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0 lg:col-span-2">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
               About Us
             </h3>
@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0 lg:col-span-2">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
               Industries
             </h3>
@@ -76,7 +76,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0 sm:col-span-2 lg:col-span-2">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
               <Link href="/locations" className="transition hover:text-white">
                 Service Areas
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={loc.slug}>
                   <Link
                     href={`/locations/${loc.slug}`}
-                    className="rounded-sm border border-stone-700 px-2.5 py-1 text-xs text-stone-400 transition hover:border-brand-gold hover:text-brand-gold"
+                    className="inline-block rounded-sm border border-stone-700 px-2.5 py-1 text-xs text-stone-400 transition hover:border-brand-gold hover:text-brand-gold"
                   >
                     {loc.city}
                   </Link>
@@ -99,13 +99,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0 sm:col-span-2 lg:col-span-12">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-gold">
               Contact
             </h3>
-            <ul className="space-y-3 text-sm text-stone-400">
-              <li>
-                <a href={`mailto:${company.email}`} className="transition hover:text-brand-gold">
+            <ul className="flex flex-col gap-3 text-sm text-stone-400 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-8 sm:gap-y-2">
+              <li className="min-w-0 max-w-full">
+                <a
+                  href={`mailto:${company.email}`}
+                  className="break-all transition hover:text-brand-gold"
+                >
                   {company.email}
                 </a>
               </li>

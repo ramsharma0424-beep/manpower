@@ -269,7 +269,7 @@ export type ServiceDetailEnriched = ServiceDetail & {
   keywordParagraph: string;
 };
 
-export const homeKeywordSummary = `Looking for manpower services in Delhi NCR or security services in Delhi NCR? Rudra Manpower is an army veteran-led, PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, housekeeping, bouncers, PSO protection, facility/technical staff, horticulture, labour, construction manpower, supervisors, and contract staffing across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.`;
+export const homeKeywordSummary = `Searching for the best security agency in Delhi, Gurgaon, Gurugram, or Delhi NCR, or for top manpower services and a top manpower agency? Rudra Manpower is an army veteran-led, PASARA-licensed security agency and staffing company in Gurugram offering police-verified security guards, housekeeping, bouncers, PSO protection, facility/technical staff, horticulture, labour, construction manpower, supervisors, and contract staffing across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, Panipat, and Bhiwadi.`;
 
 export const serviceDetails: ServiceDetail[] = [
   {
@@ -313,8 +313,15 @@ export const serviceDetails: ServiceDetail[] = [
     ],
     areas: company.locations,
     keywords: [
+      "best security agency in Delhi",
+      "best security agency in Gurgaon",
+      "best security agency in Gurugram",
+      "best security agency in Delhi NCR",
+      "top security agency in Delhi",
+      "top security agency in Gurgaon",
       "security guards Gurugram",
       "PASARA security agency Noida",
+      "PSARA licensed security agency Gurugram",
       "corporate security Delhi NCR",
       "industrial security Manesar",
       "night watch security Haryana",
@@ -327,6 +334,7 @@ export const serviceDetails: ServiceDetail[] = [
         heading: "PASARA-licensed security guard services in Delhi NCR",
         paragraphs: [
           "Businesses across Delhi NCR need more than a uniform at the gate. They need a PASARA licensed security agency that can prove who is on duty, how those guards were verified, and who is accountable when something goes wrong. Rudra Manpower provides security guard services built on police verification, documented briefings, and supervisor-led reporting for corporate offices, manufacturing plants, warehouses, malls, hospitals, and residential societies.",
+          "If you are comparing the best security agency in Delhi, Gurgaon, Gurugram, Noida, or Delhi NCR, check the licence, the verification file, and who supervises the shift. The same checks apply when you want top manpower services — guards, housekeeping, and contract labour — from one agency instead of three vendors.",
           "Our security personnel are briefed before every shift on dress code, visitor protocols, emergency contacts, and site-specific SOPs. Whether you need corporate security guards for a Gurugram tower or industrial security services for a Manesar plant, we deploy teams that understand access control, visitor management, and perimeter security — not just presence.",
         ],
       },
@@ -1247,6 +1255,13 @@ export const serviceDetails: ServiceDetail[] = [
     ],
     areas: company.locations,
     keywords: [
+      "top manpower services in Delhi NCR",
+      "top manpower agency in Delhi NCR",
+      "top manpower agency in Gurgaon",
+      "top manpower services in Gurugram",
+      "best manpower agency in Delhi",
+      "manpower consultancy Delhi NCR",
+      "staffing company Delhi NCR",
       "contract manpower Delhi NCR",
       "manpower services in Delhi NCR",
       "staffing agency Gurugram",
@@ -1259,7 +1274,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         heading: "Verified manpower services across Delhi NCR",
         paragraphs: [
-          "Searching for manpower services in Delhi NCR usually means you need one accountable partner for security, housekeeping, labour, and project staffing — not five vendors with fragmented billing. Rudra Manpower delivers contract staffing with PASARA-licensed security capability, police-verified deployments, and army veteran-led supervision from Gurugram across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, and Bhiwadi.",
+          "Searching for top manpower services in Delhi NCR, or a top manpower agency in Gurgaon, Gurugram, Delhi, or Noida, usually means you need one accountable partner for security, housekeeping, labour, and project staffing — not five vendors with fragmented billing. Rudra Manpower delivers contract staffing with PASARA-licensed security capability, police-verified deployments, and army veteran-led supervision from Gurugram across Delhi, Noida, Faridabad, Manesar, Sonipat, Rohtak, Panipat, and Bhiwadi.",
           "Our contract manpower model covers short-term project teams, seasonal peaks, and long-term facility contracts. You get clear headcount tracking, supervisor reporting, and EPFO/ESIC compliant staffing support where statutory rules apply.",
         ],
       },

@@ -22,9 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const loc = locationPages.find((l) => l.slug === city);
   if (!loc) return { title: "Location Not Found" };
 
+  const placeNames = loc.city === "Gurugram" ? "Gurugram and Gurgaon" : loc.city;
   const base = createPageMetadata({
-    title: `Manpower & Security Services in ${loc.city} | Labour Provider Near You`,
-    description: `Best manpower & security services in ${loc.city}, ${loc.state}. Hire PASARA-licensed security guards, housekeeping staff, and labour providers near ${loc.city} from ${company.shortName}. Police-verified teams. Call ${company.phone}.`,
+    title: `Best Security Agency in ${loc.city} | Top Manpower Services`,
+    description: `Best security agency in ${placeNames}. Top manpower agency for PASARA-licensed guards, housekeeping and labour in ${loc.city}. Call ${company.phone}.`,
     path: `/locations/${loc.slug}`,
     keywords: locationSeoKeywords(loc.city, loc.state),
   });
@@ -45,6 +46,19 @@ export default async function LocationPage({ params }: Props) {
   const loc = locationPages.find((l) => l.slug === city);
   if (!loc) notFound();
 
+  const placeNames = loc.city === "Gurugram" ? "Gurugram and Gurgaon" : loc.city;
+  const localFaqs = [
+    ...loc.faqs,
+    {
+      question: `How do I choose the best security agency in ${placeNames}?`,
+      answer: `Choose the best security agency in ${placeNames} by checking PASARA licensing, police verification before deployment, and a named supervisor. ${company.shortName} deploys police-verified security guards in ${loc.city} on that standard. Call ${company.phone} for a site-wise quote.`,
+    },
+    {
+      question: `Do you provide top manpower services in ${loc.city}?`,
+      answer: `Yes. Top manpower services in ${loc.city} from ${company.shortName} include security guards, housekeeping, facility staff, and contract labour, with attendance reporting and replacements handled by one operations desk.`,
+    },
+  ];
+
   const locationSchema = {
     "@context": "https://schema.org",
     "@type": ["EmploymentAgency", "LocalBusiness"],
@@ -53,7 +67,7 @@ export default async function LocationPage({ params }: Props) {
     url: absoluteUrl(`/locations/${loc.slug}`),
     telephone: phoneE164,
     email: company.email,
-    description: `PASARA-licensed security guard services, housekeeping services, and manpower deployment in ${loc.city}, ${loc.state} by ${company.name}.`,
+    description: `Best security agency and top manpower services in ${loc.city}, ${loc.state}. PASARA-licensed guards, housekeeping, and contract labour by ${company.name}.`,
     address: {
       "@type": "PostalAddress",
       addressLocality: loc.city,
@@ -75,11 +89,11 @@ export default async function LocationPage({ params }: Props) {
   };
 
   const faqSchema =
-    loc.faqs.length > 0
+    localFaqs.length > 0
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: loc.faqs.map((faq) => ({
+          mainEntity: localFaqs.map((faq) => ({
             "@type": "Question",
             name: faq.question,
             acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -131,8 +145,8 @@ export default async function LocationPage({ params }: Props) {
                 Manpower, security &amp; labour providers near {loc.city}
               </h2>
               <p className="mt-4 leading-relaxed text-stone-600 dark:text-stone-300">
-                If you searched for manpower services in {loc.city}, best security services in{" "}
-                {loc.city}, a labour provider near {loc.city}, or a security agency in {loc.city},{" "}
+                If you searched for the best security agency in {placeNames}, top manpower services
+                in {loc.city}, a top manpower agency, or a labour provider near {loc.city},{" "}
                 {company.shortName} is built for local deployment — PASARA-licensed security guards,
                 trained housekeeping staff, and EPFO-aligned contract labour with supervisor
                 accountability on every shift.
@@ -238,14 +252,14 @@ export default async function LocationPage({ params }: Props) {
         </SiteContainer>
       </section>
 
-      {loc.faqs.length > 0 && (
+      {localFaqs.length > 0 && (
         <section className="py-10 sm:py-14">
           <SiteContainer>
             <h2 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100 sm:text-2xl">
               Frequently Asked Questions — {loc.city}
             </h2>
             <div className="mt-4 max-w-3xl space-y-3">
-              {loc.faqs.map((faq) => (
+              {localFaqs.map((faq) => (
                 <details key={faq.question} className="group card-elevated overflow-hidden">
                   <summary className="cursor-pointer list-none px-5 py-4 text-sm font-semibold text-brand-navy marker:content-none dark:text-stone-100 [&::-webkit-details-marker]:hidden">
                     <span className="flex items-start justify-between gap-4">

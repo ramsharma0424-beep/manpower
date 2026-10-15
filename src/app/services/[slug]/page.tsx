@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return { title: "Service Not Found" };
 
   const titles: Record<string, string> = {
-    security: "Security Guard Services Delhi NCR | PASARA Licensed Agency",
+    security: "Best Security Agency in Delhi NCR | PASARA Licensed Guards",
     housekeeping: "Housekeeping Services Delhi NCR | Office & Corporate",
     bouncer: "Bouncer Services Delhi NCR | Event & Hotel Security",
     pso: "PSO Services Delhi NCR | Personal Security Officer",
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     labour: "Labour Supply Delhi NCR | Industrial & Warehouse Manpower",
     "construction-labour": "Construction Labour Supply Delhi NCR | Site Manpower",
     professional: "Site Supervisor Supply Delhi NCR | Facility Coordinators",
-    "contract-staffing": "Manpower Services Delhi NCR | Contract Staffing & Labour",
+    "contract-staffing": "Top Manpower Services in Delhi NCR | Contract Staffing",
   };
 
   return createPageMetadata({

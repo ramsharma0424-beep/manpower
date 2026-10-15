@@ -10,6 +10,31 @@ export const phoneE164 = `+91${company.phone}`;
 export const locationsLine = company.locations.join(", ");
 
 export const defaultKeywords = [
+  "best security agency in Delhi",
+  "best security agency in Gurgaon",
+  "best security agency in Gurugram",
+  "best security agency in Delhi NCR",
+  "best security agency in Noida",
+  "best security agency in Faridabad",
+  "top manpower agency",
+  "top manpower agency in Delhi NCR",
+  "top manpower agency in Gurgaon",
+  "top manpower agency in Gurugram",
+  "top manpower agency in Delhi",
+  "top manpower services",
+  "top manpower services in Delhi NCR",
+  "top manpower services in Delhi",
+  "top manpower services in Gurgaon",
+  "best manpower agency in Delhi NCR",
+  "best manpower services in Gurugram",
+  "top security agency in Delhi",
+  "top security agency in Gurgaon",
+  "top security services in Delhi NCR",
+  "manpower consultancy Delhi NCR",
+  "staffing company Delhi NCR",
+  "manpower supplier Delhi NCR",
+  "manpower outsourcing Delhi NCR",
+  "PSARA licensed security agency Gurugram",
   "manpower services in Delhi NCR",
   "manpower agency Delhi NCR",
   "security services in Delhi NCR",
@@ -50,31 +75,54 @@ export function locationSeoKeywords(city: string, state: string): string[] {
 
   return places
     .flatMap((place) => [
+      `best security agency in ${place}`,
+      `best security agency ${place}`,
+      `top security agency in ${place}`,
+      `top security services in ${place}`,
+      `best security services in ${place}`,
+      `best security company in ${place}`,
+      `top manpower agency in ${place}`,
+      `top manpower agency ${place}`,
+      `top manpower services in ${place}`,
+      `top manpower services ${place}`,
+      `best manpower agency in ${place}`,
+      `best manpower services in ${place}`,
       `manpower services ${place}`,
       `manpower services in ${place}`,
       `manpower agency ${place}`,
-      `best manpower agency ${place}`,
+      `manpower agency in ${place}`,
       `security services ${place}`,
       `security services in ${place}`,
-      `best security services ${place}`,
       `security guard services ${place}`,
+      `security guard agency ${place}`,
       `security agency ${place}`,
-      `best security agency ${place}`,
+      `security agency in ${place}`,
       `housekeeping services ${place}`,
       `labour provider ${place}`,
       `labour provider near ${place}`,
       `labour supply ${place}`,
       `labour supply agency ${place}`,
       `contract staffing ${place}`,
-      `staffing agency ${place}`,
+      `staffing company ${place}`,
+      `staffing company in ${place}`,
+      `manpower consultancy ${place}`,
+      `manpower supplier ${place}`,
+      `manpower outsourcing ${place}`,
       `facility management ${place}`,
       `PASARA licensed security ${place}`,
+      `PSARA licensed security agency ${place}`,
       `police verified security guards ${place}`,
       `manpower contractor ${place}`,
       `security guards near me ${place}`,
       `manpower services near me ${place}`,
     ])
     .concat([
+      `best security agency in Delhi NCR`,
+      `top manpower agency in Delhi NCR`,
+      `top manpower services in Delhi NCR`,
+      `manpower consultancy Delhi NCR`,
+      `staffing company Delhi NCR`,
+      `manpower supplier ${city}`,
       `manpower agency ${city} ${state}`,
       `security agency ${city} ${state}`,
       `labour provider near me`,
@@ -83,7 +131,7 @@ export function locationSeoKeywords(city: string, state: string): string[] {
 }
 
 export const defaultDescription =
-  "Looking for manpower services in Delhi NCR? Hire a PASARA-licensed security agency for police-verified security guards, housekeeping staff & contract labour in Gurugram, Noida, Delhi, Faridabad, Manesar & nearby. Free quote.";
+  "Best security agency in Delhi, Gurgaon, Gurugram and Delhi NCR. Top manpower services for PASARA-licensed guards, housekeeping and contract labour. Free quote.";
 
 type PageMetaOptions = {
   title: string;
@@ -163,13 +211,13 @@ export function createPageMetadata({
 
 export const rootMetadata: Metadata = {
   ...createPageMetadata({
-    title: "Manpower Agency Delhi NCR | PASARA Security & Housekeeping",
+    title: "Best Security Agency in Delhi NCR | Top Manpower Services",
     description: defaultDescription,
     path: "/",
     keywords: defaultKeywords,
   }),
   title: {
-    default: `${company.shortName} | Manpower Agency Delhi NCR — PASARA Security & Housekeeping`,
+    default: `${company.shortName} | Best Security Agency in Delhi, Gurgaon & Delhi NCR`,
     template: `%s | ${company.shortName}`,
   },
   icons: {

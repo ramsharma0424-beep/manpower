@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { company } from "./data";
 
 export type EmailAttachment = {
   filename: string;
@@ -20,7 +21,7 @@ function getSmtpConfig() {
   const user = process.env.SMTP_USER?.trim();
   const pass = process.env.SMTP_PASS?.trim().replace(/^["']|["']$/g, "");
   const port = Number(process.env.SMTP_PORT ?? "587");
-  const to = process.env.CONTACT_TO_EMAIL?.trim() ?? "rudramanpowerservicespvtltd@gmail.com";
+  const to = ["souravkumar4297@gmail.com", company.email];
   const fromName = process.env.SMTP_FROM_NAME?.trim() ?? "Rudra Manpower Website";
 
   if (!host || !user || !pass) {

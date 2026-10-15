@@ -13,7 +13,7 @@ import { servicesMainKeywords } from "@/lib/keywords";
 import { absoluteUrl, createPageMetadata, createServicesJsonLd, locationsLine } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Security, Housekeeping & Manpower Services Near Delhi NCR",
+  title: "Best Security Agency & Top Manpower Services in Delhi NCR",
   description: `Hire security guards in Gurugram, housekeeping staff in Noida, or contract manpower across Faridabad, Manesar & Delhi NCR. PASARA-licensed teams from ${company.shortName}.`,
   path: "/services",
   keywords: servicesMainKeywords(),

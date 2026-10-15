@@ -7,8 +7,8 @@ import CoverImage from "@/components/CoverImage";
 import JsonLdScript from "@/components/JsonLdScript";
 import SiteContainer from "@/components/SiteContainer";
 import { blogs } from "@/lib/blogs";
-import { company } from "@/lib/data";
-import { absoluteImageUrl, absoluteUrl, createPageMetadata } from "@/lib/seo";
+import { company, leadership } from "@/lib/data";
+import { absoluteImageUrl, absoluteUrl, createPageMetadata, siteUrl } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     image: post.image,
     keywords: post.keywords,
     type: "article",
+    publishedTime: post.isoDate,
   });
 }
 
@@ -38,15 +39,32 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
+  const relatedLinks = post.related ?? [
+    { href: "/services", label: "All services" },
+    { href: "/locations", label: "Service areas" },
+    { href: "/services/security", label: "Security" },
+    { href: "/services/housekeeping", label: "Housekeeping" },
+    { href: "/services/contract-staffing", label: "Contract staffing" },
+  ];
+
+  const author = leadership[0];
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
+    ...(post.directAnswer ? { abstract: post.directAnswer } : {}),
     image: [absoluteImageUrl(post.image)],
     datePublished: post.isoDate,
     dateModified: post.isoDate,
-    author: { "@type": "Organization", name: company.name, url: absoluteUrl("/") },
+    author: {
+      "@type": "Person",
+      name: author.name,
+      jobTitle: author.role,
+      description: `${author.name} is a retired Indian Army Captain and ${author.role.toLowerCase()} of ${company.name}.`,
+      url: absoluteUrl("/about#leadership"),
+      worksFor: { "@id": `${siteUrl}/#organization` },
+    },
     publisher: {
       "@type": "Organization",
       name: company.name,
@@ -56,11 +74,28 @@ export default async function BlogPostPage({ params }: Props) {
     articleSection: post.category,
     keywords: post.keywords.join(", "),
     inLanguage: "en-IN",
+    about: {
+      "@type": "Thing",
+      name: post.category,
+    },
   };
 
   return (
     <>
       <JsonLdScript data={articleJsonLd} />
+      {post.faqs && post.faqs.length > 0 && (
+        <JsonLdScript
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          }}
+        />
+      )}
 
       <section className="premium-hero py-16 text-white sm:py-20 lg:py-24">
         <SiteContainer narrow>
@@ -76,6 +111,13 @@ export default async function BlogPostPage({ params }: Props) {
             <span>·</span>
             <span>{post.readTime}</span>
           </div>
+          <p className="mt-3 text-sm text-stone-400">
+            By{" "}
+            <Link href="/about#leadership" className="text-brand-gold hover:text-brand-gold-dark">
+              {author.name}
+            </Link>
+            , {author.role}, {company.shortName}
+          </p>
           <h1 className="mt-4 font-display text-2xl font-semibold sm:text-3xl lg:text-4xl">
             {post.title}
           </h1>
@@ -101,24 +143,52 @@ export default async function BlogPostPage({ params }: Props) {
           className="mb-10 rounded-lg"
         />
 
+        {post.directAnswer && (
+          <p className="mb-10 border-l-2 border-brand-gold pl-4 text-base leading-relaxed text-stone-700 dark:text-stone-200">
+            <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-brand-gold">
+              Quick answer
+            </span>
+            {post.directAnswer}
+          </p>
+        )}
+
         <BlogContent blocks={post.blocks} />
 
+        {post.faqs && post.faqs.length > 0 && (
+          <div className="mt-12">
+            <h2 className="font-display text-xl font-semibold text-brand-navy dark:text-stone-100">
+              Frequently asked questions
+            </h2>
+            <div className="mt-4 space-y-3">
+              {post.faqs.map((faq) => (
+                <details key={faq.question} className="group card-elevated overflow-hidden">
+                  <summary className="cursor-pointer list-none px-5 py-4 text-sm font-semibold text-brand-navy marker:content-none dark:text-stone-100 [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-start justify-between gap-4">
+                      {faq.question}
+                      <span className="mt-0.5 shrink-0 text-brand-gold transition group-open:rotate-45">
+                        +
+                      </span>
+                    </span>
+                  </summary>
+                  <div className="border-t border-brand-border px-5 py-4 text-sm leading-relaxed text-stone-600 dark:border-stone-700 dark:text-stone-300">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mt-10 flex flex-wrap gap-3 text-sm">
-          <Link href="/services" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
-            All services
-          </Link>
-          <Link href="/locations" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
-            Service areas
-          </Link>
-          <Link href="/services/security" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
-            Security
-          </Link>
-          <Link href="/services/housekeeping" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
-            Housekeeping
-          </Link>
-          <Link href="/services/contract-staffing" className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300">
-            Contract staffing
-          </Link>
+          {relatedLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-sm border border-brand-border px-3 py-1.5 text-stone-600 transition hover:border-brand-gold hover:text-brand-gold dark:text-stone-300"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         <div className="card-elevated mt-12 p-8">

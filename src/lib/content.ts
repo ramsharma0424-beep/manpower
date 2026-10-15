@@ -261,6 +261,8 @@ export type ServiceDetail = {
   /** Extra long-form SEO sections rendered below offerings */
   sections?: { heading: string; paragraphs: string[] }[];
   faqs?: { question: string; answer: string }[];
+  /** Supporting buyer guide for internal linking */
+  guide?: { href: string; label: string };
 };
 
 export type ServiceDetailEnriched = ServiceDetail & {
@@ -836,7 +838,7 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Horticulture Services",
     eyebrow: "Landscaping & Greenery",
     heroDescription:
-      "Landscaping, garden maintenance, and indoor plant care for corporates, hotels, residential societies, and commercial campuses.",
+      "Horticulture services in Gurugram and Delhi NCR: lawn care, garden maintenance, and indoor plant teams for offices, hotels, and societies.",
     intro:
       "Well-kept green spaces reflect the quality of your facility. Rudra Manpower provides horticulture teams for lawn care, garden maintenance, seasonal planting, and indoor greenery across corporate campuses, hotels, hospitals, and residential societies in Delhi NCR.",
     image: images.horticulture,
@@ -924,13 +926,17 @@ export const serviceDetails: ServiceDetail[] = [
           "Yes. Many campuses prefer bundled housekeeping plus horticulture under one Rudra contract for simpler supervision and billing.",
       },
     ],
+    guide: {
+      href: "/blogs/horticulture-services-gurugram-delhi-ncr",
+      label: "Horticulture services guide for Gurugram and Delhi NCR",
+    },
   },
   {
     id: "labour",
     title: "General Labour & Helpers",
     eyebrow: "Industrial Workforce",
     heroDescription:
-      "Reliable labour and helper staff for manufacturing plants, mills, warehouses, gyms, and industrial operations across Delhi NCR and UP.",
+      "Warehouse labour supply in Delhi NCR — helpers, loading staff, and shift teams for plants in Gurugram, Manesar, Sonipat, and Noida.",
     intro:
       "Production lines, warehouses, and industrial sites depend on helpers who show up, follow instructions, and stay. Rudra Manpower deploys general labour and helper staff for manufacturing units, mills, FMCG plants, and fitness centres — with supervisor coordination and flexible shift arrangements in Gurugram, Manesar, Noida, Rohtak, and Sonipat.",
     image: images.labour,
@@ -1006,6 +1012,10 @@ export const serviceDetails: ServiceDetail[] = [
           "Yes. After site assessment and confirmation, we can mobilise additional helpers for seasonal demand, loading peaks, or temporary production increases across Delhi NCR.",
       },
     ],
+    guide: {
+      href: "/blogs/warehouse-labour-supply-delhi-ncr",
+      label: "Warehouse labour supply guide for Delhi NCR",
+    },
   },
   {
     id: "construction-labour",

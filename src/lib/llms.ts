@@ -1,3 +1,4 @@
+import { blogs } from "./blogs";
 import { company, services } from "./data";
 import { keywordPagePaths, keywordPages, readableKeyword } from "./keywords";
 import { absoluteUrl, locationsLine, phoneE164 } from "./seo";
@@ -55,6 +56,10 @@ export function buildLlmsTxt(): string {
     `- Careers: ${absoluteUrl("/careers")}`,
     `- Training: ${absoluteUrl("/training")}`,
     `- Blogs: ${absoluteUrl("/blogs")}`,
+    "",
+    "## Buyer guides",
+    "",
+    ...blogs.slice(0, 8).map((post) => `- ${post.title}: ${absoluteUrl(`/blogs/${post.slug}`)}`),
     "",
     "## Top keywords (home)",
     "",

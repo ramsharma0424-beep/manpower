@@ -93,6 +93,7 @@ type PageMetaOptions = {
   keywords?: string[];
   type?: "website" | "article";
   noIndex?: boolean;
+  publishedTime?: string;
 };
 
 export function absoluteUrl(path = ""): string {
@@ -111,6 +112,7 @@ export function createPageMetadata({
   keywords = defaultKeywords,
   type = "website",
   noIndex = false,
+  publishedTime,
 }: PageMetaOptions): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = image ? absoluteImageUrl(image) : undefined;
@@ -134,6 +136,9 @@ export function createPageMetadata({
       description,
       ...(imageUrl
         ? { images: [{ url: imageUrl, width: 1200, height: 630, alt: title }] }
+        : {}),
+      ...(type === "article" && publishedTime
+        ? { publishedTime, modifiedTime: publishedTime }
         : {}),
     },
     twitter: {

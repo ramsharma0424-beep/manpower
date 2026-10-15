@@ -12,7 +12,7 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
   { path: "/services", lastModified: "2026-09-15" },
   { path: "/contact", lastModified: "2026-08-11" },
   { path: "/about", lastModified: "2026-08-11" },
-  { path: "/blogs", lastModified: "2026-09-15" },
+  { path: "/blogs", lastModified: "2026-10-15" },
   { path: "/careers", lastModified: "2026-06-01" },
   { path: "/training", lastModified: "2026-06-01" },
   { path: "/locations", lastModified: "2026-09-25" },

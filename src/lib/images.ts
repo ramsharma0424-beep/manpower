@@ -37,4 +37,6 @@ export const blogImages = {
   "bouncer-services-gurugram-events-hotels": "/images/blogs/bouncer-wedding.jpg",
   "facility-management-services-gurugram-guide": "/images/blogs/facility-management.jpg",
   "pso-services-delhi-ncr-executive-protection": "/images/blogs/pso-delhi-ncr.jpg",
+  "warehouse-labour-supply-delhi-ncr": "/images/blogs/warehouse-labour.jpg",
+  "horticulture-services-gurugram-delhi-ncr": "/images/blogs/horticulture-gurugram.jpg",
 } as const;

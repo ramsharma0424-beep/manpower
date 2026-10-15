@@ -1119,6 +1119,256 @@ const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "warehouse-labour-supply-delhi-ncr",
+    title: "Warehouse Labour Supply in Delhi NCR: Helpers, Loading Staff & Shifts",
+    excerpt:
+      "A buyer’s guide to warehouse labour in Gurugram, Manesar, Sonipat, and Noida — what loading and packing helpers should cover, how shifts should be written, and what to check before you hire.",
+    metaDescription:
+      "Warehouse labour supply in Delhi NCR: hire helpers, loading staff, and shift teams for Gurugram, Manesar, Sonipat, and Noida logistics sites.",
+    directAnswer:
+      "Warehouse labour supply in Delhi NCR is contract deployment of helpers for loading, unloading, packing, and internal material movement. A usable contract names the site, shift hours, headcount, and who replaces a no-show — not just a daily rate. Rudra Manpower deploys these teams in Gurugram, Manesar, Sonipat, and Noida.",
+    keywords: [
+      "warehouse labour supply Delhi NCR",
+      "warehouse helpers Gurugram",
+      "loading unloading staff Manesar",
+      "labour supply Sonipat",
+      "factory helper Noida",
+      "logistics manpower Delhi NCR",
+      "contract labour warehouse Faridabad",
+    ],
+    image: blogImages["warehouse-labour-supply-delhi-ncr"],
+    imageAlt: "Warehouse helpers moving cartons at a Delhi NCR loading dock",
+    category: "Labour",
+    date: "October 5, 2026",
+    isoDate: "2026-10-05",
+    readTime: "8 min read",
+    related: [
+      { href: "/services/labour", label: "Labour supply" },
+      { href: "/services/contract-staffing", label: "Contract staffing" },
+      { href: "/blogs/industrial-manpower-manesar-bhiwadi", label: "Industrial manpower" },
+      { href: "/locations", label: "Service areas" },
+    ],
+    faqs: [
+      {
+        question: "Do you supply warehouse labour in Manesar and Sonipat?",
+        answer:
+          "Yes. Rudra Manpower deploys warehouse helpers and loading teams for factories and logistics sites in IMT Manesar, Sonipat, Kundli, Gurugram, Noida, and nearby Delhi NCR belts.",
+      },
+      {
+        question: "What is the difference between warehouse helpers and construction labour?",
+        answer:
+          "Warehouse helpers move, pack, and stage goods inside a running store or plant. Construction labour — masons, bar benders, and site helpers — works on a build. Hiring one pool for both jobs is how attendance and safety briefings get mixed up.",
+      },
+      {
+        question: "Can warehouse contract labour be EPFO and ESIC compliant?",
+        answer:
+          "Yes, where the role and tenure fall under statutory coverage. Ask the agency to state EPFO and ESIC scope in the proposal, along with attendance and wage records, before the first shift.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "A warehouse in IMT Manesar or along the KMP Expressway in Sonipat does not fail because a quote was a few rupees higher. It fails when the loading team is late, the night shift is unnamed, and nobody owns the replacement. Warehouse labour supply in Delhi NCR is a shift-and-attendance product, not a list of names.",
+      },
+      {
+        type: "h2",
+        text: "What does warehouse labour supply include?",
+      },
+      {
+        type: "p",
+        text: "Warehouse labour supply means helpers placed on a contract to move goods through a live site. In Gurugram, Noida, Manesar, and Sonipat that usually covers inbound trucks, outbound dispatch, and the floor work between them. It is not construction labour, and it is not a security guard at the gate.",
+      },
+      {
+        type: "table",
+        caption: "Typical warehouse helper roles in Delhi NCR",
+        headers: ["Role", "Main work", "Where it shows up"],
+        rows: [
+          ["Loading helper", "Unload trucks, stage pallets, move cartons", "3PL parks, plant warehouses"],
+          ["Packing helper", "Pack, sort, and label outbound orders", "FMCG and e-commerce stores"],
+          ["General helper", "Floor movement, cleaning of work aisles, line support", "Mills, factories, dispatch bays"],
+        ],
+      },
+      {
+        type: "h2",
+        text: "How is warehouse labour different from construction labour?",
+      },
+      {
+        type: "p",
+        text: "Construction labour follows a project calendar: masons, bar benders, and site helpers on a build in Noida or Faridabad. Warehouse labour follows a dispatch calendar: the same headcount, every shift, until the contract ends. A builder’s daily-wage gang will not hold a night dispatch window in Manesar.",
+      },
+      {
+        type: "h2",
+        text: "What should the shift plan specify?",
+      },
+      {
+        type: "ul",
+        items: [
+          "Site address and the exact bay, floor, or line — not only the city",
+          "Shift start, end, and weekly off, including night dispatch if you run it",
+          "Headcount per shift and the skill mix (loading, packing, general help)",
+          "Who briefs the team and who you call if someone does not report",
+          "Whether EPFO and ESIC apply, and what attendance record you will receive",
+        ],
+      },
+      {
+        type: "p",
+        text: "Peak weeks — festival dispatch, month-end invoicing, a new SKU launch — need a written ramp, not a WhatsApp message the evening before. Say how many extra helpers, for which dates, and which shift.",
+      },
+      {
+        type: "h2",
+        text: "What should you check before you hire a labour provider?",
+      },
+      {
+        type: "ul",
+        items: [
+          "Can they name a supervisor for your site, not a rotating unknown?",
+          "Do document checks happen before the helper enters the floor?",
+          "Is the replacement rule in the contract, with a time you can rely on?",
+          "Will wage and attendance records match the people who actually worked?",
+          "Have they deployed in your belt — Manesar, Sonipat, Bhiwadi, Noida — or only in one city?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra deploys warehouse teams",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower supplies warehouse and factory helpers across Gurugram, Manesar, Sonipat, Noida, Faridabad, and other Delhi NCR industrial belts. Share the site, shift pattern, and headcount. We propose the team, compliance scope where it applies, and a named supervisor before the first shift.`,
+      },
+      {
+        type: "p",
+        text: `Call ${company.phone} or use the contact form for a labour quote. For role scope, see our general labour and helpers page.`,
+      },
+    ],
+  },
+  {
+    slug: "horticulture-services-gurugram-delhi-ncr",
+    title: "Horticulture Services in Gurugram: Lawn Care, Gardens & Indoor Plants",
+    excerpt:
+      "What facility teams in Gurugram and Noida should expect from a horticulture contract — visit frequency, monsoon growth, indoor plant routes, and how to bundle grounds work with housekeeping.",
+    metaDescription:
+      "Horticulture services in Gurugram and Delhi NCR: lawn care, garden maintenance, indoor plants, and what to ask before hiring a landscaping team.",
+    directAnswer:
+      "Horticulture services in Gurugram and Delhi NCR means a scheduled team for lawn care, hedge and planter upkeep, and indoor plant routes. Visit days should change with monsoon, summer, and winter, not sit on one flat monthly line.",
+    keywords: [
+      "horticulture services Gurugram",
+      "horticulture services Delhi NCR",
+      "garden maintenance Noida",
+      "landscaping manpower Gurugram",
+      "lawn care services Gurgaon",
+      "indoor plant care office Delhi NCR",
+      "corporate landscaping Noida",
+    ],
+    image: blogImages["horticulture-services-gurugram-delhi-ncr"],
+    imageAlt: "Horticulture staff watering indoor plants in a Gurugram office lobby",
+    category: "Horticulture",
+    date: "October 15, 2026",
+    isoDate: "2026-10-15",
+    readTime: "8 min read",
+    related: [
+      { href: "/services/horticulture", label: "Horticulture services" },
+      { href: "/services/housekeeping", label: "Housekeeping" },
+      { href: "/services/technical", label: "Facility management" },
+      { href: "/locations", label: "Service areas" },
+    ],
+    faqs: [
+      {
+        question: "Do you provide horticulture services in Gurugram and Noida?",
+        answer:
+          "Yes. Rudra Manpower deploys gardening and landscaping manpower for corporate campuses, hotels, hospitals, and residential societies across Gurugram, Noida, Delhi, Faridabad, and nearby NCR areas.",
+      },
+      {
+        question: "How often should a corporate lawn be maintained in Delhi NCR?",
+        answer:
+          "Most Gurugram and Noida campuses need weekly visits in monsoon and summer, and a lighter winter cycle. Large lawns, hedge lines, and high-visibility driveways often need a second mid-week pass during peak growth.",
+      },
+      {
+        question: "Can indoor plant care be part of the same horticulture contract?",
+        answer:
+          "Yes. Lobby, atrium, and office-floor plant routes are usually scheduled on the same contract as outdoor lawn and garden maintenance, with a separate checklist for watering, dusting, and replacement.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "A tired lawn at a Cyber City campus or a row of dying lobby plants in Noida is not a design problem. It is a manpower problem. Horticulture services in Gurugram and across Delhi NCR fail when visit days are vague, monsoon growth is treated like winter, and indoor plants are left to the housekeeping team between other tasks.",
+      },
+      {
+        type: "h2",
+        text: "What a horticulture contract should actually cover",
+      },
+      {
+        type: "p",
+        text: "Facility managers searching for garden maintenance in Noida or lawn care services in Gurgaon usually need three jobs on one calendar: outdoor grounds, seasonal recovery, and indoor plant care. A quote that only says “gardener” does not tell you which of those will happen.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Lawn mowing, edging, and watering discipline matched to season",
+          "Hedge trimming, planter upkeep, and driveway presentation",
+          "Indoor plant routes for lobbies, atriums, and meeting floors",
+          "Monsoon growth control and summer watering checks",
+          "A named supervisor who walks the site, not only a visiting mali",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Set visit frequency by season, not by a flat monthly line",
+      },
+      {
+        type: "p",
+        text: "Delhi NCR lawns do not grow at one speed. From June to September, hedges and grass outpace a fortnightly visit. In peak summer, missed watering shows up in two days on exposed lawns along Golf Course Road, Sohna Road, and Noida expressway campuses. Winter is slower, but entrance planters and indoor plants still need a fixed route.",
+      },
+      {
+        type: "p",
+        text: "Ask for a monthly work calendar before you sign. It should name visit days, which zones are weekly, and what “presentation standard” means for the reception driveway versus the rear service yard. Headcount follows that calendar. A single gardener cannot cover a multi-acre corporate park and a 40-plant indoor route on the same morning.",
+      },
+      {
+        type: "h2",
+        text: "Indoor plant care is a separate checklist",
+      },
+      {
+        type: "p",
+        text: "Office indoor plant care in Delhi NCR fails for boring reasons: overwatering in air-conditioned lobbies, dusty leaves, and no one empowered to replace a dead fiddle-leaf before a client visit. Put indoor plants on the horticulture contract with a count, a floor-wise route, and a replacement rule. Housekeeping can dust around planters. Horticulture should own plant health.",
+      },
+      {
+        type: "h2",
+        text: "Questions to ask before you hire landscaping manpower",
+      },
+      {
+        type: "ul",
+        items: [
+          "Who is the supervisor, and how often do they walk the site?",
+          "What is the visit plan for monsoon, summer, and winter?",
+          "Are tools, fuel, and waste removal in your scope or ours?",
+          "How do you report missed visits and plant replacements?",
+          "Can horticulture sit on the same contract as housekeeping?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When to bundle horticulture with housekeeping",
+      },
+      {
+        type: "p",
+        text: "Campuses that already buy housekeeping or facility management often get cleaner grounds when both teams report to one operations desk. Leaf litter, washroom-adjacent planters, and banquet lawns stop bouncing between vendors. Keep security on its own PASARA-licensed contract if guards are in scope, and keep horticulture with the soft-services partner.",
+      },
+      {
+        type: "h2",
+        text: "How Rudra deploys horticulture teams",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower supplies horticulture and landscaping manpower for corporate campuses, hotels, hospitals, and residential societies in Gurugram, Noida, Delhi, Faridabad, and nearby NCR cities. Share open area, indoor plant count, and the presentation standard you need. We propose headcount, visit days, and whether the work should sit with your housekeeping contract.`,
+      },
+      {
+        type: "p",
+        text: `Call ${company.phone} or use the contact form for a horticulture quote. If you want the service scope first, see our horticulture services page for lawn care, indoor plant routes, and seasonal upkeep.`,
+      },
+    ],
+  },
 ];
 
 /** Newest first — keeps homepage preview, /blogs listing, and sitemap timeline accurate. */

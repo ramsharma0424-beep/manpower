@@ -326,6 +326,11 @@ export const services = [
 
 export const faqs = [
   {
+    question: "What is Rudra Manpower Services?",
+    answer:
+      "Rudra Manpower Services Pvt. Ltd. is a PASARA-licensed manpower agency based in Gurugram and led by Capt Raj Kumar (Retd), a retired Indian Army Captain. Founded on 10 April 2023, it deploys police-verified security guards, housekeeping staff, facility teams, and contract labour across Delhi NCR.",
+  },
+  {
     question: "Which areas does Rudra Manpower serve?",
     answer: `We deploy security guard services, housekeeping services, facility management services, and labour supply teams across Delhi NCR, including ${company.locations.join(", ")}. Contact us to confirm availability for your site.`,
   },

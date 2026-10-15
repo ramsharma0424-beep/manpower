@@ -3,6 +3,8 @@ import { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    // CoverImage uses 65 for priority photos and 60 for the rest.
+    qualities: [60, 65, 75],
     // 390 covers iPhone 12/13/14 Pro portrait; 414 covers Plus/Max.
     deviceSizes: [390, 414, 640, 828, 1080, 1200, 1920],
     minimumCacheTTL: 2592000,

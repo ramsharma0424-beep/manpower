@@ -12,7 +12,7 @@ import { absoluteUrl, createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Manpower Blog Delhi NCR | Security, Housekeeping & Staffing Tips",
   description:
-    "Fresh guides on manpower services, security guards, housekeeping, facility management and labour hiring across Gurugram, Noida and Delhi NCR — from Rudra Manpower.",
+    "Fresh guides on manpower, security guards, housekeeping, horticulture, facility management and labour hiring across Gurugram, Noida and Delhi NCR.",
   path: "/blogs",
   keywords: [
     "manpower blog Delhi NCR",
@@ -20,6 +20,7 @@ export const metadata: Metadata = createPageMetadata({
     "housekeeping workforce guide Noida",
     "contract staffing advice Delhi NCR",
     "facility management tips Gurgaon",
+    "horticulture services Gurugram",
     "industrial manpower Manesar",
   ],
 });

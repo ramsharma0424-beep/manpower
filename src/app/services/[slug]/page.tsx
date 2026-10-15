@@ -186,6 +186,16 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
           </div>
 
+          {service.guide && (
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-stone-600 sm:text-base dark:text-stone-300">
+              Planning the contract?{" "}
+              <Link href={service.guide.href} className="font-semibold text-brand-gold hover:text-brand-gold-dark">
+                {service.guide.label}
+              </Link>
+              .
+            </p>
+          )}
+
           {service.faqs && service.faqs.length > 0 && (
             <div className="mt-12 max-w-3xl">
               <h2 className="font-display text-xl font-semibold text-brand-navy sm:text-2xl dark:text-stone-100">

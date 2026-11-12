@@ -72,7 +72,20 @@ export default function CareersPage() {
                         ))}
                       </ul>
                     )}
-                    <p className="mt-2 text-xs text-stone-400">Location: {role.locations}</p>
+                    <p className="mt-2 text-xs text-stone-400">
+                      {role.posted >= "2026-11-01" && (
+                        <>
+                          Posted{" "}
+                          {new Date(`${role.posted}T00:00:00`).toLocaleDateString("en-IN", {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric",
+                          })}
+                          {" · "}
+                        </>
+                      )}
+                      Location: {role.locations}
+                    </p>
                   </article>
                 ))}
               </div>

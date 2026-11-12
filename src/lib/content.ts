@@ -187,12 +187,13 @@ export const trainingPrograms = [
   },
 ];
 
-export const careerRoles = [
+const careerRoleList = [
   {
     id: "business-development-manager",
     title: "Business Development Manager",
     locations: "Sonipat, Haryana",
     type: "Full-time",
+    posted: "2026-11-12",
     description:
       "Expand security and manpower contracts for Rudra from Sonipat. This role is for someone who can bring in real business across Delhi NCR and Haryana, not only make calls.",
     highlights: [
@@ -208,6 +209,7 @@ export const careerRoles = [
     title: "Business Development Executive",
     locations: "Sonipat, Haryana",
     type: "Full-time",
+    posted: "2026-11-11",
     description:
       "Support new security and manpower contracts from Sonipat through field sales and client meetings.",
     highlights: [
@@ -220,6 +222,7 @@ export const careerRoles = [
     title: "Operations Supervisor",
     locations: "Sonipat, Haryana",
     type: "Full-time",
+    posted: "2026-11-11",
     description:
       "Run day-to-day security operations for deployed sites, with staff, attendance, and on-ground supervision.",
     highlights: [
@@ -232,6 +235,7 @@ export const careerRoles = [
     title: "HR & Recruitment Executive",
     locations: "Sonipat, Haryana",
     type: "Full-time",
+    posted: "2026-11-11",
     description:
       "Hire and coordinate candidates for security and manpower deployments, and keep joining documents in order.",
     highlights: [
@@ -246,6 +250,7 @@ export const careerRoles = [
     type: "Full-time / Shift-based",
     description:
       "Join our PASARA-licensed security teams for corporate, industrial, hotel, and residential deployments across Delhi NCR. Police verification required.",
+    posted: "2026-06-01",
   },
   {
     id: "housekeeping",
@@ -254,6 +259,7 @@ export const careerRoles = [
     type: "Full-time / Shift-based",
     description:
       "Work with hotels, corporates, malls, and hospitals. Training provided on hygiene SOPs, equipment use, and guest-area standards.",
+    posted: "2026-06-01",
   },
   {
     id: "bouncer",
@@ -262,6 +268,7 @@ export const careerRoles = [
     type: "Event & venue assignments",
     description:
       "Experienced personnel for hotels, banquets, and venue security. Prior hospitality or event security experience preferred.",
+    posted: "2026-06-01",
   },
   {
     id: "pso",
@@ -270,6 +277,7 @@ export const careerRoles = [
     type: "Assignment-based",
     description:
       "For verified, experienced security professionals. Executive protection assignments with prior PSO or close-protection experience.",
+    posted: "2026-06-01",
   },
   {
     id: "labour-helper",
@@ -278,6 +286,7 @@ export const careerRoles = [
     type: "Project & contract-based",
     description:
       "Construction sites, manufacturing units, and industrial facilities. Safety briefing provided before deployment.",
+    posted: "2026-06-01",
   },
   {
     id: "supervisor",
@@ -286,8 +295,14 @@ export const careerRoles = [
     type: "Full-time",
     description:
       "Lead on-ground teams, manage shift attendance, coordinate with clients, and uphold Rudra's quality and reporting standards.",
+    posted: "2026-06-01",
   },
 ];
+
+/** Newest vacancy first. Roles without a post date stay at the bottom. */
+export const careerRoles = [...careerRoleList].sort((a, b) =>
+  (b.posted ?? "0000-01-01").localeCompare(a.posted ?? "0000-01-01"),
+);
 
 export const careerBenefits = [
   "Fair wages with structured payout cycles",

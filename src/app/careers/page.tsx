@@ -59,9 +59,9 @@ export default function CareersPage() {
                     <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
                       {role.description}
                     </p>
-                    {"highlights" in role && role.highlights.length > 0 && (
+                    {(role.highlights ?? []).length > 0 && (
                       <ul className="mt-3 space-y-1.5">
-                        {role.highlights.map((item) => (
+                        {(role.highlights ?? []).map((item) => (
                           <li
                             key={item}
                             className="flex gap-2 text-sm text-stone-600 dark:text-stone-300"

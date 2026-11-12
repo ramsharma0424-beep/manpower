@@ -39,4 +39,5 @@ export const blogImages = {
   "pso-services-delhi-ncr-executive-protection": "/images/blogs/pso-delhi-ncr.jpg",
   "warehouse-labour-supply-delhi-ncr": "/images/blogs/warehouse-labour.jpg",
   "horticulture-services-gurugram-delhi-ncr": "/images/blogs/horticulture-gurugram.jpg",
+  "security-manpower-contracts-sonipat": "/images/blogs/sonipat-security-contracts.jpg",
 } as const;

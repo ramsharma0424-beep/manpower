@@ -10,15 +10,15 @@ import { company } from "@/lib/data";
 import { createPageMetadata, locationsLine } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Careers — Join Rudra Manpower in Delhi NCR",
-  description: `Apply for security guard, housekeeping, bouncer, PSO, labour, and supervisor roles with ${company.shortName}. Fair wages, training, and army-led discipline across ${locationsLine}.`,
+  title: "Careers — Hiring in Sonipat and Delhi NCR",
+  description: `Rudra is hiring a Business Development Manager, Business Development Executive, Operations Supervisor, and HR & Recruitment Executive in Sonipat, plus security, housekeeping, and manpower roles across ${locationsLine}.`,
   path: "/careers",
   keywords: [
+    "security jobs Sonipat",
+    "business development manager security Haryana",
+    "manpower recruitment jobs Sonipat",
     "security guard jobs Gurugram",
-    "housekeeping jobs Noida",
-    "bouncer jobs Delhi NCR",
-    "PSO jobs Haryana",
-    "manpower careers Faridabad",
+    "housekeeping jobs Delhi NCR",
   ],
 });
 
@@ -28,7 +28,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Work With Rudra Manpower"
-        description={`Join a PASARA-licensed, army veteran-led team serving businesses across ${company.region}. We're hiring security, housekeeping, bouncer, PSO, labour, and supervisory staff.`}
+        description="We are hiring in Sonipat for business development, operations, and recruitment, and we still deploy security, housekeeping, and manpower teams across Delhi NCR. Share your CV through the form."
       />
       <Breadcrumbs items={[{ name: "Careers", path: "/careers" }]} />
 
@@ -40,8 +40,9 @@ export default function CareersPage() {
                 Open Roles
               </h2>
               <p className="mt-3 text-sm text-stone-600 sm:text-base dark:text-stone-300">
-                We recruit across Delhi NCR for shift-based and project-based assignments. Police
-                verification is required for all security roles.
+                Office hiring is open in Sonipat. Field roles across Delhi NCR continue as well.
+                Police verification is required for security deployments. Send your CV with the form
+                on this page.
               </p>
 
               <div className="mt-6 space-y-4">
@@ -58,7 +59,20 @@ export default function CareersPage() {
                     <p className="mt-2 text-sm text-stone-600 dark:text-stone-300">
                       {role.description}
                     </p>
-                    <p className="mt-2 text-xs text-stone-400">Locations: {role.locations}</p>
+                    {"highlights" in role && role.highlights.length > 0 && (
+                      <ul className="mt-3 space-y-1.5">
+                        {role.highlights.map((item) => (
+                          <li
+                            key={item}
+                            className="flex gap-2 text-sm text-stone-600 dark:text-stone-300"
+                          >
+                            <span className="text-brand-gold">•</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <p className="mt-2 text-xs text-stone-400">Location: {role.locations}</p>
                   </article>
                 ))}
               </div>

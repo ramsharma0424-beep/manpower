@@ -4,6 +4,94 @@ import type { BlogPost } from "./blog-types";
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "security-manpower-contracts-sonipat",
+    title: "Security and Manpower Contracts from Sonipat: What Rudra Is Taking On Now",
+    excerpt:
+      "Rudra is accepting new security, housekeeping, and manpower contracts from Sonipat, starting at 10 personnel per site, with PSARA coverage in Delhi, Haryana, and Uttar Pradesh.",
+    metaDescription:
+      "Rudra Manpower in Sonipat is taking new security, factory, warehouse, residential, housekeeping, and manpower contracts from 10 personnel per site across Delhi, Haryana, and Uttar Pradesh.",
+    directAnswer:
+      "Rudra Manpower Services Pvt. Ltd., Sonipat, is accepting new security and manpower contracts starting at 10 personnel per site. Coverage includes trained guards and supervisors, factory and warehouse security, residential and commercial security, housekeeping, general manpower, staff replacement, and attendance management, under PSARA licence coverage in Delhi, Haryana, and Uttar Pradesh.",
+    keywords: [
+      "security services Sonipat",
+      "manpower contractor Sonipat",
+      "factory security Haryana",
+      "warehouse security Delhi NCR",
+      "PSARA security agency Haryana",
+      "housekeeping manpower Sonipat",
+      "security contract Delhi Haryana Uttar Pradesh",
+    ],
+    image: blogImages["security-manpower-contracts-sonipat"],
+    imageAlt: "Security team briefing before a site deployment in Haryana",
+    category: "Security",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    readTime: "6 min read",
+    related: [
+      { href: "/services/security", label: "Security services" },
+      { href: "/services/housekeeping", label: "Housekeeping" },
+      { href: "/services/labour", label: "Manpower and labour" },
+      { href: "/contact", label: "Request a proposal" },
+    ],
+    faqs: [
+      {
+        question: "What is the smallest site Rudra will take on?",
+        answer:
+          "New contracts start from 10 personnel per site. Share the site, shift pattern, and the mix of security, housekeeping, or general manpower you need.",
+      },
+      {
+        question: "Where is the PSARA licence coverage?",
+        answer:
+          "Rudra holds PSARA licence coverage for Delhi, Haryana, and Uttar Pradesh, and is based in Sonipat, Haryana.",
+      },
+      {
+        question: "Who should we ask for a commercial proposal?",
+        answer:
+          "Administration, HR, or purchase teams can request a meeting and a commercial proposal through the contact form or by phone.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Factories, warehouses, and residential sites around Sonipat often need a security and manpower partner that can start with a real team, not a one-person trial. Rudra Manpower Services Pvt. Ltd., Sonipat, is accepting new contracts starting from 10 personnel per site.",
+      },
+      {
+        type: "h2",
+        text: "What we can deploy",
+      },
+      {
+        type: "ul",
+        items: [
+          "Trained security guards and supervisors",
+          "Factory and warehouse security",
+          "Residential and commercial security",
+          "Housekeeping and general manpower",
+          "Staff replacement and attendance management",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Where the licence covers",
+      },
+      {
+        type: "p",
+        text: "We are a professional security and manpower service provider with PSARA licence coverage in Delhi, Haryana, and Uttar Pradesh. The Sonipat office is the base for new site meetings across these states and the wider Delhi NCR belt.",
+      },
+      {
+        type: "h2",
+        text: "How a new contract starts",
+      },
+      {
+        type: "p",
+        text: "Tell us the site, the headcount, and whether you need security, housekeeping, general manpower, or a mix. We would like to meet your administration, HR, or purchase team and submit a commercial proposal before deployment. Replacement cover and attendance reporting are part of the operating model, not an extra favour after the first week.",
+      },
+      {
+        type: "p",
+        text: `Call ${company.phone} or use the contact form. Share the site address, shift pattern, and the department we should meet. We will reply with a proposal for a contract of 10 personnel or more.`,
+      },
+    ],
+  },
+  {
     slug: "why-police-verification-matters",
     title: "Why Police Verification Should Be Your First Question When Hiring Security",
     excerpt:

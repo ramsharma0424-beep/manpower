@@ -189,6 +189,57 @@ export const trainingPrograms = [
 
 export const careerRoles = [
   {
+    id: "business-development-manager",
+    title: "Business Development Manager",
+    locations: "Sonipat, Haryana",
+    type: "Full-time",
+    description:
+      "Expand security and manpower contracts for Rudra from Sonipat. This role is for someone who can bring in real business across Delhi NCR and Haryana, not only make calls.",
+    highlights: [
+      "3–5 years of B2B sales",
+      "Security, facility management, or manpower experience preferred",
+      "Acquire corporate and industrial clients and close contracts",
+      "Field visits across Delhi NCR and Haryana; a two-wheeler is preferred",
+      "Meet factory owners, HR, and administration teams, prepare quotations, and keep client relationships",
+    ],
+  },
+  {
+    id: "business-development-executive",
+    title: "Business Development Executive",
+    locations: "Sonipat, Haryana",
+    type: "Full-time",
+    description:
+      "Support new security and manpower contracts from Sonipat through field sales and client meetings.",
+    highlights: [
+      "1–2 years of experience preferred",
+      "Field sales, client handling, and clear communication",
+    ],
+  },
+  {
+    id: "operations-supervisor",
+    title: "Operations Supervisor",
+    locations: "Sonipat, Haryana",
+    type: "Full-time",
+    description:
+      "Run day-to-day security operations for deployed sites, with staff, attendance, and on-ground supervision.",
+    highlights: [
+      "Security operations experience preferred",
+      "Staff management, attendance, and site supervision",
+    ],
+  },
+  {
+    id: "hr-recruitment-executive",
+    title: "HR & Recruitment Executive",
+    locations: "Sonipat, Haryana",
+    type: "Full-time",
+    description:
+      "Hire and coordinate candidates for security and manpower deployments, and keep joining documents in order.",
+    highlights: [
+      "Recruitment experience preferred",
+      "Candidate sourcing, documentation, and coordination",
+    ],
+  },
+  {
     id: "security-guard",
     title: "Security Guard",
     locations: "Gurugram, Noida, Manesar, Faridabad, Sonipat, Bhiwadi",

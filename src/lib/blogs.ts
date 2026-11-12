@@ -92,6 +92,269 @@ const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: "factory-warehouse-security-sonipat",
+    title: "Factory and Warehouse Security in Sonipat: What a 10-Person Site Actually Needs",
+    excerpt:
+      "A practical note for plants and warehouses around Sonipat: guards, a supervisor, shift cover, and why a contract should start at a real team rather than one name on a gate.",
+    metaDescription:
+      "Factory and warehouse security in Sonipat from Rudra Manpower: trained guards, supervisors, and site contracts starting at 10 personnel.",
+    directAnswer:
+      "Factory and warehouse security in Sonipat needs trained guards plus a supervisor, a written shift plan, and a replacement rule. Rudra Manpower Services Pvt. Ltd. takes new site contracts from 10 personnel, covering plants, warehouses, and logistics bays in Haryana and the wider Delhi NCR belt.",
+    keywords: [
+      "factory security Sonipat",
+      "warehouse security Sonipat",
+      "industrial security Haryana",
+      "security guards warehouse Delhi NCR",
+      "plant security Kundli",
+      "security supervisor Sonipat",
+    ],
+    image: blogImages["factory-warehouse-security-sonipat"],
+    imageAlt: "Night security cover at an industrial gate in Haryana",
+    category: "Security",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    readTime: "6 min read",
+    related: [
+      { href: "/blogs/security-manpower-contracts-sonipat", label: "Sonipat contracts" },
+      { href: "/services/security", label: "Security services" },
+      { href: "/blogs/warehouse-labour-supply-delhi-ncr", label: "Warehouse labour" },
+      { href: "/contact", label: "Request a proposal" },
+    ],
+    faqs: [
+      {
+        question: "Do you cover factory and warehouse gates in Sonipat?",
+        answer:
+          "Yes. New security contracts from the Sonipat office include factory and warehouse sites, starting at 10 personnel per site.",
+      },
+      {
+        question: "Is a supervisor included with the guards?",
+        answer:
+          "A working site contract should name both trained guards and a supervisor. The supervisor owns shift attendance and the first call when someone does not report.",
+      },
+      {
+        question: "Can the same contract include warehouse helpers?",
+        answer:
+          "Security and general manpower can sit on one proposal if you want both. Say which bays need guards and which shifts need helpers before the quote is written.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "A factory or warehouse gate in Sonipat fails in a familiar way. One guard is listed, the night shift is unnamed, and the first absence has no replacement. Factory and warehouse security is a team deployment, not a single name on a register.",
+      },
+      {
+        type: "h2",
+        text: "What the site team should include",
+      },
+      {
+        type: "ul",
+        items: [
+          "Trained security guards for the gate, yard, and internal rounds",
+          "A supervisor who checks attendance and briefs the shift",
+          "Cover for day and night if the plant or warehouse runs both",
+          "A written note of who is called when a guard does not report",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the contract starts at 10 personnel",
+      },
+      {
+        type: "p",
+        text: "Rudra Manpower Services Pvt. Ltd., Sonipat, is accepting new contracts from 10 personnel per site. That floor is there so a plant or warehouse gets a real roster — guards and supervision — instead of a token posting that collapses on the first weekly off.",
+      },
+      {
+        type: "h2",
+        text: "What to send before the proposal",
+      },
+      {
+        type: "ul",
+        items: [
+          "Site address and whether it is a factory, warehouse, or both",
+          "Gate count, yard size, and any internal areas that need a round",
+          "Shift hours, weekly off, and night dispatch if you run it",
+          "Whether housekeeping or general helpers should be on the same proposal",
+        ],
+      },
+      {
+        type: "p",
+        text: `Share those details with your administration, HR, or purchase team, then call ${company.phone} or use the contact form. We will meet you and submit a commercial proposal before anyone is deployed.`,
+      },
+    ],
+  },
+  {
+    slug: "residential-commercial-security-haryana",
+    title: "Residential and Commercial Security in Haryana: How the Brief Changes",
+    excerpt:
+      "Societies and commercial buildings do not need the same guard brief. Here is how Rudra separates residential and commercial security for sites in Haryana and Delhi NCR.",
+    metaDescription:
+      "Residential and commercial security in Haryana from Rudra Manpower in Sonipat: different briefs for societies, offices, and shops, from 10 personnel per site.",
+    directAnswer:
+      "Residential security focuses on resident entry, visitor logs, and night presence. Commercial security focuses on opening and closing, staff entry, and the shop or office floor. Rudra Manpower, Sonipat, deploys both, with trained guards and supervisors, on contracts from 10 personnel per site.",
+    keywords: [
+      "residential security Haryana",
+      "commercial security Sonipat",
+      "society security guards Delhi NCR",
+      "office security Haryana",
+      "apartment security Sonipat",
+      "commercial complex security Gurugram",
+    ],
+    image: blogImages["residential-commercial-security-haryana"],
+    imageAlt: "Security staff at a residential or commercial entrance",
+    category: "Security",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    readTime: "6 min read",
+    related: [
+      { href: "/services/security", label: "Security services" },
+      { href: "/blogs/security-manpower-contracts-sonipat", label: "Sonipat contracts" },
+      { href: "/blogs/factory-warehouse-security-sonipat", label: "Factory and warehouse security" },
+      { href: "/contact", label: "Request a proposal" },
+    ],
+    faqs: [
+      {
+        question: "Do you provide security for housing societies?",
+        answer:
+          "Yes. Residential deployments cover entry, visitors, parking, and night presence for societies and apartment sites.",
+      },
+      {
+        question: "Is commercial security the same posting?",
+        answer:
+          "No. Offices, showrooms, and commercial complexes need opening and closing cover, staff entry, and a different visitor pattern. The brief should say which one you are.",
+      },
+      {
+        question: "What is the smallest residential or commercial contract?",
+        answer:
+          "New contracts start at 10 personnel per site, so the roster can cover shifts instead of a single guard.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "A housing society and a commercial complex can sit on the same road in Haryana and still need different security. One is about residents coming home. The other is about a business opening, trading, and closing. Putting the same unnamed guard on both is how instructions get lost.",
+      },
+      {
+        type: "h2",
+        text: "What residential security is for",
+      },
+      {
+        type: "ul",
+        items: [
+          "Resident and visitor entry at the gate",
+          "A visitor record the committee can actually check",
+          "Parking and basement presence where the society asks for it",
+          "Night cover, with a named person on that shift",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What commercial security is for",
+      },
+      {
+        type: "ul",
+        items: [
+          "Opening and closing of the office, showroom, or complex",
+          "Staff entry separate from customers or visitors",
+          "Common areas, service gates, and loading points",
+          "A supervisor the admin or facility manager can call",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How Rudra writes the contract",
+      },
+      {
+        type: "p",
+        text: "From Sonipat, Rudra Manpower Services Pvt. Ltd. takes residential and commercial security on new contracts of 10 personnel or more. Housekeeping can be added when the building wants one team for gates and floors. Tell us which kind of site it is before the proposal, so the brief matches the gate.",
+      },
+      {
+        type: "p",
+        text: `Administration, HR, or the purchase team can call ${company.phone} or use the contact form. Share the address, shift hours, and whether the site is residential, commercial, or both.`,
+      },
+    ],
+  },
+  {
+    slug: "security-staff-replacement-attendance",
+    title: "Security Contracts Fail on Replacement and Attendance, Not on the Quote",
+    excerpt:
+      "A guard roster only works if absences are replaced and attendance is recorded. This is how Rudra treats replacement and attendance on security and manpower sites.",
+    metaDescription:
+      "Staff replacement and attendance management for security and manpower contracts from Rudra Manpower in Sonipat. What the site should receive each shift.",
+    directAnswer:
+      "A security or manpower contract should name who replaces a no-show and what attendance record the client receives. Rudra Manpower Services Pvt. Ltd., Sonipat, includes staff replacement and attendance management in site contracts that start at 10 personnel.",
+    keywords: [
+      "security guard replacement Delhi NCR",
+      "attendance management security contract",
+      "security supervisor attendance Haryana",
+      "manpower replacement Sonipat",
+      "shift attendance security agency",
+    ],
+    image: blogImages["security-staff-replacement-attendance"],
+    imageAlt: "Supervisor checking a site attendance record",
+    category: "Operations",
+    date: "November 9, 2026",
+    isoDate: "2026-11-09",
+    readTime: "5 min read",
+    related: [
+      { href: "/blogs/security-manpower-contracts-sonipat", label: "Sonipat contracts" },
+      { href: "/services/security", label: "Security services" },
+      { href: "/blogs/epfo-esic-compliant-contract-staffing-delhi-ncr", label: "Contract staffing compliance" },
+      { href: "/contact", label: "Request a proposal" },
+    ],
+    faqs: [
+      {
+        question: "Who replaces a guard who does not report?",
+        answer:
+          "The contract should name the supervisor responsible for that shift and the replacement path. A WhatsApp message after the gate is already empty is not a replacement plan.",
+      },
+      {
+        question: "What attendance record should the client get?",
+        answer:
+          "The site should be able to see who was on duty, on which shift, and who was absent. That record is part of attendance management, not a favour at the end of the month.",
+      },
+      {
+        question: "Does this apply only to security?",
+        answer:
+          "No. The same replacement and attendance rule applies to housekeeping and general manpower on a Rudra site contract.",
+      },
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Most security disputes start after the quote is signed. Someone does not report, the gate is short, and nobody owns the gap. Replacement and attendance are the contract. The daily rate is only the price of that promise.",
+      },
+      {
+        type: "h2",
+        text: "What replacement should mean",
+      },
+      {
+        type: "ul",
+        items: [
+          "A named supervisor for the site, not a rotating unknown",
+          "A clear step when a guard, housekeeper, or helper does not report",
+          "Cover for the shift that is open, not a promise to 'send someone tomorrow'",
+          "The same rule for security, housekeeping, and general manpower",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What attendance management should show",
+      },
+      {
+        type: "p",
+        text: "Attendance is the list of people who actually stood the shift. Your admin or HR team should be able to match that list to the roster. If the record and the gate do not match, the contract is already off.",
+      },
+      {
+        type: "h2",
+        text: "How this sits in a Rudra contract",
+      },
+      {
+        type: "p",
+        text: `Rudra Manpower Services Pvt. Ltd. includes staff replacement and attendance management on new site contracts from Sonipat, starting at 10 personnel. Call ${company.phone} or use the contact form and say which shifts you run. The proposal will name the team and how absences are covered.`,
+      },
+    ],
+  },
+  {
     slug: "why-police-verification-matters",
     title: "Why Police Verification Should Be Your First Question When Hiring Security",
     excerpt:

@@ -40,4 +40,7 @@ export const blogImages = {
   "warehouse-labour-supply-delhi-ncr": "/images/blogs/warehouse-labour.jpg",
   "horticulture-services-gurugram-delhi-ncr": "/images/blogs/horticulture-gurugram.jpg",
   "security-manpower-contracts-sonipat": "/images/blogs/sonipat-security-contracts.jpg",
+  "factory-warehouse-security-sonipat": "/images/blogs/factory-warehouse-sonipat.jpg",
+  "residential-commercial-security-haryana": "/images/blogs/residential-commercial-security.jpg",
+  "security-staff-replacement-attendance": "/images/blogs/staff-replacement-attendance.jpg",
 } as const;
